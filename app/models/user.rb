@@ -3,4 +3,10 @@ class User < ApplicationRecord
   has_one :seller
   has_many :organizations_users
   has_many :organizations, through: :organizations_users
+
+  def get_seller_id
+    self.seller_id
+  end
+
+
 end
