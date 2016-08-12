@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :organizations_users
   has_many :transactions
   has_many :organizations, through: :organizations_users
+  has_many :message_threads
 
   def get_seller_id
     self.seller_id
@@ -24,5 +25,8 @@ class User < ApplicationRecord
     self.seller.listings.length != 0
   end
 
+  def all_messages
+    self.message_threads
+  end
 
 end
