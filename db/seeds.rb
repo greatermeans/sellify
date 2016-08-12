@@ -7,13 +7,13 @@ Organization.destroy_all
 
 FactoryGirl.create(:organization)
 
-10.times do 
+10.times do
 	FactoryGirl.create(:user)
 end
 
 FactoryGirl.create(:seller)
 
-5.times do 
+5.times do
 	FactoryGirl.create(:listing)
 end
 
