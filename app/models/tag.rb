@@ -1,6 +1,6 @@
 class Tag < ApplicationRecord
-  has_many :listings_tags
-  has_many :listings, through: :listings_tags
+  has_many :categories
+  has_many :listings, through: :categories
 
   def oldest_first
     self.listings.order(created_at: :asc)
