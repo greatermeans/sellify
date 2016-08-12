@@ -25,5 +25,8 @@ class User < ApplicationRecord
     self.seller.listings.length != 0
   end
 
+  def all_messages
+    self.message_threads
+  end
 
 end
