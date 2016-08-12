@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_one :seller
-  has_many :organizations_users
+  has_many :communities
   has_many :transactions
-  has_many :organizations, through: :organizations_users
+  has_many :organizations, through: :communities
+  has_secure_password
 
   def get_seller_id
     self.seller_id

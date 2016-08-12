@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :organization do
-    name            'Flatiron School'
+    name   'Flatiron School'
   end
 end
