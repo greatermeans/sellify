@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 20160812211616) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "listing_id"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "listings", force: :cascade do |t|
     t.integer  "seller_id"
     t.string   "title"
@@ -66,14 +74,6 @@ ActiveRecord::Schema.define(version: 20160812211616) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "transactions", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "listing_id"
-    t.string   "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -82,9 +82,9 @@ ActiveRecord::Schema.define(version: 20160812211616) do
     t.string   "city"
     t.string   "state"
     t.integer  "phone"
+    t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "password_digest"
   end
 
 end

@@ -38,7 +38,7 @@ module Api
       # end
 
       def index
-        render json: User.all, include: ['listings','communities','transactions','organizations']
+        render json: User.all, include: ['listings','communities','conversations','organizations']
 
       end
 

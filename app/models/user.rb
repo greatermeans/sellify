@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_one :seller
   has_many :communities
-  has_many :transactions
+  has_many :conversations
   has_many :organizations, through: :communities
   has_many :listings, through: :seller
   has_secure_password

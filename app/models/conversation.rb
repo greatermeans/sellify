@@ -1,4 +1,4 @@
-class Transaction < ApplicationRecord
+class Conversation < ApplicationRecord
   belongs_to :user
   belongs_to :listing
 
