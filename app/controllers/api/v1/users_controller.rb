@@ -22,9 +22,20 @@ module Api
       #   end
       # end
 
-      # def show
-      #   @user = User.find params[:id]
-      # end
+      def show
+        @user = User.find(params[:id])
+        render json: @user
+      end
+
+      def show_listings
+        @user = User.find(params[:id])
+        render json: @user.listings
+      end
+
+      def show_conversations
+        @user = User.find(params[:id])
+        render json: @user.conversations
+      end
 
       # def update
 
@@ -38,8 +49,8 @@ module Api
       # end
 
       def index
-        render json: User.all, include: ['listings','communities','conversations','organizations']
-
+        @users = User.all
+        render json: @users
       end
 
       private
