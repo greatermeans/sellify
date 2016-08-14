@@ -21,4 +21,6 @@ end
 	FactoryGirl.create(:tag)
 end
 
-FactoryGirl.create(:community)
+5.times do
+	FactoryGirl.create(:community)
+end

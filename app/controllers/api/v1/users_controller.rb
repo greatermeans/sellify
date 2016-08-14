@@ -49,8 +49,8 @@ module Api
       # end
 
       def index
-        @users = User.all
-        render json: @users
+        @users = User.joins(:organizations)
+        render json: @users, include: ['listings','communities','conversations','organizations']
       end
 
       private

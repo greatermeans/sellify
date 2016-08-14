@@ -4,7 +4,8 @@ module Api
 		class SellersController < ApplicationController
 
 			def index
-				render json: Seller.all, include: ['listings','seller'] 
+				@sellers = Seller.joins(:listings)
+				render json: @sellers, include: ['listings'] 
 			end
 
 		end
