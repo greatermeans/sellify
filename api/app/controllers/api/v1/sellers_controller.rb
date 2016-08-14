@@ -7,7 +7,6 @@ module Api
 				@sellers = Seller.joins(:listings)
 				render json: @sellers, include: ['listings'] 
 			end
-
 		end
 	end
 end
