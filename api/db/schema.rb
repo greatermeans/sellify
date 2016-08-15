@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20160812211616) do
     t.string   "street_address"
     t.string   "city"
     t.string   "state"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
