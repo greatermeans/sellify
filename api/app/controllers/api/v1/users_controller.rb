@@ -15,7 +15,7 @@ module Api
         binding.pry
         if @user.save
           login(@user)
-          render json: @user, include: ['listings','organizations']
+          render json: @user, include: ['listings','organizations'] 
         else
           render json: @user.errors.full_messages
         end
