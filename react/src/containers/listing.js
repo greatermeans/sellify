@@ -12,7 +12,7 @@ const Listing = class extends Component {
 
 	render() {
 		return(
-		<div onClick={this.doSomething.bind(this)}>
+		<div>
 			hello
 		</div>
 	)}

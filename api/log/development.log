@@ -3715,9 +3715,9 @@ Completed 200 OK in 22ms (Views: 15.1ms | ActiveRecord: 0.0ms)
   [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 34], ["organization_id", 4], ["created_at", 2016-08-14 16:28:48 UTC], ["updated_at", 2016-08-14 16:28:48 UTC]]
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
 Started GET "/api/v1/listings" for ::1 at 2016-08-14 12:29:00 -0400
-  
+
 ActionController::RoutingError (undefined method `protect_from_forgery' for ApplicationController:Class):
-  
+
 app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
 app/controllers/application_controller.rb:1:in `<top (required)>'
 app/controllers/api/v1/listings_controller.rb:4:in `<module:V1>'
@@ -3730,15 +3730,15 @@ Processing by Api::V1::ListingsController#index as HTML
 Completed 500 Internal Server Error in 116ms (ActiveRecord: 12.4ms)
 
 
-  
+
 NoMethodError (undefined method `status' for #<Listing:0x007f813e8f0db0>):
-  
+
 app/models/listing.rb:8:in `is_available?'
 app/controllers/api/v1/listings_controller.rb:16:in `index'
 Started GET "/favicon.ico" for ::1 at 2016-08-14 12:29:59 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3767,9 +3767,9 @@ Processing by Api::V1::ListingsController#index as HTML
 Completed 500 Internal Server Error in 73ms (ActiveRecord: 6.7ms)
 
 
-  
+
 NoMethodError (undefined method `status' for #<Listing:0x007fe9b9bc7668>):
-  
+
 app/models/listing.rb:8:in `is_available?'
 app/controllers/api/v1/listings_controller.rb:16:in `index'
   [1m[36mListing Load (1.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" ORDER BY "listings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
@@ -3781,15 +3781,15 @@ Processing by Api::V1::ListingsController#index as HTML
 Completed 500 Internal Server Error in 107ms (ActiveRecord: 15.0ms)
 
 
-  
+
 NoMethodError (undefined method `address' for #<Seller:0x007fe9bc922a18>):
-  
+
 app/models/listing.rb:12:in `seller_address'
 app/controllers/api/v1/listings_controller.rb:16:in `index'
 Started GET "/favicon.ico" for ::1 at 2016-08-14 12:31:38 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3838,9 +3838,9 @@ Completed 200 OK in 183ms (Views: 139.0ms | ActiveRecord: 37.5ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 12:31:55 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3943,9 +3943,9 @@ Completed 200 OK in 138ms (Views: 105.3ms | ActiveRecord: 24.7ms)
 
 
 Started GET "/api/v1/sellers" for ::1 at 2016-08-14 12:42:56 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/sellers"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3967,9 +3967,9 @@ puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/api/v1/sellers" for ::1 at 2016-08-14 12:44:12 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/sellers"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3991,9 +3991,9 @@ puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/api/v1/sellers" for ::1 at 2016-08-14 12:44:28 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/sellers"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -4021,11 +4021,11 @@ Processing by Api::V1::SellersController#index as HTML
 Completed 500 Internal Server Error in 58ms (ActiveRecord: 8.3ms)
 
 
-  
+
 NoMethodError (undefined method `users' for #<Seller:0x007fe9b9d774b8>
 Did you mean?  user
                user=):
-  
+
 app/controllers/api/v1/sellers_controller.rb:7:in `index'
 Started GET "/api/v1/sellers" for ::1 at 2016-08-14 12:45:02 -0400
 Processing by Api::V1::SellersController#index as HTML
@@ -4041,9 +4041,9 @@ Completed 200 OK in 128ms (Views: 96.9ms | ActiveRecord: 23.1ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 12:45:03 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -4091,9 +4091,9 @@ Completed 200 OK in 151ms (Views: 104.4ms | ActiveRecord: 23.3ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 13:13:39 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -4115,9 +4115,9 @@ puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/api/v1/users" for ::1 at 2016-08-14 13:14:07 -0400
-  
+
 ArgumentError (Before process_action callback :login_required has not been defined):
-  
+
 app/controllers/api/v1/users_controller.rb:5:in `<class:UsersController>'
 app/controllers/api/v1/users_controller.rb:4:in `<module:V1>'
 app/controllers/api/v1/users_controller.rb:2:in `<module:Api>'
@@ -4198,9 +4198,9 @@ Completed 200 OK in 169ms (Views: 112.8ms | ActiveRecord: 37.9ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 13:17:07 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -4264,9 +4264,9 @@ Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
 
 
 Started GET "/api/v1/" for ::1 at 2016-08-14 13:18:02 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -4395,11 +4395,11 @@ Completed 200 OK in 486ms (Views: 393.1ms | ActiveRecord: 70.7ms)
 
 
 Started GET "/api/v1/users" for ::1 at 2016-08-14 13:22:52 -0400
-  
+
 SyntaxError (/Users/gakouri/Documents/flatiron/sellify/app/controllers/api/v1/users_controller.rb:41: syntax error, unexpected [, expecting keyword_do or '{' or '('
 ...ender json: User.all, include ['listings','communities','tra...
 ...                               ^):
-  
+
 app/controllers/api/v1/users_controller.rb:41: syntax error, unexpected [, expecting keyword_do or '{' or '('
 Started GET "/api/v1/users" for ::1 at 2016-08-14 13:23:04 -0400
 Processing by Api::V1::UsersController#index as HTML
@@ -5479,23 +5479,23 @@ Completed 200 OK in 190ms (Views: 138.1ms | ActiveRecord: 27.7ms)
 
 
 Started GET "/api/v1/users" for ::1 at 2016-08-14 14:38:27 -0400
-  
-SyntaxError (/Users/gakouri/Documents/flatiron/sellify/app/controllers/api/v1/users_controller.rb:26: syntax error, unexpected tIDENTIFIER, expecting keyword_end
-        render json: User.find params[:id]  
-                                     ^):
-  
-app/controllers/api/v1/users_controller.rb:26: syntax error, unexpected tIDENTIFIER, expecting keyword_end
-Started GET "/api/v1/users" for ::1 at 2016-08-14 14:40:45 -0400
-  
+
 SyntaxError (/Users/gakouri/Documents/flatiron/sellify/app/controllers/api/v1/users_controller.rb:26: syntax error, unexpected tIDENTIFIER, expecting keyword_end
         render json: User.find params[:id]
                                      ^):
-  
+
+app/controllers/api/v1/users_controller.rb:26: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/api/v1/users" for ::1 at 2016-08-14 14:40:45 -0400
+
+SyntaxError (/Users/gakouri/Documents/flatiron/sellify/app/controllers/api/v1/users_controller.rb:26: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+        render json: User.find params[:id]
+                                     ^):
+
 app/controllers/api/v1/users_controller.rb:26: syntax error, unexpected tIDENTIFIER, expecting keyword_end
 Started GET "/favicon.ico" for ::1 at 2016-08-14 14:40:46 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -5609,9 +5609,9 @@ Completed 200 OK in 320ms (Views: 225.6ms | ActiveRecord: 56.5ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 14:40:52 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -5725,9 +5725,9 @@ Completed 200 OK in 386ms (Views: 290.0ms | ActiveRecord: 70.4ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 14:41:04 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -5749,16 +5749,16 @@ puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/api/v1/users" for ::1 at 2016-08-14 14:41:17 -0400
-  
+
 SyntaxError (/Users/gakouri/Documents/flatiron/sellify/app/controllers/api/v1/users_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting keyword_end
         render json: User.find params[:id]
                                      ^):
-  
+
 app/controllers/api/v1/users_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting keyword_end
 Started GET "/favicon.ico" for ::1 at 2016-08-14 14:41:18 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -5780,16 +5780,16 @@ puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/api/v1/users" for ::1 at 2016-08-14 14:42:15 -0400
-  
+
 SyntaxError (/Users/gakouri/Documents/flatiron/sellify/app/controllers/api/v1/users_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting keyword_end
         render json: User.find params[:id]
                                      ^):
-  
+
 app/controllers/api/v1/users_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting keyword_end
 Started GET "/favicon.ico" for ::1 at 2016-08-14 14:42:17 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -5903,9 +5903,9 @@ Completed 200 OK in 591ms (Views: 498.2ms | ActiveRecord: 73.4ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 14:44:44 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -5932,13 +5932,13 @@ Processing by Api::V1::UsersController#show as HTML
 Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `pry' for #<Binding:0x007ffa62eae638>
 Did you mean?  pretty_print
                pretty_inspect
                pretty_print_cycle
                try):
-  
+
 app/controllers/api/v1/users_controller.rb:26:in `show'
 Started GET "/api/v1/users/1" for ::1 at 2016-08-14 14:45:10 -0400
 Processing by Api::V1::UsersController#show as HTML
@@ -5954,9 +5954,9 @@ Completed 200 OK in 124ms (Views: 58.8ms | ActiveRecord: 29.4ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 14:45:11 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6006,9 +6006,9 @@ Completed 200 OK in 103ms (Views: 78.5ms | ActiveRecord: 7.8ms)
 
 
 Started GET "/api/v1/users/12/listings" for ::1 at 2016-08-14 14:50:30 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/api/v1/users/12/listings"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6219,9 +6219,9 @@ Completed 200 OK in 333ms (Views: 267.5ms | ActiveRecord: 46.3ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 15:05:11 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6355,9 +6355,9 @@ Completed 200 OK in 621ms (Views: 531.9ms | ActiveRecord: 71.4ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 15:05:45 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6491,9 +6491,9 @@ Completed 200 OK in 445ms (Views: 367.7ms | ActiveRecord: 67.6ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 15:05:57 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6590,9 +6590,9 @@ Completed 200 OK in 490ms (Views: 403.8ms | ActiveRecord: 70.0ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 15:07:35 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6680,9 +6680,9 @@ Completed 200 OK in 478ms (Views: 363.1ms | ActiveRecord: 86.7ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 15:15:26 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6908,9 +6908,9 @@ Completed 200 OK in 439ms (Views: 347.8ms | ActiveRecord: 64.4ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 15:46:21 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7007,9 +7007,9 @@ Completed 200 OK in 381ms (Views: 296.8ms | ActiveRecord: 54.7ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 16:11:10 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7123,9 +7123,9 @@ Completed 200 OK in 695ms (Views: 585.2ms | ActiveRecord: 77.8ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 16:12:10 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7239,9 +7239,9 @@ Completed 200 OK in 580ms (Views: 468.9ms | ActiveRecord: 75.7ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 16:13:01 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7569,9 +7569,9 @@ Completed 200 OK in 647ms (Views: 543.7ms | ActiveRecord: 91.4ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 16:58:59 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7674,9 +7674,9 @@ Completed 200 OK in 320ms (Views: 270.2ms | ActiveRecord: 42.3ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 17:00:53 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7702,14 +7702,14 @@ Processing by Api::V1::SellersController#index as HTML
 Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveRecord::ConfigurationError (Can't join 'Seller' to association named 'users'; perhaps you misspelled it?):
-  
+
 app/controllers/api/v1/sellers_controller.rb:8:in `index'
 Started GET "/favicon.ico" for ::1 at 2016-08-14 17:01:55 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7763,9 +7763,9 @@ Completed 200 OK in 414ms (Views: 343.4ms | ActiveRecord: 54.4ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 17:02:18 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -7911,9 +7911,9 @@ Completed 200 OK in 162ms (Views: 116.0ms | ActiveRecord: 25.5ms)
 
 
 Started GET "/favicon.ico" for ::1 at 2016-08-14 17:03:44 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -8225,9 +8225,9 @@ Completed 200 OK in 80ms (Views: 32.3ms | ActiveRecord: 3.7ms)
 
 
 Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-14 20:15:47 -0400
-  
+
 LoadError (cannot load such file -- /Users/gakouri/Documents/flatiron/sellify/config/routes.rb):
-  
+
 activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `load'
 activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `block in load'
 activesupport (5.0.0.1) lib/active_support/dependencies.rb:259:in `load_dependency'
@@ -8283,9 +8283,9 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-14 20:18:23 -0400
   [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -8307,9 +8307,9 @@ puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-14 20:38:47 -0400
-  
+
 ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
@@ -12116,3 +12116,360 @@ Completed 200 OK in 903ms (Views: 663.9ms | ActiveRecord: 196.3ms)
   [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["organization_id", 1], ["LIMIT", 1]]
   [1m[36mListing Load (3.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1 ORDER BY "listings"."created_at" ASC[0m  [["user_id", 1]]
+=======
+  [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT "sellers".* FROM "sellers"[0m
+Started GET "/" for ::1 at 2016-08-14 21:53:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/gakouri/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gakouri/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2016-08-14 21:53:24 -0400
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/api/v1/users/undefined/" for ::1 at 2016-08-14 22:24:17 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 222ms (ActiveRecord: 53.7ms)
+
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+
+app/controllers/api/v1/users_controller.rb:25:in `show'
+Started GET "/api/v1/users/118/" for ::1 at 2016-08-14 22:24:30 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"118"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 2.0ms)
+
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=118):
+
+app/controllers/api/v1/users_controller.rb:25:in `show'
+Started GET "/api/v1/users/118/" for ::1 at 2016-08-14 22:25:07 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"118"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 1.2ms)
+
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=118):
+
+app/controllers/api/v1/users_controller.rb:25:in `show'
+Started GET "/api/v1/users/" for ::1 at 2016-08-14 22:25:20 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mSeller Load (6.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (4.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (2.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (3.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 189], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 189]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 189]]
+[active_model_serializers]   [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 189]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 189]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 190], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 190]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 190]]
+[active_model_serializers]   [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 190]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 190]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 191], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 191]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 191]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 191]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 191]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 192], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 192]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 192]]
+[active_model_serializers]   [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 192]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 192]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 193], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 193]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 193]]
+[active_model_serializers]   [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 193]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 193]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 194], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 194]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 194]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 194]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 194]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 195], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 195]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 195]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 195]]
+[active_model_serializers]   [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 195]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 196], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 196]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 196]]
+[active_model_serializers]   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 196]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 196]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 197], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 197]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 197]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 197]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 197]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (538.57ms)
+Completed 200 OK in 679ms (Views: 597.9ms | ActiveRecord: 79.4ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-14 22:25:44 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (59.87ms)
+Completed 200 OK in 95ms (Views: 64.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-14 22:27:31 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (204.88ms)
+Completed 200 OK in 296ms (Views: 175.6ms | ActiveRecord: 46.4ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+  [1m[36mListing Load (1.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-14 22:29:17 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (199.67ms)
+Completed 200 OK in 238ms (Views: 168.6ms | ActiveRecord: 45.2ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-14 22:29:49 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (357.1ms)
+Completed 200 OK in 424ms (Views: 324.0ms | ActiveRecord: 49.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-14 22:30:29 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (181.26ms)
+Completed 200 OK in 239ms (Views: 155.2ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-14 22:31:43 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (642.74ms)
+Completed 200 OK in 723ms (Views: 600.7ms | ActiveRecord: 61.5ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-14 22:31:46 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (1.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (1.7ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (107.98ms)
+Completed 200 OK in 114ms (Views: 101.2ms | ActiveRecord: 10.2ms)

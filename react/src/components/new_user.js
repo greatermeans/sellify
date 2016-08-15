@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
+import addUser from '../actions/add_user'
 
 class NewUser extends Component{
+
 	submitHandler(event){
 		event.preventDefault()
 		let name = event.target.value
-
+		addUser({name:name})
 	}
 
 	render(){
@@ -17,3 +19,5 @@ class NewUser extends Component{
 	}
 
 }
+
+export default NewUser
