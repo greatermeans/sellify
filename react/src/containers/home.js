@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from  '../components/navBar'
-import CreateListing from '../components/createListing'
+import NewListingForm from '../components/newListingForm'
 import BookMarked from '../components/bookmarked'
 import AllListing from '../components/allListing'
 import getUser from '../actions/getUser'
@@ -11,7 +11,7 @@ const Home = class extends Component {
 		return(
 			<div>
 				<NavBar />
-				<CreateListing />
+				<NewListingForm />
 			  <AllListing />
 				<BookMarked />
 			</div>
