@@ -5,9 +5,6 @@ export default class MyProfile extends Component {
     return(
       <div>
 
-      {this.props.}
-
-
       </div>
     )
   }
