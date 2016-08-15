@@ -14,7 +14,6 @@ const Routes = (
     </Route>
     <Route path='/home' component={App}>
       <Route path='/my_profile' component={MyProfile} />
-      {/* <Route path='/listings' component={Listings} /> */}
     </Route>
   </Router>
 )
