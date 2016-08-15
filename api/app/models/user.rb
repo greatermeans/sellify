@@ -15,7 +15,7 @@ class User < ApplicationRecord
   end
 
   def is_seller?
-    self.seller.listings.length != 0
+    self.seller == nil ? false : true
   end
 
 
