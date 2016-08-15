@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-import addUser from '../actions/add_user'
+import addUser from '../actions/addUser'
 
 class NewUser extends Component{
 
 	submitHandler(event){
 		event.preventDefault()
-		let name = event.target.value
-		addUser({name:name})
+		let userData = JSON.stringify(event.target.firstChild.value)
+		debugger
+		addUser(userData)
 	}
 
 	render(){

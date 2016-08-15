@@ -11788,3 +11788,1181 @@ Processing by Api::V1::UsersController#show as HTML
 Completed 200 OK in 114ms (Views: 101.2ms | ActiveRecord: 10.2ms)
 
 
+Started GET "/api/v1/users/188" for ::1 at 2016-08-15 00:17:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (3.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (3.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (248.22ms)
+Completed 200 OK in 329ms (Views: 235.2ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/api/v1/users/188" for ::1 at 2016-08-15 00:18:25 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (41.74ms)
+Completed 200 OK in 62ms (Views: 44.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:19:13 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (1.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (108.71ms)
+Completed 200 OK in 240ms (Views: 193.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:19:31 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (1.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.7ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (1.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (98.18ms)
+Completed 200 OK in 174ms (Views: 109.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:20:47 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (142.78ms)
+Completed 200 OK in 211ms (Views: 121.9ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:21:35 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (107.8ms)
+Completed 200 OK in 145ms (Views: 90.2ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:22:16 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (141.7ms)
+Completed 200 OK in 193ms (Views: 125.9ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:22:54 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (164.54ms)
+Completed 200 OK in 214ms (Views: 146.3ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:23:10 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (109.06ms)
+Completed 200 OK in 160ms (Views: 93.6ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 00:23:49 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (238.56ms)
+Completed 200 OK in 293ms (Views: 204.0ms | ActiveRecord: 49.7ms)
+
+
+Started POST "/api/v1/users/" for ::1 at 2016-08-15 09:08:05 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"name"=>"hjonasd", "user"=>{}}
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:19:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (2.1ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (15.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (272.1ms)
+Completed 200 OK in 352ms (Views: 242.6ms | ActiveRecord: 73.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:26:57 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.8ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (106.96ms)
+Completed 200 OK in 141ms (Views: 104.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:31 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (1.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.7ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (1.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (1.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.9ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (2.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (3.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (213.01ms)
+Completed 200 OK in 242ms (Views: 199.6ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:33 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (1.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (1.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (1.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (213.52ms)
+Completed 200 OK in 219ms (Views: 202.6ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:34 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (103.58ms)
+Completed 200 OK in 106ms (Views: 96.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:35 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (1.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (1.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (89.0ms)
+Completed 200 OK in 92ms (Views: 77.4ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:38 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.9ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (2.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (2.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (96.03ms)
+Completed 200 OK in 100ms (Views: 85.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:41 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (58.01ms)
+Completed 200 OK in 69ms (Views: 61.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:45 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (4.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (1.0ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (102.81ms)
+Completed 200 OK in 107ms (Views: 92.9ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 09:29:53 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/gakouri/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gakouri/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (24.6ms)
+Completed 200 OK in 50ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:29:56 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (99.22ms)
+Completed 200 OK in 103ms (Views: 89.2ms | ActiveRecord: 11.2ms)
+
+
+Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-15 09:30:26 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:31:12 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (29.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (1.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (481.17ms)
+Completed 200 OK in 524ms (Views: 449.3ms | ActiveRecord: 42.3ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:31:15 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (146.69ms)
+Completed 200 OK in 149ms (Views: 139.1ms | ActiveRecord: 8.9ms)
+
+
+Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-15 09:32:45 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:32:46 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (2.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (5.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (8.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (9.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (1.0ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (7.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (1.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (230.99ms)
+Completed 200 OK in 269ms (Views: 192.6ms | ActiveRecord: 49.8ms)
+
+
+Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-15 09:32:52 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:38:27 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (247.39ms)
+Completed 200 OK in 290ms (Views: 246.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:44:58 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (1.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (170.99ms)
+Completed 200 OK in 196ms (Views: 167.5ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:54:17 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (280.88ms)
+Completed 200 OK in 391ms (Views: 247.8ms | ActiveRecord: 67.1ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 09:56:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (2.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (7.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (1.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (3.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (419.0ms)
+Completed 200 OK in 512ms (Views: 372.4ms | ActiveRecord: 89.6ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:09:35 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.9ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (1.8ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (1.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (240.43ms)
+Completed 200 OK in 289ms (Views: 235.2ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:10:35 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (1.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (196.77ms)
+Completed 200 OK in 229ms (Views: 195.1ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:10:52 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (2.8ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.8ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (2.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (1.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (1.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (141.0ms)
+Completed 200 OK in 148ms (Views: 126.8ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:12:30 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (22.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (2.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (1.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (2.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (2.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (1.9ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.7ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (3.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (3.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (299.61ms)
+Completed 200 OK in 357ms (Views: 288.2ms | ActiveRecord: 48.8ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:13:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (1.1ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (1.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mSeller Load (0.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (300.33ms)
+Completed 200 OK in 548ms (Views: 290.2ms | ActiveRecord: 179.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:16:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 9.8ms)
+
+
+  
+ActiveModelSerializers::Adapter::UnknownAdapterError (NameError: ActiveModelSerializers::Adapter::UnknownAdapterError. Unknown adapter: ":json_api". Valid adapters are: []):
+  
+app/controllers/api/v1/users_controller.rb:26:in `show'
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:16:07 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveModelSerializers::Adapter::UnknownAdapterError (NameError: ActiveModelSerializers::Adapter::UnknownAdapterError. Unknown adapter: ":json_api". Valid adapters are: []):
+  
+app/controllers/api/v1/users_controller.rb:26:in `show'
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:16:30 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveModelSerializers::Adapter::UnknownAdapterError (NameError: ActiveModelSerializers::Adapter::UnknownAdapterError. Unknown adapter: ":json_api". Valid adapters are: []):
+  
+app/controllers/api/v1/users_controller.rb:26:in `show'
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:17:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (2.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (377.08ms)
+Completed 200 OK in 458ms (Views: 347.9ms | ActiveRecord: 65.7ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:19:43 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (11.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (317.79ms)
+Completed 200 OK in 383ms (Views: 306.1ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:20:02 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (3.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (240.29ms)
+Completed 200 OK in 280ms (Views: 233.1ms | ActiveRecord: 14.5ms)
+
+
+Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-15 10:21:31 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/api/v1/users/188/" for ::1 at 2016-08-15 10:21:32 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 188], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.9ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mConversation Load (8.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 188]]
+[active_model_serializers]   [1m[36mCommunity Load (0.5ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "communities" ON "users"."id" = "communities"."user_id" WHERE "communities"."organization_id" = $1[0m  [["organization_id", 23]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 46]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 47]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 48]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 49]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers]   [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "categories" ON "tags"."id" = "categories"."tag_id" WHERE "categories"."listing_id" = $1[0m  [["listing_id", 50]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (150.1ms)
+Completed 200 OK in 194ms (Views: 141.1ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/api/v1/users/" for ::1 at 2016-08-15 10:21:51 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"\"john\""=>nil}
+Completed   in 309118ms (ActiveRecord: 0.0ms)
+
+

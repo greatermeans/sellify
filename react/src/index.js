@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import combineReducer from './reducers/combine_reducer'
+import Reducers from './reducers/combineReducer'
 import { createStore , combineReducers, bindActionCreators } from 'redux'
 import { connect, Provider} from 'react-redux'
 
-const store = createStore(combineReducer)
+const store = createStore(Reducers)
 
 
 ReactDOM.render(

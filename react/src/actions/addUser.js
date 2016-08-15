@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const addUser = (userData)=>{
-	var request = 'http://localhost:3000/api/v1/users/'
+	const request = 'http://localhost:3000/api/v1/users/'
+	debugger
 	axios.post(request,userData)
 	.then( (response)=>{
 		return {

@@ -4,7 +4,6 @@ import getUser from '../actions/getUser'
 
 const User = class extends Component {
 	componentDidMount() {
-		debugger
 		getUser(188)
 	}
 	render() {
