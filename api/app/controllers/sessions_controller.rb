@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  # skip_before_action :login_required, only: [:new, :create]
+  skip_before_action :login_required, only: [:new, :create]
 
   # def new
   #   if logged_in?
@@ -9,8 +9,22 @@ class SessionsController < ApplicationController
   # end
 
 
-  # def create
-  #   user = User.find_by(email: params[:user][:email])
+  def create
+    user = User.find_by(email: params[:user][:email])
+    if user != nil
+      if user.authenticate(password_param)
+      session[:user_id] = user.id
+      redirect_to profile_path(session[:user_id])
+      else
+      flash.now[:invalidpass] = 'Incorrect password'
+      render 'new'
+      end
+    else
+      flash.now[:invaliduser] = 'User does not exist'
+      render 'new'
+    end
+
+
   #   if user == nil
   #     flash.now[:message] = 'A user with that email address does not exist. Please create an account.'
   #     render 'new'
@@ -24,9 +38,9 @@ class SessionsController < ApplicationController
   # end
 
 
-  # def destroy
-  #   session[:user_id] = nil
-  #   redirect_to root_path
-  # end
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
+  end
 
 end
