@@ -3,7 +3,7 @@ class Organization < ApplicationRecord
   has_many :users, through: :communities
 
   def all_listings
-    self.users.joins(:listings).where(seller_id: user.id)
+    self.users.joins(:listings).where('seller_id = ?', user.id)
   end
 
 end
