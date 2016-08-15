@@ -90,8 +90,7 @@ class NewUserForm extends Component {
 
 export default reduxForm({
  form: 'newForm',
- fields: ['first_name', 'last_name', 'email', 'password', 
+ fields: ['first_name', 'last_name', 'email', 'password',
 'email', 'street_address', 'city', 'state', 'phone']
 }, null,{addUser})(NewUserForm);
-
 
