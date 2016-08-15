@@ -15,7 +15,7 @@ module Api
         binding.pry
         if @user.save
           login(@user)
-          render json: @user, include: ['listings','organizations'] 
+          render json: @user, include: ['listings','organizations']
         else
           render json: @user.errors.full_messages
         end
@@ -55,7 +55,7 @@ module Api
       private
 
       def user_params
-        JSON.parse(params.first[0])
+        JSON.parse(params.first[0]) 
         # params.require(:user).permit(:first_name, :last_name, :street_address, :city, :state, :password, :email)
       end
 
