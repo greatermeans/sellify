@@ -4,7 +4,7 @@ import getUser from '../actions/getUser'
 
 const User = class extends Component {
 	componentDidMount() {
-		getUser(188)
+		getUser(55)
 	}
 	render() {
 		return(
