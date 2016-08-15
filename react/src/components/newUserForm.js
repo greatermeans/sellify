@@ -4,32 +4,15 @@ import { reduxForm } from 'redux-form';
 
 
 class NewUserForm extends Component {
-  submitHandler(event){
-    event.preventDefault()
-    let form = document.getElementById("new_user")
-    let userData = JSON.stringify({
-      first_name:this.props.fields.firstName.value,
-      last_name: this.props.fields.lastName.value,
-      street_address:this.props.fields.streetAddress.value,
-      email: this.props.fields.email.value,
-      city:this.props.fields.city.value,
-      state:this.props.fields.state.value,
-      phone:this.props.fields.phone.value,
-      password:this.props.fields.password.value
-    })
-    debugger
-    addUser(userData)
-  }
-
 
  render() {
-   const {fields: {firstName, lastName, password, email, streetAddress, city, state, phone}} = this.props;
+   const {fields: {first_name, last_name, password, email, street_address, city, state, phone}, handleSubmit} = this.props;
    return (
-  <form id='new_user' onSubmit={this.submitHandler.bind(this)}>
+  <form id='new_user' onSubmit={handleSubmit(addUser)}>
     <label>First name:</label>
-    <input type='text' {...firstName}/><br/>
+    <input type='text' {...first_name}/><br/>
     <label>Last name:</label>
-    <input type='text' {...lastName}/><br/>
+    <input type='text' {...last_name}/><br/>
     <label>Password:</label>
     <input type='password' {...password}/><br/>
     <label>Email:</label>
@@ -37,7 +20,7 @@ class NewUserForm extends Component {
     <label>Phone:</label>
     <input type='text' {...phone}/><br/>
     <label>Street Address:</label>
-    <input type='text' {...streetAddress}/><br/>
+    <input type='text' {...street_address}/><br/>
     <label>City:</label>
     <input type='text' {...city}/><br/>
     <label>State:</label>
@@ -103,7 +86,7 @@ class NewUserForm extends Component {
 
 NewUserForm = reduxForm({ // <----- THIS IS THE IMPORTANT PART!
  form: 'newForm',                           // a unique name for this form
- fields: ['firstName', 'lastName', 'email', 'password', 'email', 'streetAddress', 'city', 'state', 'phone'] // all the fields in your form
+ fields: ['first_name', 'last_name', 'email', 'password', 'email', 'street_address', 'city', 'state', 'phone'] // all the fields in your form
 })(NewUserForm);
 
 export default NewUserForm;

@@ -2641,3 +2641,515 @@ ORDER BY c.conname
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-15 15:14:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started OPTIONS "/api/v1/users/" for ::1 at 2016-08-15 15:14:59 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started OPTIONS "/api/v1/users" for ::1 at 2016-08-15 16:04:15 -0400
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 16:09:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"firstName"=>"foo", "lastName"=>"bar", "email"=>"bobbo", "password"=>"[FILTERED]", "streetAddress"=>"1051 Riverside Drive", "city"=>"New York", "state"=>"NY", "phone"=>"6467745244"}}
+DEPRECATION WARNING: Method first is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from user_params at /Users/gakouri/Documents/flatiron/sellify/api/app/controllers/api/v1/users_controller.rb:59)
+DEPRECATION WARNING: Method first is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from user_params at /Users/gakouri/Documents/flatiron/sellify/api/app/controllers/api/v1/users_controller.rb:59)
+Completed 500 Internal Server Error in 29972ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (784: unexpected token at 'user'):
+  
+app/controllers/api/v1/users_controller.rb:59:in `user_params'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 16:09:50 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"firstName"=>"foo", "lastName"=>"bar", "email"=>"bobbo", "password"=>"[FILTERED]", "streetAddress"=>"1051 Riverside Drive", "city"=>"New York", "state"=>"NY", "phone"=>"6467745244"}}
+Unpermitted parameters: firstName, lastName, streetAddress, phone
+Unpermitted parameters: firstName, lastName, streetAddress, phone
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "city", "state", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bobbo"], ["city", "New York"], ["state", "NY"], ["password_digest", "$2a$10$xfgYydeoCa0dZM/2w/JTlOQd40/25Nx/aVnwcGUkkB8uZNN.N0iDG"], ["created_at", 2016-08-15 20:13:18 UTC], ["updated_at", 2016-08-15 20:13:18 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/users" for ::1 at 2016-08-15 16:13:18 -0400
+Completed 500 Internal Server Error in 207312ms (ActiveRecord: 76.8ms)
+
+
+  
+NoMethodError (undefined method `login' for #<Api::V1::UsersController:0x007ff7fb548d00>):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"lad@aol.com", "password"=>"[FILTERED]", "city"=>"new york", "state"=>"AK", "phone"=>"1231231234"}}
+Unpermitted parameter: phone
+Unpermitted parameter: phone
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "city", "state", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lad@aol.com"], ["city", "new york"], ["state", "AK"], ["password_digest", "$2a$10$xrrHGfbTmYFc7xlP3LlTj.RqAzU5SnTFDqXYkKeU97.3g7ZbwtfoW"], ["created_at", 2016-08-15 20:14:37 UTC], ["updated_at", 2016-08-15 20:14:37 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 79633ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `login' for #<Api::V1::UsersController:0x007ff7fb4a0240>):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 16:14:54 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ge", "last_name"=>"sadf", "email"=>"asdfa@aol.com", "password"=>"[FILTERED]", "street_address"=>"123 main", "city"=>"main", "state"=>"AK", "phone"=>"123123"}}
+Unpermitted parameter: phone
+Unpermitted parameter: phone
+Completed   in 75109ms (ActiveRecord: 2.8ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (137.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sellify_dev"[0m
+  [1m[35m (123.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sellify_test"[0m
+  [1m[35m (463.7ms)[0m  [1m[35mCREATE DATABASE "sellify_dev" ENCODING = 'unicode'[0m
+  [1m[35m (253.7ms)[0m  [1m[35mCREATE DATABASE "sellify_test" ENCODING = 'unicode'[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2739943823463427770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOrganizations (20160812143114)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812143114"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20160812143230)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "street_address" character varying, "city" character varying, "state" character varying, "phone" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812143230"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSellers (20160812144700)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "sellers" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812144700"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateConversations (20160812145246)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "conversations" ("id" serial primary key, "user_id" integer, "listing_id" integer, "status" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812145246"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateListings (20160812145806)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "listings" ("id" serial primary key, "seller_id" integer, "title" character varying, "description" character varying, "location" character varying, "image" character varying, "price" float, "sold?" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812145806"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTags (20160812152144)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812152144"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMessages (20160812200649)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "messages" ("id" serial primary key, "user_id" integer, "seller_id" integer, "subject" character varying, "content" text)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812200649"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCommunities (20160812204823)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "communities" ("id" serial primary key, "user_id" integer, "organization_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812204823"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20160812211616)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "tag_id" integer, "listing_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812211616"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-15 20:16:30 UTC], ["updated_at", 2016-08-15 20:16:30 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2739943823463427770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'communities'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'conversations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'messages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sellers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mSeller Load (1.0ms)[0m  [1m[34mSELECT "sellers".* FROM "sellers"[0m
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mCommunity Load (1.0ms)[0m  [1m[34mSELECT "communities".* FROM "communities"[0m
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flatiron School"], ["created_at", 2016-08-15 20:16:37 UTC], ["updated_at", 2016-08-15 20:16:37 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Outdoors & Music"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baby & Home"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tools"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Movies"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grocery & Jewelry"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Outdoors, Books & Health"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kids"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Clothing & Sports"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Health"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shoes & Music"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Leland"], ["last_name", "Ullrich"], ["email", "nelson@beahan.info"], ["street_address", "4224 Earl Ramp"], ["city", "West Carmine"], ["state", "Wyoming"], ["phone", "1231231234"], ["password_digest", "$2a$10$nwd6PEqrLgKKhNlhqigeuuiTzATEPpeJVJqXwpKpb1.1E93So/0Hy"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Abigail"], ["last_name", "Volkman"], ["email", "cayla_sanford@feeney.io"], ["street_address", "50870 Ahmed Motorway"], ["city", "Hegmannside"], ["state", "Wyoming"], ["phone", "1231231234"], ["password_digest", "$2a$10$eT1kRzAfQAgl/LaNdJ818.Xo27ESlYKK46YXHGDz4/H3XvCw4jcMK"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Ofelia"], ["last_name", "Veum"], ["email", "katelynn_willms@willms.org"], ["street_address", "94359 Brown Springs"], ["city", "Kubborough"], ["state", "Nevada"], ["phone", "1231231234"], ["password_digest", "$2a$10$mmg4v.V1UVRHjIeDimP9Neht2i2pUl9e3w7R/aFsdv.k6G/o0gytm"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Wilfrid"], ["last_name", "Conroy"], ["email", "brooklyn.price@kunze.biz"], ["street_address", "702 Name Bridge"], ["city", "Port Donavon"], ["state", "Colorado"], ["phone", "1231231234"], ["password_digest", "$2a$10$RUAOWtO.HNfCKsqxkN9YLuS2IB.kCcPyXM6r4u0XF/gHDlCnWGQ5K"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Keven"], ["last_name", "Rutherford"], ["email", "mckayla_torphy@baumbach.info"], ["street_address", "49121 Leda Junction"], ["city", "Zoeyport"], ["state", "South Carolina"], ["phone", "1231231234"], ["password_digest", "$2a$10$F25otLXQh8pNr.yn6yDRVO8VR1ylnurODO/ojcuUrVYH1S5oFXA0m"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Gayle"], ["last_name", "Price"], ["email", "ferne@schmidt.net"], ["street_address", "49182 Alexandre Fields"], ["city", "East Will"], ["state", "Washington"], ["phone", "1231231234"], ["password_digest", "$2a$10$VHP8bqSk0Oe9pbq9zFRWeeIgh8xrwDVzbUsphLVryTH2Pl8Fmwf62"], ["created_at", 2016-08-15 20:16:38 UTC], ["updated_at", 2016-08-15 20:16:38 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Megane"], ["last_name", "Wiegand"], ["email", "jayda_watsica@bernhardboyer.com"], ["street_address", "2470 Ratke Island"], ["city", "North Kade"], ["state", "New Mexico"], ["phone", "1231231234"], ["password_digest", "$2a$10$zlVZ5MmHu/HEXZx0l7LbDeB0Ipc4Cp.jvp8Jzl5wtNt7b1wKPf3ba"], ["created_at", 2016-08-15 20:16:39 UTC], ["updated_at", 2016-08-15 20:16:39 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Rebecca"], ["last_name", "Heidenreich"], ["email", "keon_simonis@marks.co"], ["street_address", "31171 Dejon Village"], ["city", "East Amyatown"], ["state", "Alaska"], ["phone", "1231231234"], ["password_digest", "$2a$10$nTwm/x8/vPDKVqRGLAQxoOnrXpQxuOdc6xUBXtsJRq6Wp/CIwRDgu"], ["created_at", 2016-08-15 20:16:39 UTC], ["updated_at", 2016-08-15 20:16:39 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Dasia"], ["last_name", "Deckow"], ["email", "xavier_franecki@hirthe.name"], ["street_address", "64163 Jalon Way"], ["city", "Lake Kelley"], ["state", "Minnesota"], ["phone", "1231231234"], ["password_digest", "$2a$10$/1joLCr90fLlG9.1YL5.DOaYxby/2BhKv04BzomgKjVg16orikFqu"], ["created_at", 2016-08-15 20:16:39 UTC], ["updated_at", 2016-08-15 20:16:39 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Ole"], ["last_name", "Hyatt"], ["email", "jedediah_greenfelder@trantowstroman.io"], ["street_address", "302 Ebert Lodge"], ["city", "Port Tomasaview"], ["state", "Wyoming"], ["phone", "1231231234"], ["password_digest", "$2a$10$32Uor9J0wfPbA7PAWc9NSeA.FJ3eFhL5Du6IR7jMyVObbUsV53kNu"], ["created_at", 2016-08-15 20:16:39 UTC], ["updated_at", 2016-08-15 20:16:39 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", 2016-08-15 20:16:39 UTC], ["updated_at", 2016-08-15 20:16:39 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" ORDER BY "sellers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 1], ["title", "Incredible Granite Pants"], ["description", "Dolorem beatae deleniti magnam illum cupiditate."], ["image", "https://robohash.org/earumquisquamomnis.png?size=300x300&set=set1"], ["price", 84.2], ["sold?", false], ["created_at", 2016-08-15 20:16:39 UTC], ["updated_at", 2016-08-15 20:16:39 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" ORDER BY "sellers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 1], ["title", "Enormous Iron Shoes"], ["description", "Et ipsam nemo reprehenderit cupiditate ratione rerum provident pariatur."], ["image", "https://robohash.org/quiaetamet.png?size=300x300&set=set1"], ["price", 56.28], ["sold?", false], ["created_at", 2016-08-15 20:16:40 UTC], ["updated_at", 2016-08-15 20:16:40 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" ORDER BY "sellers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 1], ["title", "Fantastic Linen Keyboard"], ["description", "Sint perspiciatis culpa aut delectus quia voluptas."], ["image", "https://robohash.org/eligendiineum.png?size=300x300&set=set1"], ["price", 52.22], ["sold?", false], ["created_at", 2016-08-15 20:16:41 UTC], ["updated_at", 2016-08-15 20:16:41 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" ORDER BY "sellers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 1], ["title", "Lightweight Paper Lamp"], ["description", "Et aperiam a quaerat."], ["image", "https://robohash.org/estquaspariatur.png?size=300x300&set=set1"], ["price", 18.4], ["sold?", false], ["created_at", 2016-08-15 20:16:42 UTC], ["updated_at", 2016-08-15 20:16:42 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" ORDER BY "sellers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 1], ["title", "Fantastic Copper Car"], ["description", "Totam corporis est ad quis maiores labore nisi ea."], ["image", "https://robohash.org/etinventorenatus.png?size=300x300&set=set1"], ["price", 64.95], ["sold?", false], ["created_at", 2016-08-15 20:16:43 UTC], ["updated_at", 2016-08-15 20:16:43 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.5ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT  "organizations".* FROM "organizations" ORDER BY "organizations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["organization_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 7], ["listing_id", 5], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 5], ["listing_id", 5], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 6], ["listing_id", 1], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 2], ["listing_id", 3], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 4], ["listing_id", 2], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 3], ["listing_id", 5], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 10], ["listing_id", 5], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 3], ["listing_id", 4], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 5], ["listing_id", 4], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("tag_id", "listing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 9], ["listing_id", 5], ["created_at", 2016-08-15 20:16:44 UTC], ["updated_at", 2016-08-15 20:16:44 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/users" for ::1 at 2016-08-15 16:17:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ge", "last_name"=>"sadf", "email"=>"asdfa@aol.com", "password"=>"[FILTERED]", "street_address"=>"123 main", "city"=>"main", "state"=>"AK", "phone"=>"123123"}}
+Unpermitted parameter: phone
+Unpermitted parameter: phone
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "ge"], ["last_name", "sadf"], ["email", "asdfa@aol.com"], ["street_address", "123 main"], ["city", "main"], ["state", "AK"], ["password_digest", "$2a$10$/dFa4XU0UqCC8PEfwWXBKekzksQ/OYtOoCGV6hlsTjxHbxJ/eazDC"], ["created_at", 2016-08-15 20:18:02 UTC], ["updated_at", 2016-08-15 20:18:02 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 56975ms (ActiveRecord: 18.9ms)
+
+
+  
+NoMethodError (undefined method `login' for #<Api::V1::UsersController:0x007fd52a91b048>):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 16:18:12 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ge", "last_name"=>"sadf", "email"=>"asdfa@aol.com", "password"=>"[FILTERED]", "street_address"=>"123 main", "city"=>"main", "state"=>"AK", "phone"=>"123123"}}
