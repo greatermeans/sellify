@@ -6,16 +6,15 @@ module Api
 
       # before_action :ensure_user_is_current, only: :show
 
-      def new
-        @user = User.new
-      end
+      # def new
+      #   @user = User.new
+      # end
 
       def create
         @user = User.new(user_params)
-        binding.pry
         if @user.save
-          login(@user)
-          render json: @user, include: ['listings','organizations']
+          # login(@user)
+          redirect_to user_path(@user)
         else
           render json: @user.errors.full_messages
         end
@@ -54,10 +53,9 @@ module Api
 
       private
 
-      def user_params
-        JSON.parse(params.first[0])
-        # params.require(:user).permit(:first_name, :last_name, :street_address, :city, :state, :password, :email)
-      end
+      # def user_params
+      #   params.require(:user).permit(:first_name, :last_name, :street_address, :city, :state, :password, :email)
+      # end
 
       # def ensure_user_is_current
       #   redirect_to root_url unless params[:id].to_i == current_user.id

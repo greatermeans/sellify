@@ -1281,3 +1281,9 @@ Completed 500 Internal Server Error in 4514ms (ActiveRecord: 6.0ms)
 ActiveModel::RangeError (7322847463 is out of range for ActiveModel::Type::Integer with limit 4):
   
 app/controllers/api/v1/users_controller.rb:16:in `create'
+Started POST "/api/v1/users/" for ::1 at 2016-08-15 14:34:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (5.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"{\"first_name\":\"Yichen\",\"last_name\":\"yang\",\"street_address\":\"3396\",\"email\":\"yy608@nyu.edu\",\"city\":\"new york\",\"state\":\"\",\"phone\":\"917\",\"password\":\"123\"}"=>"[FILTERED]"}
+DEPRECATION WARNING: Method first is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from user_params at /Users/lillian/Development/sellify/api/app/controllers/api/v1/users_controller.rb:58)
+Started POST "/api/v1/users/" for ::1 at 2016-08-15 14:35:06 -0400
