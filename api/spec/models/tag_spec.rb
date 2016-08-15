@@ -15,7 +15,7 @@ describe Tag do
     make_listings
     @category1 = Category.create(id: 1, tag_id: 1, listing_id: 1)
     @category2 = Category.create(id: 2, tag_id: 1, listing_id: 2)
-    @category2 = Category.create(id: 3, tag_id: 1, listing_id: 3)
+    @category3 = Category.create(id: 3, tag_id: 1, listing_id: 3)
   end
 
   describe "newest_first" do
