@@ -7,7 +7,7 @@ export default class NavBar extends Component {
       <div>
         <ul>
           <li> <Link to={'/'}>Home</Link> </li>
-          <li> <Link to={'/'}>My Profile</Link> </li>
+          <li> <Link to={'/my_profile'}>My Profile</Link> </li>
           <li> <Link to={'/'}>Logout</Link> </li>
           <li> <input type="text" name="search" placeholder="Search" /> </li>
         </ul>
