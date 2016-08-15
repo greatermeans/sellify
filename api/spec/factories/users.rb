@@ -7,6 +7,6 @@ FactoryGirl.define do
     street_address        {Faker::Address.street_address}
     city                  {Faker::Address.city}
     state                 {Faker::Address.state}
-    password              {Faker::Internet.password}
+    password              'one'
   end
 end
