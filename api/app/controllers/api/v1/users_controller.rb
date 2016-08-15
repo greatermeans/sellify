@@ -12,19 +12,18 @@ module Api
 
       def create
         @user = User.new(user_params)
-        @user.save
-        session[:user_id] = @user.id
-        # if @user.save
-        #   # login(@user)
-        #   redirect_to user_path(@user)
-        # else
-        #   render json: @user.errors.full_messages
-        # end
+        binding.pry
+        if @user.save
+          login(@user)
+          render json: @user, include: ['listings','organizations']
+        else
+          render json: @user.errors.full_messages
+        end
       end
 
       def show
         @user = User.find(params[:id])
-        render json: @user, include: [{listings: 'listings', organizations: 'organizations'}]
+        render json: @user, include: ['listings','organizations']
       end
 
       def show_listings
@@ -56,7 +55,8 @@ module Api
       private
 
       def user_params
-        params.require(:user).permit(:first_name, :last_name, :street_address, :city, :state, :password, :email)
+        JSON.parse(params.first[0])
+        # params.require(:user).permit(:first_name, :last_name, :street_address, :city, :state, :password, :email)
       end
 
       # def ensure_user_is_current

@@ -6,7 +6,6 @@ const Listing = class extends Component {
 
 	doSomething() {
 		let tomato = fetchUsers()
-		debugger
 	}
 
 
