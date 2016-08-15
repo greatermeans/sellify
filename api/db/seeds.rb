@@ -20,12 +20,13 @@ FactoryGirl.create(:seller)
 
 5.times do
 	FactoryGirl.create(:listing)
+	sleep 1
 end
 
 10.times do
 	FactoryGirl.create(:community)
 end
 
-10.times do 
+10.times do
 	FactoryGirl.create(:category)
 end
