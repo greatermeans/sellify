@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NavBar from  './components/navBar'
-import CreateListing from './components/createListing'
-import BookMarked from './components/bookmarked'
-import AllListing from './components/allListing'
+import NavBar from  '../components/navBar'
+import CreateListing from '../components/createListing'
+import BookMarked from '../components/bookmarked'
+import AllListing from '../components/allListing'
 import getUser from '../actions/getUser'
 
 const Home = class extends Component {
