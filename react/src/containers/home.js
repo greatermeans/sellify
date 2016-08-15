@@ -6,6 +6,7 @@ import AllListing from '../components/allListing'
 import getUser from '../actions/getUser'
 
 const Home = class extends Component {
+
 	render() {
 		return(
 			<div>
