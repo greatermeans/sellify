@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Listing from './containers/listing'
-import NewUser from './components/new_user.js'
+import User from './containers/user'
+
 
 class App extends Component {
   render() {
     return (
       <div>
-        <NewUser />
-        <Listing />
+      	<User />
       </div>
     );
   }

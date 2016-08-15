@@ -23,7 +23,7 @@ module Api
 
       def show
         @user = User.find(params[:id])
-        render json: @user
+        render json: @user, include: [{listings: 'listings', organizations: 'organizations'}]
       end
 
       def show_listings

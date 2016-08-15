@@ -1,11 +1,15 @@
 import axios from 'axios'
 
-function addUser(user_data) {
+const addUser = (userData)=>{
 	var request = 'http://localhost:3000/api/v1/users/'
-	axios.post(request,user_data)
-	.then(function (response) {
-    console.log('saved successfully');
+	axios.post(request,userData)
+	.then( (response)=>{
+		return {
+		type: 'ADD_USER',
+		payload: response
+	}
   })
 }
 
-export default fetchUsers
+export default addUser 
+
