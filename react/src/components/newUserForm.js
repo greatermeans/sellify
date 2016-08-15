@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
 import addUser from '../actions/addUser'
 import { reduxForm } from 'redux-form';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
 
 class NewUserForm extends Component {
 
@@ -92,10 +89,4 @@ NewUserForm = reduxForm({
 'email', 'street_address', 'city', 'state', 'phone']
 })(NewUserForm);
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({addUser: addUser}, dispatch)
-}
-
-const SmartNewUserForm = connect(null, mapDispatchToProps)(NewUserForm)
-
-export default SmartNewUserForm;
+export default NewUserForm;
