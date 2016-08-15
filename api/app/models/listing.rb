@@ -4,12 +4,9 @@ class Listing < ApplicationRecord
   has_many :categories
   has_many :tags, through: :categories
 
-  def is_available?
-    self.status == 'open'
-  end
 
   def seller_address
-    self.seller.address
+    self.seller.user.street_address
   end
 
 end

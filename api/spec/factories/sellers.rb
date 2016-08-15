@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :seller do
-  	user
+  	user {User.first}
   end
 end
