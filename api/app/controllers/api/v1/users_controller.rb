@@ -11,6 +11,7 @@ module Api
       # end
 
       def create
+        user_params = JSON.parse(params.first[0])
         binding.pry
         @user = User.new(user_params)
         if @user.save

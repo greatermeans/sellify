@@ -8,9 +8,9 @@ class NewUserForm extends Component {
     event.preventDefault()
     let form = document.getElementById("new_user")
     let userData = JSON.stringify({
-      firstName:this.props.fields.firstName.value,
-      lastName: this.props.fields.lastName.value,
-      streetAddress:this.props.fields.streetAddress.value,
+      first_name:this.props.fields.firstName.value,
+      last_name: this.props.fields.lastName.value,
+      street_address:this.props.fields.streetAddress.value,
       city:this.props.fields.city.value,
       state:this.props.fields.state.value,
       phone:this.props.fields.phone.value,

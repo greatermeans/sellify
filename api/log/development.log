@@ -1099,3 +1099,56 @@ Completed 500 Internal Server Error in 3313220ms (ActiveRecord: 0.0ms)
 NameError (undefined local variable or method `user_params' for #<Api::V1::UsersController:0x007f8983442078>):
   
 app/controllers/api/v1/users_controller.rb:15:in `create'
+Started GET "/api/v1/users/55/" for ::1 at 2016-08-15 12:50:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+Completed 404 Not Found in 57ms (ActiveRecord: 27.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=55):
+  
+app/controllers/api/v1/users_controller.rb:25:in `show'
+Started POST "/api/v1/users/" for ::1 at 2016-08-15 12:51:29 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"{\"firstName\":\"john\",\"lastName\":\"smith\",\"streetAddress\":\"12 main st\",\"city\":\"norfolk\",\"state\":\"\",\"phone\":\"1231231234\",\"password\":\"one\"}"=>"[FILTERED]"}
+Unpermitted parameter: {"firstName":"john","lastName":"smith","streetAddress":"12 main st","city":"norfolk","state":"","phone":"1231231234","password":"one"}
+Unpermitted parameter: {"firstName":"john","lastName":"smith","streetAddress":"12 main st","city":"norfolk","state":"","phone":"1231231234","password":"one"}
+Unpermitted parameter: {"firstName":"john","lastName":"smith","streetAddress":"12 main st","city":"norfolk","state":"","phone":"1231231234","password":"one"}
+DEPRECATION WARNING: Method first is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from create at (pry):8)
+DEPRECATION WARNING: Method first is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from create at (pry):9)
+DEPRECATION WARNING: Method first is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from create at (pry):10)
+Started GET "/api/v1/users/55/" for ::1 at 2016-08-15 13:00:59 -0400
+Completed 500 Internal Server Error in 597404ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<Api::V1::UsersController:0x007f9270d606f0>):
+  
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users/" for ::1 at 2016-08-15 13:01:27 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=55):
+  
+app/controllers/api/v1/users_controller.rb:25:in `show'
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"{\"first_name\":\"john\",\"last_name\":\"smith\",\"street_address\":\"123 mint st\",\"city\":\"mint\",\"state\":\"\",\"phone\":\"1231231234\",\"password\":\"one\"}"=>"[FILTERED]"}
+DEPRECATION WARNING: Method first is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from create at /Users/gakouri/Documents/flatiron/sellify/api/app/controllers/api/v1/users_controller.rb:14)
+  [1m[35m (9.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "john"], ["last_name", "smith"], ["street_address", "123 mint st"], ["city", "mint"], ["state", ""], ["phone", 1231231234], ["password_digest", "$2a$10$dFttTHllIhIPiTU26vYk5.9vFT1pFioy/MZsdBsZREM1TBrpEjKrW"], ["created_at", 2016-08-15 17:01:27 UTC], ["updated_at", 2016-08-15 17:01:27 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 29.2ms)
+
+
+  
+NoMethodError (undefined method `user_path' for #<Api::V1::UsersController:0x007f9270bd1848>):
+  
+app/controllers/api/v1/users_controller.rb:18:in `create'
