@@ -7,9 +7,9 @@ class ApplicationController < ActionController::API
   #   User.find(id: session[:user_id]) if session[:user_id]
   # end
 
-  # def login(user)
-  #   session[:user_id] = @user.id
-  # end
+  def login(user)
+    session[:user_id] = @user.id
+  end
 
   # def logged_in?
   #   !!current_user

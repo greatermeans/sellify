@@ -84,9 +84,10 @@ class NewUserForm extends Component {
  }
 }
 
-NewUserForm = reduxForm({ // <----- THIS IS THE IMPORTANT PART!
- form: 'newForm',                           // a unique name for this form
- fields: ['first_name', 'last_name', 'email', 'password', 'email', 'street_address', 'city', 'state', 'phone'] // all the fields in your form
+NewUserForm = reduxForm({
+ form: 'newForm',
+ fields: ['first_name', 'last_name', 'email', 'password', 
+'email', 'street_address', 'city', 'state', 'phone']
 })(NewUserForm);
 
 export default NewUserForm;
