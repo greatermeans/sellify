@@ -4,8 +4,13 @@ Listing.destroy_all
 Community.destroy_all
 Tag.destroy_all
 Organization.destroy_all
+Category.destroy_all
 
 FactoryGirl.create(:organization)
+
+10.times do
+	FactoryGirl.create(:tag)
+end
 
 10.times do
 	FactoryGirl.create(:user)
@@ -18,9 +23,9 @@ FactoryGirl.create(:seller)
 end
 
 10.times do
-	FactoryGirl.create(:tag)
+	FactoryGirl.create(:community)
 end
 
-5.times do
-	FactoryGirl.create(:community)
+10.times do 
+	FactoryGirl.create(:category)
 end
