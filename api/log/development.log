@@ -3153,3 +3153,151 @@ app/controllers/api/v1/users_controller.rb:17:in `create'
 Started POST "/api/v1/users" for ::1 at 2016-08-15 16:18:12 -0400
 Processing by Api::V1::UsersController#create as HTML
   Parameters: {"user"=>{"first_name"=>"ge", "last_name"=>"sadf", "email"=>"asdfa@aol.com", "password"=>"[FILTERED]", "street_address"=>"123 main", "city"=>"main", "state"=>"AK", "phone"=>"123123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ge"], ["last_name", "sadf"], ["email", "asdfa@aol.com"], ["street_address", "123 main"], ["city", "main"], ["state", "AK"], ["phone", "123123"], ["password_digest", "$2a$10$UDDUBjdnOwXtO1zisnB3YuwYs2w2inE/hcuWsxx/Dtbyi3bGdfje6"], ["created_at", 2016-08-15 21:17:20 UTC], ["updated_at", 2016-08-15 21:17:20 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 3548530ms (ActiveRecord: 135.6ms)
+
+
+  
+NoMethodError (undefined method `login' for #<Api::V1::UsersController:0x007fd52a3da430>):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:17:20 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$2zn15vEW1m1diIciK6/OE.7tHpGHEKy5WkGuDdsEhKUEEXjoR7p1S"], ["created_at", 2016-08-15 21:17:21 UTC], ["updated_at", 2016-08-15 21:17:21 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 8.9ms)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Api::V1::UsersController:0x007fd52e275640>
+Did you mean?  user_params):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:19:46 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$Ib62H/WsTZxPuQ9Eh4V33O0iHn.BOd9wWKqyIp8QloOPnRXkAVrvm"], ["created_at", 2016-08-15 21:19:47 UTC], ["updated_at", 2016-08-15 21:19:47 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 10.0ms)
+
+
+  
+NameError (undefined local variable or method `api_v1_user' for #<Api::V1::UsersController:0x007fd52e9d0db8>
+Did you mean?  api_v1_user_url
+               api_v1_url):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:19:59 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$0gj/CypNBnYLsBHG.ktx/eao4B2/YWXBfRXxs0qIF5frc/tMV4J8e"], ["created_at", 2016-08-15 21:19:59 UTC], ["updated_at", 2016-08-15 21:19:59 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 9.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"api/v1/users"} missing required keys: [:id]):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:21:09 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$pU68sEI6C770HHNC9zAlWeIA.419P6IN.hwakB7ofnv0Uwplnj7Am"], ["created_at", 2016-08-15 21:21:10 UTC], ["updated_at", 2016-08-15 21:21:10 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/api/v1/users/16
+Completed 302 Found in 191ms (ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:22:35 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$O0LDjcWOqmaIqca4aJdDyeUG7YieAYUkii4KAeUds6JEqjAkXgjHK"], ["created_at", 2016-08-15 21:22:35 UTC], ["updated_at", 2016-08-15 21:22:35 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/api/v1/users/17
+Completed 302 Found in 118705ms (ActiveRecord: 10.4ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:26:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$xcXCphYkfIMin6OBaf6ZOeztImATBXc0Hrf3TYkM2sRCuRklU4UeW"], ["created_at", 2016-08-15 21:26:29 UTC], ["updated_at", 2016-08-15 21:26:29 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/api/v1/users/18
+Completed 302 Found in 9442ms (ActiveRecord: 16.2ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:27:41 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$XVMDa5MtGKhQrS38RGhM/eamkXsHVWAoeI/Z814ZxPdwgsvH92wz2"], ["created_at", 2016-08-15 21:27:41 UTC], ["updated_at", 2016-08-15 21:27:41 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/api/v1/users/19
+Completed 302 Found in 3683ms (ActiveRecord: 34.8ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:33:20 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$d53SJmqsguXwq6L90mO1HOPL74rDbrqx1bdno09WxrffkZr2f9ygG"], ["created_at", 2016-08-15 21:33:20 UTC], ["updated_at", 2016-08-15 21:33:20 UTC]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 24.9ms)
+
+
+  
+NoMethodError (undefined method `user_path' for #<Api::V1::UsersController:0x007fc21c320e70>
+Did you mean?  user_params):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:35:49 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$/CbwnAjEMm3AgUmrgIM78OsCSKCpktibiIuavBa7umFT2ZVGSQLQC"], ["created_at", 2016-08-15 21:35:49 UTC], ["updated_at", 2016-08-15 21:35:49 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 12.2ms)
+
+
+  
+NoMethodError (undefined method `user_path' for #<Api::V1::UsersController:0x007fc21f94a000>
+Did you mean?  user_params):
+  
+app/controllers/api/v1/users_controller.rb:17:in `create'
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:36:01 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$sSxDV/AgZhRY44lHskp8ke/hsdNEO.AJxFcCJA/gx.TIB6vUfSf5."], ["created_at", 2016-08-15 21:36:02 UTC], ["updated_at", 2016-08-15 21:36:02 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mSeller Load (2.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 22], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (113.07ms)
+Completed 200 OK in 281ms (Views: 128.5ms | ActiveRecord: 34.7ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-15 17:38:42 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ja", "last_name"=>"ja", "email"=>"ja", "password"=>"[FILTERED]", "street_address"=>"ja", "city"=>"ja", "state"=>"AL", "phone"=>"ja"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ja"], ["last_name", "ja"], ["email", "ja"], ["street_address", "ja"], ["city", "ja"], ["state", "AL"], ["phone", "ja"], ["password_digest", "$2a$10$nLYAZgdj9FJgI8LjcwNTUOP2ztNf8Ca0dV9ISNi69bGy0TQmtnrHy"], ["created_at", 2016-08-15 21:38:42 UTC], ["updated_at", 2016-08-15 21:38:42 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 23], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (3.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   [1m[36mListing Load (1.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (34.31ms)
+Completed 200 OK in 193ms (Views: 32.7ms | ActiveRecord: 10.1ms)
+
+
