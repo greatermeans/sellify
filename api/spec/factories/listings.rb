@@ -6,5 +6,6 @@ FactoryGirl.define do
     image                { Faker::Avatar.image }
     price                { Faker::Commerce.price }
     sold?                false
+    tags				 {Tag.all.sample}
   end
 end
