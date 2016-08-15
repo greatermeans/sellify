@@ -5,10 +5,14 @@ import { reduxForm } from 'redux-form';
 
 class NewUserForm extends Component {
 
+  submitHandler(props) {
+    this.props.addUser(props)
+  }
+
  render() {
    const {fields: {first_name, last_name, password, email, street_address, city, state, phone}, handleSubmit} = this.props;
    return (
-  <form id='new_user' onSubmit={handleSubmit(addUser)}>
+  <form id='new_user' onSubmit={handleSubmit(this.submitHandler.bind(this))}>
     <label>First name:</label>
     <input type='text' {...first_name}/><br/>
     <label>Last name:</label>
@@ -84,10 +88,10 @@ class NewUserForm extends Component {
  }
 }
 
-NewUserForm = reduxForm({
+export default reduxForm({
  form: 'newForm',
  fields: ['first_name', 'last_name', 'email', 'password', 
 'email', 'street_address', 'city', 'state', 'phone']
-})(NewUserForm);
+}, null,{addUser})(NewUserForm);
 
-export default NewUserForm;
+

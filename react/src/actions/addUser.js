@@ -9,7 +9,6 @@ const addUser = (userData)=>{
   		contentType: "application/json; charset=utf-8",
   		dataType:"json"
   })
-
 	return {
 		type: 'ADD_USER',
 		payload: request

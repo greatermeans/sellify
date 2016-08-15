@@ -3301,3 +3301,30 @@ Processing by Api::V1::UsersController#create as HTML
 Completed 200 OK in 193ms (Views: 32.7ms | ActiveRecord: 10.1ms)
 
 
+Started POST "/api/v1/users" for ::1 at 2016-08-15 18:52:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"ac", "last_name"=>"acasdf", "email"=>"asdfasd@aol.com", "password"=>"[FILTERED]", "street_address"=>"123 main ", "city"=>"norwodsa", "state"=>"AL", "phone"=>"1231231234"}}
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "ac"], ["last_name", "acasdf"], ["email", "asdfasd@aol.com"], ["street_address", "123 main "], ["city", "norwodsa"], ["state", "AL"], ["phone", "1231231234"], ["password_digest", "$2a$10$K74/BUu7e73BVXX/DZdaDeDL72kP.L5VZ1u/plnkKYBpZHf.cf/gK"], ["created_at", 2016-08-15 22:52:37 UTC], ["updated_at", 2016-08-15 22:52:37 UTC]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mSeller Load (2.7ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 24], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (2.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers]   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (135.73ms)
+Completed 200 OK in 364ms (Views: 169.5ms | ActiveRecord: 61.5ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-15 18:55:52 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"asd", "last_name"=>"asd", "email"=>"asd", "password"=>"[FILTERED]", "street_address"=>"asd", "city"=>"asd", "state"=>"AL", "phone"=>"asd"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "asd"], ["last_name", "asd"], ["email", "asd"], ["street_address", "asd"], ["city", "asd"], ["state", "AL"], ["phone", "asd"], ["password_digest", "$2a$10$B.ViwADLinWUer.PDVmms.KNo6Hv0bmIF2ngAu./5s8CZIgYgeAfa"], ["created_at", 2016-08-15 22:55:52 UTC], ["updated_at", 2016-08-15 22:55:52 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (2.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers]   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (29.99ms)
+Completed 200 OK in 170ms (Views: 30.7ms | ActiveRecord: 10.0ms)
+
+
