@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import userLogin from '../actions/userLogin'
 import { reduxForm } from 'redux-form';
 var Modal = require('boron/DropModal');
 
 
-export default class LoginForm extends Component {
+class LoginForm extends Component {
+  static contextTypes = {
+    router:PropTypes.object
+  }
+
   showModal() {
     this.refs.modal.show();
   }
@@ -15,6 +19,9 @@ export default class LoginForm extends Component {
 
   submitHandler(userData) {
     this.props.userLogin(userData)
+    .then(()=>{
+      this.context.router.push('/home')
+    })
   }
 
   render() {
@@ -37,6 +44,8 @@ export default class LoginForm extends Component {
     )
   }
 }
+
+export default LoginForm
 
 export default reduxForm({
  form: 'userLoginForm',
