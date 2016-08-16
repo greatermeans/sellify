@@ -6,7 +6,8 @@ var Modal = require('boron/DropModal');
 class NewUserForm extends Component {
   static contextTypes = {
     router: PropTypes.object
-
+  }
+  
   showModal() {
     this.refs.modal.show();
   }
