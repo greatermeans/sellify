@@ -12,6 +12,10 @@ class NewListingForm extends Component{
       this.refs.modal.hide();
     }
 
+    submitHandler(userData) {
+      this.props.userLogin(userData)
+    }
+
     render() {
       const {fields: {title, description, location, price, image}, handleSubmit} = this.props;
       return (
@@ -19,7 +23,7 @@ class NewListingForm extends Component{
           <button onClick={this.showModal.bind(this)}>Open</button>
           <Modal ref="modal">
             <h3>Create New Listing</h3>
-            <form id='new_listing' onSubmit={handleSubmit(addListing)}>
+            <form id='new_listing' onSubmit={this.submitHandler.bind(this)}>
               <label>Title:</label>
               <input type='text' {...title}/><br/>
               <label>Description:</label>
@@ -39,9 +43,8 @@ class NewListingForm extends Component{
     }
 };
 
-NewListingForm = reduxForm({ // <----- THIS IS THE IMPORTANT PART!
- form: 'newListing',                           // a unique name for this form
- fields: ['title', 'description', 'price', 'location', 'image'] // all the fields in your form
-})(NewListingForm);
 
-export default NewListingForm
+export default reduxForm({
+ form: 'newListingForm',
+ fields: ['title', 'description', 'price', 'location', 'image']
+}, null,{addListing})(NewListingForm);

@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
-const addUser = (userData)=>{
-	const URL = 'http://localhost:3000/api/v1/users'
+const userLogin = (userData)=>{
+	const URL = 'http://localhost:3000/authorize'
 	var request = $.ajax({
   		url: URL,
   		type:"POST",
@@ -10,10 +10,10 @@ const addUser = (userData)=>{
   		dataType:"json"
   })
 	return {
-		type: 'ADD_USER',
+		type: 'USER_LOGIN',
 		payload: request
 	}
 
 }
 
-export default addUser
+export default userLogin

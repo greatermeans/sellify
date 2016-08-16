@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-const addUser = (userData)=>{
+const addListing = (userData)=>{
 	const URL = 'http://localhost:3000/api/v1/users'
 	var request = $.ajax({
   		url: URL,
@@ -17,4 +17,4 @@ const addUser = (userData)=>{
 
 }
 
-export default addUser
+export default addListing

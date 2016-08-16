@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
     		get '/users/:id/listings', to: 'users#show_listings'
     		get '/users/:id/conversations', to: 'users#show_conversations' 
-
     	end
     end
+    post '/authorize', to: 'sessions#create'
+    
 end

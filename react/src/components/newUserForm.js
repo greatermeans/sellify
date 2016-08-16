@@ -1,16 +1,17 @@
 import React, {Component} from 'react'
 import addUser from '../actions/addUser'
 import { reduxForm } from 'redux-form';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
 
 class NewUserForm extends Component {
+
+  submitHandler(userData) {
+    this.props.addUser(userData)
+  }
 
  render() {
    const {fields: {first_name, last_name, password, email, street_address, city, state, phone}, handleSubmit} = this.props;
    return (
-  <form id='new_user' onSubmit={handleSubmit(addUser)}>
+  <form id='new_user' onSubmit={handleSubmit(this.submitHandler.bind(this))}>
     <label>First name:</label>
     <input type='text' {...first_name}/><br/>
     <label>Last name:</label>
@@ -86,16 +87,8 @@ class NewUserForm extends Component {
  }
 }
 
-NewUserForm = reduxForm({
+export default reduxForm({
  form: 'newForm',
  fields: ['first_name', 'last_name', 'email', 'password',
 'email', 'street_address', 'city', 'state', 'phone']
-})(NewUserForm);
-
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({addUser: addUser}, dispatch)
-}
-
-const SmartNewUserForm = connect(null, mapDispatchToProps)(NewUserForm)
-
-export default SmartNewUserForm;
+}, null,{addUser})(NewUserForm);
