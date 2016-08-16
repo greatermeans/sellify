@@ -12,7 +12,7 @@ const Home = class extends Component {
 		return(
 			<div>
 				<NewListingForm />
-			  <AllListing />
+			  SmartAllListing here
 				<BookMarked />
 			</div>
 	)}

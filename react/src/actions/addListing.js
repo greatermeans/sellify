@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-const addListing = (userData)=>{
+const addListing = (listingData)=>{
 	const URL = 'http://localhost:3000/api/v1/users'
 	var request = $.ajax({
   		url: URL,

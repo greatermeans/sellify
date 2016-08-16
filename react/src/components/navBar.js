@@ -4,7 +4,7 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 export default class NavBar extends Component {
   render(){
     return(
-      <div>
+      <div className='nav-bar'>
         <ul>
           <li> <Link to={'/home'}>Home</Link> </li>
           <li> <Link to={'/my_profile'}>My Profile</Link> </li>

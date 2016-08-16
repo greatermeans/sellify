@@ -3,7 +3,9 @@ import { reduxForm } from 'redux-form';
 import addListing from '../actions/addListing'
 var Modal = require('boron/DropModal');
 
-class NewListingForm extends Component{
+export default class NewListingForm extends Component{
+
+
     showModal() {
       this.refs.modal.show();
     }
@@ -12,15 +14,15 @@ class NewListingForm extends Component{
       this.refs.modal.hide();
     }
 
-    submitHandler(userData) {
-      this.props.userLogin(userData)
+    submitHandler(listingData) {
+      this.props.addListing(listingData)
     }
 
     render() {
       const {fields: {title, description, location, price, image}, handleSubmit} = this.props;
       return (
         <div>
-          <button onClick={this.showModal.bind(this)}>Open</button>
+          <button onClick={this.showModal.bind(this)}>Create new listing</button>
           <Modal ref="modal">
             <h3>Create New Listing</h3>
             <form id='new_listing' onSubmit={this.submitHandler.bind(this)}>
@@ -34,7 +36,7 @@ class NewListingForm extends Component{
               <input input type="number" min="0.01" step="0.01" max="2500" {...price}/><br/>
               <label>Image:</label>
               <input type='text' {...image}/><br/>
-              <button type='submit'>Submit</button>
+              <button type='submit'>Add</button>
             </form>
             <button onClick={this.hideModal.bind(this)}>Close</button>
           </Modal>

@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <div>
       <NavBar />
+      <Home />
         {this.props.children}
       </div>
     );

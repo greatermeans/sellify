@@ -4,7 +4,7 @@ export default class BookMarked extends Component {
   render(){
     return(
       <div>
-        // Bookmarked stuff
+      bookmarked stuff
       </div>
     )
   }
