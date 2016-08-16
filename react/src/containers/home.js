@@ -4,29 +4,17 @@ import NavBar from  '../components/navBar'
 import NewListingForm from '../components/newListingForm'
 import BookMarked from '../components/bookmarked'
 import SmartAllListing from '../components/allListing'
-
+import auth from './authenticationResource'
 
 const Home = class extends Component {
-
-
-	componentWillMount(){
-		if(!this.props.authenticated){
-        browserHistory.push('/')
-      }
-	}
-
-	componentWillUpdate(newProps){
-		if(!newProps.authenticated){
-			browserHistory.push('/')
-		}
-	}
-
 	render() {
 		return(
 			<div>
+				<NavBar />
 				<NewListingForm />
 			  SmartAllListing here
 				<BookMarked />
+				{this.props.children}
 			</div>
 	)}
 }
@@ -37,4 +25,5 @@ function mapStateToProps(state) {
 
 const SmartHome = connect(mapStateToProps)(Home)
 
-export default SmartHome
+const AuthHome = auth(SmartHome)
+export default AuthHome;

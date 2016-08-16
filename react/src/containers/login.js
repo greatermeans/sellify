@@ -19,9 +19,10 @@ class LoginForm extends Component {
 
   submitHandler(userData) {
     this.props.userLogin(userData)
-    .then(()=>{
+    .then((()=>{
+      this.props.authenticate(true)
       this.context.router.push('/home')
-    })
+    }).bind(this))
   }
 
   render() {
@@ -44,8 +45,6 @@ class LoginForm extends Component {
     )
   }
 }
-
-export default LoginForm
 
 export default reduxForm({
  form: 'userLoginForm',
