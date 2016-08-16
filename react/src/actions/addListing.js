@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 const addListing = (listingData)=>{
-	const URL = 'http://localhost:3000/api/v1/users/11/show_listings'
+	const URL = 'http://localhost:3000/api/v1/listings'
 	debugger
 	var request = $.ajax({
   		url: URL,
