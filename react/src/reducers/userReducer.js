@@ -4,7 +4,8 @@ const userReducer = (state=null, action)=>{
 			return Object.assign({}, state, {users:[...state.users,{payload:action.payload
 		}]})
 		case 'USER_LOGIN':
-			return Object.assign({}, state, {action.payload})
+			debugger
+			return Object.assign({}, state, {user:action.payload})
 		default:
 			return state
 	}
