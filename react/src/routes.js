@@ -6,14 +6,14 @@ import NavBar from './components/navBar'
 import Login from './containers/login'
 import MyProfile from './components/myProfile'
 import LogInSignUp from './components/logInSignUp'
-import NewUser from './components/newUser'
+import NewUserForm from './components/newUserForm'
 
 const Routes = (
   <Router>
     <Route path='/' component={Start}>
       <IndexRoute component={LogInSignUp}/>
       <Route path='/log_in' component={Login} />
-      <Route path='/sign_up' component={NewUser} />
+      <Route path='/sign_up' component={NewUserForm} />
     </Route>
     <Route path='/home' component={App}>
       <Route path='/my_profile' component={MyProfile} />
