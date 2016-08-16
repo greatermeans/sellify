@@ -9,48 +9,69 @@ class NewUserForm extends Component {
   }
   
   showModal() {
-    this.refs.modal.show();
+    this.refs.modalone.show();
+  }
+
+  nextModal() {
+    this.refs.modalone.hide();
+    this.refs.modaltwo.show();
   }
 
   hideModal() {
-    this.refs.modal.hide();
+    this.refs.modalone.hide();
+    this.refs.modaltwo.hide();
   }
 
   submitHandler(userData) {
     this.props.addUser(userData)
-    .then(() => {
+    this.props.getOrganizations()
+    .then((self) => {
       debugger
       this.context.router.push('/home')
     })
   }
 
  render() {
-   const {fields: {first_name, last_name, password, email, zipcode, phone}, handleSubmit} = this.props;
+   const {fields: {first_name, last_name, password, email, zipcode}, handleSubmit} = this.props;
    return (
     <div>
       <button onClick={this.showModal.bind(this)}>Sign Up</button>
-      <Modal ref="modal">
-        <h3>Sign Up</h3>
-          <form id='new_user' onSubmit={handleSubmit(this.submitHandler.bind(this))}>
-            <label>First name:</label>
-            <input type='text' {...first_name}/><br/>
-            <label>Last name:</label>
-            <input type='text' {...last_name}/><br/>
-            <label>Password:</label>
-            <input type='password' {...password}/><br/>
-            <label>Email:</label>
-            <input type='text' {...email}/><br/>
-            <label>Zip Code:</label>
-            <input type='text' {...zipcode}/><br/>
-            <button type='submit'>Submit</button>
-          </form>
-        <button onClick={this.hideModal.bind(this)}>Close</button>
-      </Modal>
+      <form id='new_user' onSubmit={handleSubmit(this.submitHandler.bind(this))}>
+        <Modal ref="modalone">
+          <h3>Sign Up</h3>
+          <label>Email:</label>
+          <input type='text' {...email}/><br/>
+          <label>Password:</label>
+          <input type='password' {...password}/><br/>
+          <button type='button' onClick={this.nextModal.bind(this)}>Submit</button>
+          <button onClick={this.hideModal.bind(this)}>X</button>
+        </Modal>
+        <Modal ref="modaltwo">
+          <h3>Sign Up</h3>
+          <label>First name:</label>
+          <input type='text' {...first_name}/><br/>
+          <label>Last name:</label>
+          <input type='text' {...last_name}/><br/>
+          <label>Zip Code:</label>
+          <input type='text' {...zipcode}/><br/>
+          <button type='submit'>Submit</button>
+          <button onClick={this.hideModal.bind(this)}>X</button>
+        </Modal>
+        <Modal ref="modalthree">
+          <h3>Choose Your Organizations</h3>
+          <input type='text' {...last_name}/><br/>
+          <label>Zip Code:</label>
+          <input type='text' {...zipcode}/><br/>
+          <button type='submit'>Submit</button>
+          <button onClick={this.hideModal.bind(this)}>X</button>
+        </Modal>
+      </form>
     </div>
-
    );
  }
 }
+
+            
 
 function mapStateToProps(state){
   return {
@@ -60,6 +81,5 @@ function mapStateToProps(state){
 
 export default reduxForm({
  form: 'newUserForm',
- fields: ['first_name', 'last_name', 'email', 'password',
-'email', 'street_address', 'city', 'state', 'phone']
+ fields: ['first_name', 'last_name', 'email', 'password', 'zipcode']
 }, mapStateToProps,{addUser})(NewUserForm);

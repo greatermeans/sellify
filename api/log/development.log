@@ -5854,3 +5854,43 @@ ActionController::ParameterMissing (param is missing or the value is empty: user
 app/controllers/sessions_controller.rb:32:in `user_params'
 app/controllers/sessions_controller.rb:14:in `create'
 >>>>>>> 432022c8799131a1cf60c4b38b1f350ceebe186a
+Started POST "/api/v1/users" for ::1 at 2016-08-16 14:02:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"john", "last_name"=>"smith", "email"=>"johnsmith@aol.com", "password"=>"[FILTERED]", "zipcode"=>"10004"}}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "zipcode", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "john"], ["last_name", "smith"], ["email", "johnsmith@aol.com"], ["password_digest", "$2a$10$5LcN8Ncv3SN9tqangm6fduX/TfiWel3y.uC718ZIuzQih0zZzwDYW"], ["zipcode", "10004"], ["created_at", 2016-08-16 18:02:25 UTC], ["updated_at", 2016-08-16 18:02:25 UTC]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mSeller Load (1.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 21], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   [1m[36mListing Load (2.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (128.71ms)
+Completed 200 OK in 21827ms (Views: 138.1ms | ActiveRecord: 108.0ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-16 14:09:21 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"asdf", "last_name"=>"asdf", "email"=>"assad", "password"=>"[FILTERED]", "zipcode"=>"111111"}}
+  [1m[35m (11.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "zipcode", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "asdf"], ["last_name", "asdf"], ["email", "assad"], ["password_digest", "$2a$10$Xy1XGjTW0KSYS5ORtWS0xuXFAswY9OtAzlFtlwnHodpr7/YzujKvG"], ["zipcode", "111111"], ["created_at", 2016-08-16 18:09:30 UTC], ["updated_at", 2016-08-16 18:09:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 22], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (202.09ms)
+Completed 200 OK in 8915ms (Views: 206.3ms | ActiveRecord: 47.7ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2016-08-16 14:11:17 -0400
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"asdf", "last_name"=>"asdf", "email"=>"asdfa", "password"=>"[FILTERED]", "zipcode"=>"asdf"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "zipcode", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "asdf"], ["last_name", "asdf"], ["email", "asdfa"], ["password_digest", "$2a$10$e6pT6vZhZN9iReVrCn9zeeKCK1DLtIBN5FWGjjN72mcYmupjPmjne"], ["zipcode", "asdf"], ["created_at", 2016-08-16 18:11:21 UTC], ["updated_at", 2016-08-16 18:11:21 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 23], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrganization Load (3.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (28.59ms)
+Completed 200 OK in 4119ms (Views: 25.8ms | ActiveRecord: 9.9ms)
+
+
