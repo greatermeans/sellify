@@ -2,7 +2,3 @@
 2. start using state to display data
 3. authorization needs to be redone post jeff's lecture
 4. new user signs up then redirects to organization page??
-5. US state list in form
-
-
-state = {user:{}}

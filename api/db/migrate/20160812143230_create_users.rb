@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :state
       t.string :phone
       t.string :password_digest
+      t.string :zipcode
       
       t.timestamps
     end

@@ -4,9 +4,7 @@ FactoryGirl.define do
     last_name             {Faker::Name.last_name}
     phone                 1231231234
     email                 {Faker::Internet.email}
-    street_address        {Faker::Address.street_address}
-    city                  {Faker::Address.city}
-    state                 {Faker::Address.state}
+    zipcode               {Faker::Address.zip_code}
     password              'one'
   end
 end

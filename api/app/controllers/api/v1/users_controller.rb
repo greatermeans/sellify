@@ -55,7 +55,7 @@ module Api
 
 
       def user_params
-        params.require(:user).permit(:first_name, :last_name, :street_address, :city, :state, :password, :email,:phone)
+        params.require(:user).permit(:first_name, :last_name, :zipcode, :password, :email)
       end
 
       # def ensure_user_is_current

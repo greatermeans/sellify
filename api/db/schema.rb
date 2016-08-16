@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20160812211616) do
     t.string   "state"
     t.string   "phone"
     t.string   "password_digest"
+    t.string   "zipcode"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
