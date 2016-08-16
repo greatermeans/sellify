@@ -4,8 +4,8 @@ import { reduxForm } from 'redux-form';
 
 class NewUserForm extends Component {
 
-  submitHandler(props) {
-    this.props.addUser(props)
+  submitHandler(userData) {
+    this.props.addUser(userData)
   }
 
  render() {
