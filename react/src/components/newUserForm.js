@@ -1,13 +1,12 @@
 import React, {Component, PropTypes} from 'react'
 import addUser from '../actions/addUser'
+import getOrganizations from '../actions/getOrganizations'
 import { reduxForm } from 'redux-form';
+import { browserHistory } from 'react-router'
+
 var Modal = require('boron/DropModal');
 
-class NewUserForm extends Component {
-  static contextTypes = {
-    router: PropTypes.object
-  }
-  
+class NewUserForm extends Component {  
   showModal() {
     this.refs.modalone.show();
   }
@@ -24,10 +23,8 @@ class NewUserForm extends Component {
 
   submitHandler(userData) {
     this.props.addUser(userData)
-    this.props.getOrganizations()
-    .then((self) => {
-      debugger
-      this.context.router.push('/home')
+    .then(() => {
+      browserHistory.push('/home')
     })
   }
 
@@ -51,14 +48,6 @@ class NewUserForm extends Component {
           <label>First name:</label>
           <input type='text' {...first_name}/><br/>
           <label>Last name:</label>
-          <input type='text' {...last_name}/><br/>
-          <label>Zip Code:</label>
-          <input type='text' {...zipcode}/><br/>
-          <button type='submit'>Submit</button>
-          <button onClick={this.hideModal.bind(this)}>X</button>
-        </Modal>
-        <Modal ref="modalthree">
-          <h3>Choose Your Organizations</h3>
           <input type='text' {...last_name}/><br/>
           <label>Zip Code:</label>
           <input type='text' {...zipcode}/><br/>

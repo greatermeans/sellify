@@ -6,7 +6,9 @@ Tag.destroy_all
 Organization.destroy_all
 Category.destroy_all
 
-FactoryGirl.create(:organization)
+9.times do 
+  FactoryGirl.create(:organization)
+end
 
 10.times do
 	FactoryGirl.create(:tag)
