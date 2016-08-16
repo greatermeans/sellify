@@ -15,6 +15,7 @@ export default class NewListingForm extends Component{
     }
 
     submitHandler(listingData) {
+      listingData.preventDefault()
       this.props.addListing(listingData)
     }
 

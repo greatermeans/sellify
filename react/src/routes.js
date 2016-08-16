@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Router, IndexRoute } from 'react-router';
-import App from './App';
+import SmartApp from './App';
 import Start from './components/start'
 import NavBar from './components/navBar'
 import Login from './containers/login'
@@ -15,7 +15,7 @@ const Routes = (
       <Route path='/log_in' component={Login} />
       <Route path='/sign_up' component={NewUserForm} />
     </Route>
-    <Route path='/home' component={App}>
+    <Route path='/home' component={SmartApp}>
       <Route path='/my_profile' component={MyProfile} />
     </Route>
   </Router>
