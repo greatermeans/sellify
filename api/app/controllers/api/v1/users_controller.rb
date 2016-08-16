@@ -12,7 +12,6 @@ module Api
 
       def create
         @user = User.new(user_params)
-        binding.pry
         if @user.save
 
           login(@user)
