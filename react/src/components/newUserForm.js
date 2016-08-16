@@ -1,11 +1,18 @@
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
 import addUser from '../actions/addUser'
 import { reduxForm } from 'redux-form';
 
 class NewUserForm extends Component {
+  static contextTypes = {
+    router: PropTypes.object
+  }
 
   submitHandler(userData) {
     this.props.addUser(userData)
+    .then(() => {
+      debugger
+      this.context.router.push('/home')
+    })
   }
 
  render() {
@@ -29,8 +36,14 @@ class NewUserForm extends Component {
  }
 }
 
+function mapStateToProps(state){
+  return {
+    users: state.users
+  }
+}
+
 export default reduxForm({
  form: 'newForm',
  fields: ['first_name', 'last_name', 'email', 'password',
 'email', 'street_address', 'city', 'state', 'phone']
-}, null,{addUser})(NewUserForm);
+}, mapStateToProps,{addUser})(NewUserForm);

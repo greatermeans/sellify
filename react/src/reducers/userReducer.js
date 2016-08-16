@@ -1,11 +1,11 @@
-const userReducer = (state=null, action)=>{
+const userReducer = (state={}, action)=>{
 	switch(action.type){
 		case 'ADD_USER':
-			return Object.assign({}, state, {users:[...state.users,{payload:action.payload
-		}]})
+		debugger
+			return Object.assign({}, state, {user: action.payload })
 		case 'USER_LOGIN':
 			debugger
-			return Object.assign({}, state, {user:action.payload})
+			return Object.assign({}, state, {user: action.payload})
 		default:
 			return state
 	}
