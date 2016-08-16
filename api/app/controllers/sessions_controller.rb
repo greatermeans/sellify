@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :login_required, only: [:new, :create]
+  # skip_before_action :login_required, only: [:new, :create]
 
   # def new
   #   if logged_in?
@@ -10,37 +10,26 @@ class SessionsController < ApplicationController
 
 
   def create
-    user = User.find_by(email: params[:user][:email])
-    if user != nil
-      if user.authenticate(password_param)
+    error = {error: 'The account/password combination is invalid. Please try again'}
+    user = User.find_by(email: user_params[:email])
+    if !!user && user.authenticate(user_params[:password])
       session[:user_id] = user.id
-      redirect_to profile_path(session[:user_id])
-      else
-      flash.now[:invalidpass] = 'Incorrect password'
-      render 'new'
-      end
+      render json: @user, include: ['listings','organizations']
     else
-      flash.now[:invaliduser] = 'User does not exist'
-      render 'new'
+      render json: error
     end
-
-
-  #   if user == nil
-  #     flash.now[:message] = 'A user with that email address does not exist. Please create an account.'
-  #     render 'new'
-  #   elsif user.authenticate(params[:user][:password])
-  #     session[:user_id] = user.id
-  #     redirect_to user_path(session[:user_id])
-  #   else
-  #     flash.now[:message] = 'Please enter the correct password'
-  #     render 'new'
-  #   end
-  # end
+  end
 
 
   def destroy
     session[:user_id] = nil
     redirect_to root_path
   end
+
+  private
+
+    def user_params
+      params.require(:user).permit(:password, :email)
+    end
 
 end

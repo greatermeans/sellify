@@ -4,11 +4,6 @@ import fetchUsers from '../actions/fetchUsers'
 
 const Listing = class extends Component {
 
-	doSomething() {
-		let tomato = fetchUsers()
-	}
-
-
 	render() {
 		return(
 		<div>

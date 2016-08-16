@@ -1,10 +1,10 @@
 import $ from 'jquery'
 
 const userLogin = (userData)=>{
-	const URL = 'http://localhost:3000/api/v1/users'
+	const URL = 'http://localhost:3000/authorize'
 	var request = $.ajax({
   		url: URL,
-  		type:"GET",
+  		type:"POST",
   		data: JSON.stringify({user: userData}),
   		contentType: "application/json; charset=utf-8",
   		dataType:"json"
