@@ -12,8 +12,11 @@ module Api
 
       def create
         @user = User.new(user_params)
+        binding.pry
         if @user.save
+
           login(@user)
+
           render json: @user, include: ['listings','organizations']
         else
           render json: @user.errors.full_messages

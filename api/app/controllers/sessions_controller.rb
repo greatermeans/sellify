@@ -10,10 +10,11 @@ class SessionsController < ApplicationController
 
 
   def create
+    binding.pry
     error = {error: 'The account/password combination is invalid. Please try again'}
-    user = User.find_by(email: user_params[:email])
-    if !!user && user.authenticate(user_params[:password])
-      session[:user_id] = user.id
+    @user = User.find_by(email: user_params[:email])
+    if !!@user && @user.authenticate(user_params[:password])
+      session[:user_id] = @user.id
       render json: @user, include: ['listings','organizations']
     else
       render json: error

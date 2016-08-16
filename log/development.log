@@ -1,0 +1,1674 @@
+Started GET "/" for ::1 at 2016-08-12 10:43:05 -0400
+Started GET "/" for ::1 at 2016-08-12 10:43:05 -0400
+  
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
+  
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:558:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:545:in `call'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:558:in `connection'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activerecord (5.0.0.1) lib/active_record/migration.rb:545:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/" for ::1 at 2016-08-12 10:43:59 -0400
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "sellify_development" does not exist
+):
+  
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:558:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:545:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  [1m[35m (54.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2285846557307478060);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOrganizations (20160812143114)
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.0ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812143114"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20160812143230)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "street_address" character varying, "city" character varying, "state" character varying, "phone" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812143230"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSellers (20160812144700)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "sellers" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812144700"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBuyers (20160812145201)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "buyers" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812145201"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactions (20160812145246)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" serial primary key, "buyer_id" integer, "listing_id" integer, "status" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812145246"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateListings (20160812145806)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "listings" ("id" serial primary key, "seller_id" integer, "title" character varying, "description" character varying, "location" character varying, "image" character varying, "price" float, "sold?" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812145806"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrganizationUsers (20160812151934)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "organizations_users" ("id" serial primary key, "organization_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812151934"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateListingTags (20160812152102)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "listings_tags" ("id" serial primary key, "listing_id" integer, "tag_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812152102"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTags (20160812152144)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812152144"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-12 15:24:59 UTC], ["updated_at", 2016-08-12 15:24:59 UTC]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2285846557307478060)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'buyers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings_tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sellers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2285846557307478060);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (9.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveBuyers (20160812172111)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2285846557307478060)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2285846557307478060);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveBuyers (20160812172111)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (33.7ms)[0m  [1m[35mDROP TABLE "buyers"[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812172111"]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2285846557307478060)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (12.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings_tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sellers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2285846557307478060);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeBuyerToUser (20160812172405)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.3ms)[0m  [1m[35mDROP TABLE "transactions"[0m
+  [1m[35m (61.6ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" serial primary key, "user_id" integer, "listing_id" integer, "status" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812172405"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2285846557307478060)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings_tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sellers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2285846557307478060);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (8.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20160812192511)
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.9ms)[0m  [1m[35mCREATE TABLE "messages" ("id" serial primary key, "user_id" integer, "seller_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812192511"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2285846557307478060)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings_tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'messages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sellers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2285846557307478060);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ReplaceMessages (20160812194110)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2285846557307478060)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2285846557307478060);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ReplaceMessages (20160812194110)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "message_threads" ("id" serial primary key, "user_id" integer, "seller_id" integer)[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "messages" ("id" serial primary key, "message_thread_id" integer, "content" text)[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160812194110"]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2285846557307478060)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings_tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'message_threads'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'messages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sellers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/" for ::1 at 2016-08-14 17:03:45 -0400
+Started GET "/" for ::1 at 2016-08-14 17:03:45 -0400
+  
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "sellify_dev" does not exist
+):
+ActiveRecord::NoDatabaseError (FATAL:  database "sellify_dev" does not exist
+):
+  
+  
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:558:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:558:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:545:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:545:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  [1m[35m (4.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sellify_dev"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sellify_test"[0m
+  [1m[35m (373.2ms)[0m  [1m[35mCREATE DATABASE "sellify_dev" ENCODING = 'unicode'[0m
+  [1m[35m (249.2ms)[0m  [1m[35mCREATE DATABASE "sellify_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (34.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "tag_id" integer, "listing_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "communities" ("id" serial primary key, "user_id" integer, "organization_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "conversations" ("id" serial primary key, "user_id" integer, "listing_id" integer, "status" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "listings" ("id" serial primary key, "seller_id" integer, "title" character varying, "description" character varying, "location" character varying, "image" character varying, "price" float, "sold?" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "messages" ("id" serial primary key, "user_id" integer, "seller_id" integer, "subject" character varying, "content" text)[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "sellers" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "street_address" character varying, "city" character varying, "state" character varying, "phone" integer, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160812211616')[0m
+  [1m[35m (4.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160812143114'), ('20160812143230'), ('20160812144700'), ('20160812145246'), ('20160812145806'), ('20160812152144'), ('20160812200649'), ('20160812204823');
+
+[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-14 21:06:47 UTC], ["updated_at", 2016-08-14 21:06:47 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "tag_id" integer, "listing_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "communities" ("id" serial primary key, "user_id" integer, "organization_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "conversations" ("id" serial primary key, "user_id" integer, "listing_id" integer, "status" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "listings" ("id" serial primary key, "seller_id" integer, "title" character varying, "description" character varying, "location" character varying, "image" character varying, "price" float, "sold?" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "messages" ("id" serial primary key, "user_id" integer, "seller_id" integer, "subject" character varying, "content" text)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "sellers" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "street_address" character varying, "city" character varying, "state" character varying, "phone" integer, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160812211616')[0m
+  [1m[35m (3.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160812143114'), ('20160812143230'), ('20160812144700'), ('20160812145246'), ('20160812145806'), ('20160812152144'), ('20160812200649'), ('20160812204823');
+
+[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-14 21:06:47 UTC], ["updated_at", 2016-08-14 21:06:47 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mSeller Load (0.5ms)[0m  [1m[34mSELECT "sellers".* FROM "sellers"[0m
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities"[0m
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flatiron School"], ["created_at", 2016-08-14 21:06:47 UTC], ["updated_at", 2016-08-14 21:06:47 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Kennedy"], ["last_name", "Schowalter"], ["email", "shaylee.hodkiewicz@veum.net"], ["street_address", "4953 Kattie Run"], ["city", "Wintheisermouth"], ["state", "Missouri"], ["phone", 1231231234], ["password_digest", "$2a$10$Zo8tiVN66S4vLKpP7quNkuLJdU2pImrSyuA1Fvi3OKZhLsLoh9iyW"], ["created_at", 2016-08-14 21:06:48 UTC], ["updated_at", 2016-08-14 21:06:48 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Mya"], ["last_name", "King"], ["email", "arnold.hegmann@kub.info"], ["street_address", "5402 Bailey Stravenue"], ["city", "Kirlinmouth"], ["state", "Illinois"], ["phone", 1231231234], ["password_digest", "$2a$10$SwNC2oEpYsOsGAkCjfMTg.vmRn3P53dyzsWBnLvA2sl7k7TX3QSmC"], ["created_at", 2016-08-14 21:06:48 UTC], ["updated_at", 2016-08-14 21:06:48 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Emiliano"], ["last_name", "Schimmel"], ["email", "corbin_nolan@langworth.biz"], ["street_address", "7220 Myles Locks"], ["city", "Fadelside"], ["state", "Pennsylvania"], ["phone", 1231231234], ["password_digest", "$2a$10$Yj5VSIU1WFz5wFi/PtdOZOip5XlJHpIeEbwD2mv9Egh6fIPJB3/UW"], ["created_at", 2016-08-14 21:06:48 UTC], ["updated_at", 2016-08-14 21:06:48 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Mervin"], ["last_name", "Roberts"], ["email", "christina_schimmel@fay.net"], ["street_address", "554 Jaquelin Heights"], ["city", "East Madelynnhaven"], ["state", "Illinois"], ["phone", 1231231234], ["password_digest", "$2a$10$r2/TJooGKi4OeNBJMSczHO2d/xAJqpF0g6j9NQTt5Xt29EHqxCMpm"], ["created_at", 2016-08-14 21:06:48 UTC], ["updated_at", 2016-08-14 21:06:48 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Eudora"], ["last_name", "Jerde"], ["email", "baylee.dubuque@labadiequigley.com"], ["street_address", "285 Gus Landing"], ["city", "Jerdetown"], ["state", "Michigan"], ["phone", 1231231234], ["password_digest", "$2a$10$v.nosLbNXZm.2KXUfcdxXOIXATBV00RF8aLW8/8iNrlx4M8R0fk4e"], ["created_at", 2016-08-14 21:06:48 UTC], ["updated_at", 2016-08-14 21:06:48 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Leone"], ["last_name", "Hahn"], ["email", "lilly@keebler.com"], ["street_address", "3591 Boyer Gardens"], ["city", "Wiegandside"], ["state", "Maryland"], ["phone", 1231231234], ["password_digest", "$2a$10$RCt52ebf91ee5XgydRH3Te3GWdM2fKRA/fU0Yi0cJNa72nEalnAci"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Arden"], ["last_name", "Kling"], ["email", "morgan.lakin@yundt.org"], ["street_address", "7332 Rhiannon Crest"], ["city", "Lake Keshaun"], ["state", "Louisiana"], ["phone", 1231231234], ["password_digest", "$2a$10$NEcwwsoWX2ExvMkLjCf/WOtd8BY0FojHQ.pSxRrXd30cLpDHAGSCS"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Meagan"], ["last_name", "Wunsch"], ["email", "peter_upton@heaney.biz"], ["street_address", "288 Miracle Ways"], ["city", "Port Hubertborough"], ["state", "Montana"], ["phone", 1231231234], ["password_digest", "$2a$10$od/8Vl6fcOhX9ygSkSIayOkClMxkf/Hd6gngr1H7DcBt5H70DtNQi"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Alvera"], ["last_name", "Swaniawski"], ["email", "adrian@schmitt.info"], ["street_address", "970 Bernier Mountains"], ["city", "North Dejon"], ["state", "New York"], ["phone", 1231231234], ["password_digest", "$2a$10$wX3ZNnN00thMVS8jNI6XG.KTZnb/nVOKU4XPzIlvZg9ekgMXWGnsG"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Eldora"], ["last_name", "Brekke"], ["email", "sidney@funk.biz"], ["street_address", "94730 Robel Fields"], ["city", "Harveytown"], ["state", "Alabama"], ["phone", 1231231234], ["password_digest", "$2a$10$TBuFDPtD3hFUpEvRHfF4CutubZSmj991njgRUalxjzrqfU0xZf.3C"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Darius"], ["last_name", "Pouros"], ["email", "sarai.ebert@dach.biz"], ["street_address", "9080 Casper Isle"], ["city", "Hermannton"], ["state", "Minnesota"], ["phone", 1231231234], ["password_digest", "$2a$10$/MJi3ZI1EVJd9gryqzl6oO35Yc/FvxokvfL16VMnNdjVu2.LNt/TO"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 11], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Dillon"], ["last_name", "Hagenes"], ["email", "kayden.stamm@shieldsprohaska.com"], ["street_address", "454 Micheal Mill"], ["city", "Lake Chadrickfort"], ["state", "Louisiana"], ["phone", 1231231234], ["password_digest", "$2a$10$fVGu8aWU0HxkCIuJLE4QqeLqgi93USXZy/C9myOFAmbedqEu79sa2"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 12], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 2], ["title", "Ergonomic Iron Shoes"], ["description", "Totam ad nostrum dolore eligendi dolores voluptas."], ["image", "https://robohash.org/laborumrerumet.png?size=300x300&set=set1"], ["price", 37.17], ["sold?", false], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Dave"], ["last_name", "Fay"], ["email", "jee@schneiderparker.io"], ["street_address", "790 Conrad Islands"], ["city", "North Abbie"], ["state", "California"], ["phone", 1231231234], ["password_digest", "$2a$10$UelHVESiednrUhXm3rCdXO7.CF3Z8vkr6XEaL/O.8xtbSLiB7987K"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 13], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 3], ["title", "Incredible Rubber Wallet"], ["description", "Dolor ut nostrum earum quia et voluptas ullam nam."], ["image", "https://robohash.org/teneturdoloribuserror.png?size=300x300&set=set1"], ["price", 10.8], ["sold?", false], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "George"], ["last_name", "Kulas"], ["email", "blanche@abbottschaden.io"], ["street_address", "186 Ruthie Trail"], ["city", "Georgiannabury"], ["state", "Maryland"], ["phone", 1231231234], ["password_digest", "$2a$10$ECVv0KC10pdFbNI6WG7MluAilUB7l9lWRZAinczqVMSvb5TQnfVIy"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 14], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 4], ["title", "Sleek Leather Hat"], ["description", "Eos exercitationem aut eveniet molestiae harum."], ["image", "https://robohash.org/exercitationemfacereconsequatur.png?size=300x300&set=set1"], ["price", 11.32], ["sold?", false], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Monica"], ["last_name", "Flatley"], ["email", "destin.gibson@upton.biz"], ["street_address", "3924 Martine Mountain"], ["city", "Port Elmerton"], ["state", "Iowa"], ["phone", 1231231234], ["password_digest", "$2a$10$hk9i5HZJk79X0uqAINxChOWwWOy8jkzP5UEi1m4FFOH2j4cHoUqjW"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 15], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 5], ["title", "Ergonomic Copper Pants"], ["description", "Excepturi non cum natus."], ["image", "https://robohash.org/impeditnonquasi.png?size=300x300&set=set1"], ["price", 18.83], ["sold?", false], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Jordon"], ["last_name", "Olson"], ["email", "eryn@brakus.name"], ["street_address", "23409 Evelyn Burg"], ["city", "Gretchenchester"], ["state", "Arkansas"], ["phone", 1231231234], ["password_digest", "$2a$10$9y.kVw0FFAblExRwfaiMJuH1y3JXYuxY8RyZYLQ0PcXz0UGQXf78W"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 16], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 6], ["title", "Heavy Duty Wool Table"], ["description", "Aperiam fuga molestiae aut dolore numquam hic."], ["image", "https://robohash.org/quisquamaliquidbeatae.png?size=300x300&set=set1"], ["price", 23.37], ["sold?", false], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Computers, Automotive & Electronics"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Books & Electronics"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Industrial & Music"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Music & Kids"], ["created_at", 2016-08-14 21:06:49 UTC], ["updated_at", 2016-08-14 21:06:49 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jewelry"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baby"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Toys & Electronics"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tools, Industrial & Clothing"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Toys & Electronics"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Industrial"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Marianna"], ["last_name", "Lind"], ["email", "amy@kemmer.org"], ["street_address", "498 Zieme Tunnel"], ["city", "Meghanstad"], ["state", "Washington"], ["phone", 1231231234], ["password_digest", "$2a$10$08V.nxJ5C9VV1Zx.nR8XUubdDNDk1k2bEYvdqe4nXmgMnud8PJovi"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flatiron School"], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 17], ["organization_id", 2], ["created_at", 2016-08-14 21:06:50 UTC], ["updated_at", 2016-08-14 21:06:50 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2739943823463427770);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2739943823463427770)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'communities'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'conversations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'listings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'messages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'organizations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sellers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSeller Load (0.7ms)[0m  [1m[34mSELECT "sellers".* FROM "sellers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "sellers" WHERE "sellers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "sellers" WHERE "sellers"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "sellers" WHERE "sellers"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "sellers" WHERE "sellers"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "sellers" WHERE "sellers"."id" = $1[0m  [["id", 5]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "sellers" WHERE "sellers"."id" = $1[0m  [["id", 6]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mListing Load (2.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 4]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCommunity Load (0.6ms)[0m  [1m[34mSELECT "communities".* FROM "communities"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "communities" WHERE "communities"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 2]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 6]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 7]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 8]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 9]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 10]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "organizations" WHERE "organizations"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "organizations" WHERE "organizations"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flatiron School"], ["created_at", 2016-08-14 21:07:29 UTC], ["updated_at", 2016-08-14 21:07:29 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Dina"], ["last_name", "Funk"], ["email", "bianka@sauer.biz"], ["street_address", "287 Bernhard Canyon"], ["city", "Bechtelarbury"], ["state", "Illinois"], ["phone", 1231231234], ["password_digest", "$2a$10$q6XkAkoB21D4HzRu0s2SMuCPBN72EqbrVvkW8rDR2ZtvVHzfcyZCK"], ["created_at", 2016-08-14 21:07:29 UTC], ["updated_at", 2016-08-14 21:07:29 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Etha"], ["last_name", "Kiehn"], ["email", "krystina@franeckikling.co"], ["street_address", "908 Diamond Shores"], ["city", "Lake Brendan"], ["state", "Louisiana"], ["phone", 1231231234], ["password_digest", "$2a$10$fGKribXMEsusT2DJUY2gKuqYsa7hKvvKbtYooT8v3aYuiwumPBplu"], ["created_at", 2016-08-14 21:07:29 UTC], ["updated_at", 2016-08-14 21:07:29 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Estell"], ["last_name", "Schiller"], ["email", "will@denesik.io"], ["street_address", "8919 Flavio Street"], ["city", "Leoniemouth"], ["state", "Montana"], ["phone", 1231231234], ["password_digest", "$2a$10$7EL6hgWpviaSB1T59Z/61.mz2wFLJlBqt/altSCLMXWtl8e77ED1S"], ["created_at", 2016-08-14 21:07:29 UTC], ["updated_at", 2016-08-14 21:07:29 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Felix"], ["last_name", "Schoen"], ["email", "eugene_farrell@swaniawski.biz"], ["street_address", "15408 Stokes Springs"], ["city", "East Amirabury"], ["state", "Maryland"], ["phone", 1231231234], ["password_digest", "$2a$10$mlIQiZGCcWPmi/3tGyN2Dut1ayQbeuVKt4ZsfhOgN6lenWv2SUmCO"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Eldora"], ["last_name", "Lindgren"], ["email", "skye@quigley.info"], ["street_address", "47037 Beier Summit"], ["city", "Nienowside"], ["state", "Pennsylvania"], ["phone", 1231231234], ["password_digest", "$2a$10$RhAF2HsfzTy9ybTE/hzK/urWaCdm/pfc4l7O.6kWLg/prS0ojGYGO"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Cordia"], ["last_name", "Reilly"], ["email", "benjamin@okonreilly.co"], ["street_address", "3814 Isadore Crossroad"], ["city", "New Robertborough"], ["state", "Nevada"], ["phone", 1231231234], ["password_digest", "$2a$10$7GLb9U0of8gqoVrjrKgNO.cANpj11rJ4myP7TtDjm6XJrNlANJiuG"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Niko"], ["last_name", "Reynolds"], ["email", "koby.jakubowski@jacobson.biz"], ["street_address", "17123 Fisher Centers"], ["city", "Littleside"], ["state", "Wisconsin"], ["phone", 1231231234], ["password_digest", "$2a$10$Men7H85lYi8cnHs6LbmIUey84mHtGjp2UIjfdXeMakob5aBTj2V56"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Malinda"], ["last_name", "Welch"], ["email", "maureen@mertzmosciski.org"], ["street_address", "9783 Mills Springs"], ["city", "Danielhaven"], ["state", "Virginia"], ["phone", 1231231234], ["password_digest", "$2a$10$v28Ev5RwPzhPJAPLyI5.Z.rkbuCpjK5MOcg8.TP.Q.zIcJmApv1AC"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Dangelo"], ["last_name", "Emard"], ["email", "michelle.block@zemlak.name"], ["street_address", "8098 Domingo Gardens"], ["city", "Billyton"], ["state", "Colorado"], ["phone", 1231231234], ["password_digest", "$2a$10$EI9f2mEWrm6Gumf/fZrdM.58weGs7UGh9YZJE0a8vfpLby2QJW2Ru"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Elmore"], ["last_name", "Greenfelder"], ["email", "constantin@zboncak.io"], ["street_address", "7808 Wilkinson Underpass"], ["city", "Anastacioview"], ["state", "Arkansas"], ["phone", 1231231234], ["password_digest", "$2a$10$PQfBGFV9Z88BIEUBikivEezyyV7fEAPz4CnBo8wTzmffKZM3ZyYFe"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Buddy"], ["last_name", "Macejkovic"], ["email", "buddy_blanda@stoltenbergparker.com"], ["street_address", "9777 Kelton Mission"], ["city", "Pfannerstillshire"], ["state", "Maine"], ["phone", 1231231234], ["password_digest", "$2a$10$KG8zQB2B6vqJ1gWP6onFaOt7VEJGAsH.W7ubz51DHODsjV476mvfa"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 28], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Cyril"], ["last_name", "Considine"], ["email", "adella@quitzonkohler.biz"], ["street_address", "4217 Hilma Islands"], ["city", "Colemouth"], ["state", "Oklahoma"], ["phone", 1231231234], ["password_digest", "$2a$10$Z7CHKt4TSlJ2tdNYl0EbZekO0gfLiPPxY5jeypOZkXSsrMzYzZuZy"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 29], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 8], ["title", "Practical Bronze Wallet"], ["description", "Harum quia consequatur praesentium quis eligendi perspiciatis corrupti dolore."], ["image", "https://robohash.org/eadolorumratione.png?size=300x300&set=set1"], ["price", 90.4], ["sold?", false], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Jaleel"], ["last_name", "Lockman"], ["email", "gillian@gutmann.name"], ["street_address", "668 Denesik Stravenue"], ["city", "Ottisfort"], ["state", "Maine"], ["phone", 1231231234], ["password_digest", "$2a$10$YCBHMCGjxSOl0inYLfsIWucckyjowL9Xozzff8FxBiGEDgB6UtNqm"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 30], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 9], ["title", "Practical Wool Plate"], ["description", "Numquam quo ut et aut sint rerum enim."], ["image", "https://robohash.org/impeditadipisciconsequatur.png?size=300x300&set=set1"], ["price", 47.53], ["sold?", false], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Carrie"], ["last_name", "Skiles"], ["email", "mayra@heathcote.co"], ["street_address", "216 Schultz Key"], ["city", "New Estrella"], ["state", "Nevada"], ["phone", 1231231234], ["password_digest", "$2a$10$cgp7TB3ozB0XlzVFvmVaz.x9.wB0DH7XhnsKyMEvuivDpteWSPgam"], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 31], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 10], ["title", "Synergistic Bronze Bottle"], ["description", "Ad et voluptatibus molestiae quidem similique voluptate laborum."], ["image", "https://robohash.org/iureautdicta.png?size=300x300&set=set1"], ["price", 82.28], ["sold?", false], ["created_at", 2016-08-14 21:07:30 UTC], ["updated_at", 2016-08-14 21:07:30 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Heaven"], ["last_name", "Greenfelder"], ["email", "elsie@ornturner.co"], ["street_address", "277 Schuster Pike"], ["city", "Yundttown"], ["state", "Rhode Island"], ["phone", 1231231234], ["password_digest", "$2a$10$fJZ/Ml7DuECdbDC4bBRklev.2Q3R0f7Eel/o0iq0N5udFElCOKyxC"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 32], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 11], ["title", "Incredible Concrete Hat"], ["description", "Magni dolor perferendis nemo aut cum hic."], ["image", "https://robohash.org/laborequiincidunt.png?size=300x300&set=set1"], ["price", 88.98], ["sold?", false], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Jaycee"], ["last_name", "Lowe"], ["email", "carey@buckridge.co"], ["street_address", "9864 Christopher Inlet"], ["city", "Beckermouth"], ["state", "Delaware"], ["phone", 1231231234], ["password_digest", "$2a$10$c/fBPcJ7Cb946MXoade7TeMxv7a1BmEY.EvVaoYfNOHvt.xpEI4pG"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sellers" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 33], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("seller_id", "title", "description", "image", "price", "sold?", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["seller_id", 12], ["title", "Ergonomic Aluminum Chair"], ["description", "Et tenetur nobis perferendis ipsam excepturi ab."], ["image", "https://robohash.org/accusamusfugiatest.png?size=300x300&set=set1"], ["price", 20.02], ["sold?", false], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Computers, Health & Grocery"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Outdoors, Beauty & Clothing"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shoes"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Clothing, Sports & Jewelry"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jewelry, Clothing & Kids"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shoes"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Books & Music"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beauty, Jewelry & Shoes"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baby"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jewelry"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "street_address", "city", "state", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Kiarra"], ["last_name", "Lueilwitz"], ["email", "hunter_crona@padberg.co"], ["street_address", "735 Buckridge Prairie"], ["city", "Rosarioberg"], ["state", "Hawaii"], ["phone", 1231231234], ["password_digest", "$2a$10$Kvk8iNQ8h6eJneWG.sBXYumIihLQCZe5roo4o303uZXUOI5mymgHm"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flatiron School"], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "communities" ("user_id", "organization_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 34], ["organization_id", 4], ["created_at", 2016-08-14 21:07:31 UTC], ["updated_at", 2016-08-14 21:07:31 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2016-08-14 17:07:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/lillian/.rvm/gems/ruby-2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lillian/.rvm/gems/ruby-2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (6.9ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-08-14 17:07:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/" for ::1 at 2016-08-14 17:13:48 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/lillian/.rvm/gems/ruby-2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lillian/.rvm/gems/ruby-2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (7.9ms)
+Completed 200 OK in 25ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-08-14 17:13:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/users/12" for ::1 at 2016-08-14 17:13:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/12"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/users/12" for ::1 at 2016-08-14 17:14:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/12"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2016-08-14 17:15:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 18], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 20], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.4ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 21], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 22], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 23], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 24], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 26], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 27], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.6ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 29], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 30], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 31], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.3ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 32], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 33], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSeller Load (0.2ms)[0m  [1m[34mSELECT  "sellers".* FROM "sellers" WHERE "sellers"."user_id" = $1 LIMIT $2[0m  [["user_id", 34], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCommunity Load (0.4ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 18]]
+[active_model_serializers]   [1m[36mConversation Load (5.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 18]]
+[active_model_serializers]   [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 18]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 18]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 19]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 19]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 19]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 19]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 20]]
+[active_model_serializers]   [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 20]]
+[active_model_serializers]   [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 20]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 20]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 22]]
+[active_model_serializers]   [1m[36mCommunity Load (0.3ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 23]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers]   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 24]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers]   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 25]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 26]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 26]]
+[active_model_serializers]   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 26]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 26]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 27]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 27]]
+[active_model_serializers]   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 27]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 27]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 28]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 28]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 28]]
+[active_model_serializers]   [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 28]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 29]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 29]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 29]]
+[active_model_serializers]   [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 29]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 30]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 30]]
+[active_model_serializers]   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 30]]
+[active_model_serializers]   [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 30]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 31]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 31]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 31]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 31]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 32]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 32]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 32]]
+[active_model_serializers]   [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 32]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 33]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 33]]
+[active_model_serializers]   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 33]]
+[active_model_serializers]   [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 33]]
+[active_model_serializers]   [1m[36mCommunity Load (0.2ms)[0m  [1m[34mSELECT "communities".* FROM "communities" WHERE "communities"."user_id" = $1[0m  [["user_id", 34]]
+[active_model_serializers]   [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1[0m  [["user_id", 34]]
+[active_model_serializers]   [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" INNER JOIN "communities" ON "organizations"."id" = "communities"."organization_id" WHERE "communities"."user_id" = $1[0m  [["user_id", 34]]
+[active_model_serializers]   [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" INNER JOIN "sellers" ON "listings"."seller_id" = "sellers"."id" WHERE "sellers"."user_id" = $1[0m  [["user_id", 34]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (371.82ms)
+Completed 200 OK in 449ms (Views: 368.6ms | ActiveRecord: 54.6ms)
+
+
+Started GET "/api" for ::1 at 2016-08-14 17:16:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
