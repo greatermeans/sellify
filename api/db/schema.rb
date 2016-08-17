@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812211616) do
+ActiveRecord::Schema.define(version: 20160817170607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20160812211616) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.integer  "seller_id"
+    t.integer  "user_id"
     t.string   "title"
     t.string   "description"
     t.string   "location"
@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20160812211616) do
 
   create_table "messages", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "seller_id"
     t.string  "subject"
     t.text    "content"
   end
@@ -62,10 +61,11 @@ ActiveRecord::Schema.define(version: 20160812211616) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "sellers", force: :cascade do |t|
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "orglistings", force: :cascade do |t|
+    t.integer  "organization_id"
+    t.integer  "listing_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "tags", force: :cascade do |t|

@@ -1,11 +1,10 @@
 import $ from 'jquery'
-import {browserHistory} from 'react-router'
 
-const addListing = (listingData)=>{
-	const URL = 'http://localhost:3000/api/v1/listings'
+const viewListing = (listingData)=>{
+	const URL = 'http://localhost:3000/api/v1/listing/{id}'
 	var request = $.ajax({
   		url: URL,
-  		type:"POST",
+  		type:"GET",
   		data: JSON.stringify({listing: listingData}),
   		contentType: "application/json; charset=utf-8",
   		dataType:"json"
@@ -18,4 +17,4 @@ const addListing = (listingData)=>{
 
 }
 
-export default addListing
+export default viewListing

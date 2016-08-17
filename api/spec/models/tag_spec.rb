@@ -3,14 +3,13 @@ require_relative '../rails_helper'
 describe Tag do
   before(:all) do
     @user1 = User.create(id: 1, password: "heya")
-    @seller1 = Seller.create(id: 1, user_id: 1)
     @tag1 = Tag.create(id: 1, name: "metal")
     def make_listings
-      @listing1 = Listing.create(id: 1, seller_id: 1, title: "Table", description: "A big brown Table", location: "West Village", image: nil, price: 30.5, sold?: false)
+      @listing1 = Listing.create(id: 1, user_id: 1, title: "Table", description: "A big brown Table", location: "West Village", image: nil, price: 30.5, sold?: false)
       sleep 1
-      @listing2 = Listing.create(id: 2, seller_id: 1, title: "Chair", description: "A small brown chair", location: "West Village", image: nil, price: 20.0, sold?: false)
+      @listing2 = Listing.create(id: 2, user_id: 1, title: "Chair", description: "A small brown chair", location: "West Village", image: nil, price: 20.0, sold?: false)
       sleep 1
-      @listing3 = Listing.create(id: 3, seller_id: 1, title: "Fake Fruit Bowl", description: "A center decoration for your table", location: "West Village", image: nil, price: 50.0, sold?: false)
+      @listing3 = Listing.create(id: 3, user_id: 1, title: "Fake Fruit Bowl", description: "A center decoration for your table", location: "West Village", image: nil, price: 50.0, sold?: false)
     end
     make_listings
     @category1 = Category.create(id: 1, tag_id: 1, listing_id: 1)

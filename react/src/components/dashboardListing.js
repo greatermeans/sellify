@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import ListingBox from './listingBox'
 
-class AllListing extends Component {
+class DashboardListing extends Component {
 
   displayListings() {
-    
+    return this.props.user.dashboard_listings.map ( (listing, idx) => {
+      return <ListingBox key={idx} {...listing}/>
+    })
   }
 
   render(){
     return(
       <div>
-      Organization Listings
+      <h1>Organizations Listings</h1>
       {this.displayListings()}
       </div>
     )
@@ -25,5 +27,5 @@ function mapStateToProps(state){
   }
 }
 
-const SmartAllListing = connect(mapStateToProps)(AllListing)
-export default SmartAllListing
+const SmartDashboardListing = connect(mapStateToProps)(DashboardListing)
+export default SmartDashboardListing

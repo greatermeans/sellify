@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import NavBar from  '../components/navBar'
 import NewListingForm from '../components/newListingForm'
 import BookMarked from '../components/bookmarked'
-import SmartAllListing from '../components/allListing'
+import SmartDashboardListing from '../components/dashboardListing'
 import auth from './authenticationResource'
 
 const LoggedIn = class extends Component {
