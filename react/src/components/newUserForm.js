@@ -23,10 +23,11 @@ class NewUserForm extends Component {
   }
 
   submitHandler(userData) {
+    this.props.getOrganizations()
     this.props.addUser(userData)
     .then((() => {
       this.props.authenticate(true)
-      browserHistory.push('/dashboard')
+      browserHistory.push('/organizations')
     }).bind(this))
   }
 
@@ -73,4 +74,4 @@ function mapStateToProps(state){
 export default reduxForm({
  form: 'newUserForm',
  fields: ['first_name', 'last_name', 'email', 'password', 'zipcode']
-}, mapStateToProps,{addUser, authenticate})(NewUserForm);
+}, mapStateToProps,{addUser, getOrganizations, authenticate})(NewUserForm);
