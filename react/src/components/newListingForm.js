@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import addListing from '../actions/addListing'
 import {browserHistory} from 'react-router'
+import viewListing from '../actions/viewListing'
+
 var Modal = require('boron/DropModal');
 
 
@@ -17,7 +19,12 @@ export default class NewListingForm extends Component{
 
     submitHandler(listingData) {
       listingData.user_id = this.props.user.id
-      this.props.addListing(listingData).then(browserHistory.push('/dashboard'))
+      this.props.addListing(listingData)
+      debugger
+      // .then(
+      //
+      //   //initiate view route
+      //   browserHistory.push('/listings/:id'))
     }
 
     render() {
