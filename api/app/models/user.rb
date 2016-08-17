@@ -13,14 +13,12 @@ class User < ApplicationRecord
     first_name + ' ' + last_name
   end
 
-  def all_listings_for_orgs
-    list = []
-    self.organizations.map {|org| list << org.get_listings}
-    return list.flatten
+  def all_listings
+    self.organizations.map {|org| org.get_listings}.flatten
   end
 
   def dashboard_listings
-    self.all_listings_for_orgs.first(6)
+    Listing.where(id: all_listings.map(&:id)).order(:created_at).first(6)
   end
 
 end
