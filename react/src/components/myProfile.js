@@ -7,8 +7,9 @@ const MyProfile = class extends Component {
   render(){
     return(
       <div>
+      <h3>My Listings</h3>
         {this.props.user.user.listings.map((listing, ind)=>{
-          return <ListingBox key={ind} title={listing.title} price={listing.price} image={listing.image}/>
+          return <ListingBox key={ind} title={listing.title} price={listing.price} image={listing.image} description={listing.description}/>
         })}
       </div>
     )
