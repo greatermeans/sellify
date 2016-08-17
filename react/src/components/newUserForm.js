@@ -7,7 +7,7 @@ class NewUserForm extends Component {
   static contextTypes = {
     router: PropTypes.object
   }
-  
+
   showModal() {
     this.refs.modalone.show();
   }
@@ -26,7 +26,7 @@ class NewUserForm extends Component {
     this.props.addUser(userData)
     this.props.getOrganizations()
     .then((self) => {
-      debugger
+
       this.context.router.push('/home')
     })
   }
@@ -71,7 +71,7 @@ class NewUserForm extends Component {
  }
 }
 
-            
+
 
 function mapStateToProps(state){
   return {
