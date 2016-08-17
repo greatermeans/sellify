@@ -15,6 +15,7 @@ const Routes = (
           <Route path='/organizations' component={SmartAllOrganizations} />
           <Route path='/dashboard' component={AuthDashboard} />
           <Route path='/my_profile' component={AuthMyProfile} />
+          <Route path='/listings(/:id)' component={} />
         </Route>
     </Route>
   </Router>
