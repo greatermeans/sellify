@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import fetchUsers from '../actions/fetchUsers'
-
 
 const Listing = class extends Component {
 
