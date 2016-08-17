@@ -5,7 +5,8 @@ import ListingBox from './listingBox'
 class AllListing extends Component {
 
   displayListings() {
-    this.props.all_listings_for_orgs.map ( (listing) => {
+    return this.props.user.dashboard_listings.map ( (listing, idx) => {
+      return <ListingBox key={idx} {...listing}/>
     })
   }
 

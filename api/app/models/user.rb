@@ -19,6 +19,8 @@ class User < ApplicationRecord
     return list.flatten
   end
 
-
+  def dashboard_listings
+    self.all_listings_for_orgs.first(6)
+  end
 
 end
