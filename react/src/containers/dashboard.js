@@ -5,7 +5,7 @@ import BookMarked from '../components/bookmarked'
 import SmartAllListing from '../components/allListing'
 import auth from './authenticationResource'
 
-const Home = class extends Component {
+const Dashboard = class extends Component {
 	render() {
 		return(
 			<div>
@@ -20,7 +20,7 @@ function mapStateToProps(state) {
 	return { user: state.user, authenticated: state.authenticated }
 }
 
-const SmartHome = connect(mapStateToProps)(Home)
+const SmartDashboard = connect(mapStateToProps)(Dashboard)
 
-const AuthHome = auth(SmartHome)
-export default AuthHome;
+const AuthDashboard = auth(SmartDashboard)
+export default AuthDashboard;

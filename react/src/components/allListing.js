@@ -4,19 +4,23 @@ import ListingBox from './listingBox'
 
 class AllListing extends Component {
 
+  displayListings() {
+  }
+
   render(){
     return(
       <div>
-      this is allmy listing
+      Organization Listings
+      this.displayListings
       </div>
     )
   }
 }
 
 function mapStateToProps(state){
-
   return{
-    listings: state.listings
+    listings: state.listings,
+    user: state.user
   }
 }
 
