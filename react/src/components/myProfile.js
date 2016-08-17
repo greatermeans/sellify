@@ -9,7 +9,7 @@ const MyProfile = class extends Component {
       <div>
       <h3>My Listings</h3>
         {this.props.user.listings.map((listing, ind)=>{
-          return <ListingBox key={ind} title={listing.title} price={listing.price} image={listing.image} description={listing.description}/>
+          return <ListingBox key={ind} {...listing} />
         })}
       </div>
     )

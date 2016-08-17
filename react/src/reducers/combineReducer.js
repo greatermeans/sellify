@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'
 import userReducer from './userReducer'
-import sellerReducer from './sellerReducer'
 import listingReducer from './listingReducer'
 import authenticateReducer from './authenticateReducer'
 import orgReducer from './organizationReducer'
