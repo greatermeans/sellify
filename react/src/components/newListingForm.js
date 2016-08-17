@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import addListing from '../actions/addListing'
 import {browserHistory} from 'react-router'
+import Dropzone from 'react-dropzone'
+
 var Modal = require('boron/DropModal');
 
 
@@ -17,10 +19,10 @@ export default class NewListingForm extends Component{
 
     submitHandler(listingData) {
       listingData.user_id = this.props.user.id
+      debugger
       this.props.addListing(listingData).then(function(resp){
         browserHistory.push(`/listings/${resp.payload.id}`)
       })
-
     }
 
     render() {
@@ -40,8 +42,13 @@ export default class NewListingForm extends Component{
               <input type='text' {...location}/><br/>
               <label>Price:</label>
               <input input type="number" min="0.01" step="0.01" max="2500" {...price}/><br/>
-              <label>Image:</label>
-              <input type='text' {...image}/><br/>
+              <label>Image(s):</label>
+              <Dropzone
+                multiple={true}
+                accept="image/*" {...image}>
+                  <p>Drag an image here or click to select a file to upload</p>
+              </Dropzone>
+              <br/>
               <button type='submit'>Add</button>
             </form>
             <button onClick={this.hideModal.bind(this)}>Close</button>
