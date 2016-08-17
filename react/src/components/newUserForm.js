@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router'
 
 var Modal = require('boron/DropModal');
 
-class NewUserForm extends Component {  
+class NewUserForm extends Component {
   showModal() {
     this.refs.modalone.show();
   }
@@ -60,7 +60,7 @@ class NewUserForm extends Component {
  }
 }
 
-            
+
 
 function mapStateToProps(state){
   return {

@@ -5,7 +5,7 @@ function fetchUsers() {
 
 	axios.get(request)
 	.then(function (response) {
-		debugger
+
     console.log(response);
   })
 }
