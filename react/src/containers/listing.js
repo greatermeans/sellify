@@ -12,4 +12,10 @@ const Listing = class extends Component {
 	)}
 }
 
+function mapStateToProps(state){
+  return {
+    listings: state.listings
+  }
+}
+
 export default Listing
