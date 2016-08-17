@@ -5,7 +5,6 @@ var Modal = require('boron/DropModal');
 
 export default class NewListingForm extends Component{
 
-
     showModal() {
       this.refs.modal.show();
     }
@@ -15,18 +14,19 @@ export default class NewListingForm extends Component{
     }
 
     submitHandler(listingData) {
-      listingData.preventDefault()
+      listingData.user_id = this.props.user.user.id
       this.props.addListing(listingData)
     }
 
     render() {
+
       const {fields: {title, description, location, price, image}, handleSubmit} = this.props;
       return (
         <div>
           <button onClick={this.showModal.bind(this)}>Create new listing</button>
           <Modal ref="modal">
             <h3>Create New Listing</h3>
-            <form id='new_listing' onSubmit={this.submitHandler.bind(this)}>
+            <form id='new_listing' onSubmit={handleSubmit(this.submitHandler.bind(this))}>
               <label>Title:</label>
               <input type='text' {...title}/><br/>
               <label>Description:</label>
@@ -46,8 +46,13 @@ export default class NewListingForm extends Component{
     }
 };
 
+function mapStateToProps(state){
+  return {
+    user: state.user
+  }
+}
 
 export default reduxForm({
  form: 'newListingForm',
  fields: ['title', 'description', 'price', 'location', 'image']
-}, null,{addListing})(NewListingForm);
+}, mapStateToProps,{addListing})(NewListingForm);

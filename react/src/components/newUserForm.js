@@ -62,6 +62,7 @@ class NewUserForm extends Component {
  }
 }
 
+
 function mapStateToProps(state){
   return {
     user: state.user, authenticated: state.authenticated
