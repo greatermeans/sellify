@@ -8,9 +8,9 @@ module Api
 
       def create
         new_seller = Seller.find_or_create_by(user_id: user_params[:user_id])
-        binding.pry
-        listing_params[:seller_id] = new_seller.id
-        @listing = Listing.create(listing_params)
+        new_params = listing_params.to_h
+        new_params[:seller_id] = new_seller.id
+        @listing = Listing.create(new_params)
         render json: @listing, include: ['seller', 'user']
       end
 
