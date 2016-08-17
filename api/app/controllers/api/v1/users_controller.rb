@@ -35,6 +35,11 @@ module Api
         render json: @user.conversations
       end
 
+      def add_org
+        binding.pry
+        @user = User.find(params[:id])
+      end
+
       # def update
 
       # end

@@ -1,32 +1,45 @@
 import React, { Component } from 'react';
 import OrganizationBox from '../components/organizationBox'
 import { connect } from 'react-redux'
-import getOrganizations from '../actions/getOrganizations'
+import joinOrganizations from '../actions/getOrganizations'
 import { bindActionCreators } from 'redux'
+import { reduxForm } from 'redux-form';
 
 const AllOrganizations = class extends Component {
 	mapOrgs(){
 		return (
 			this.props.orgs.map((org)=>{
-				return (<li> {org.name} </li>)
+				return <OrganizationBox {...org}/>
 			})
-	)
-}
+		)
+	}
+
+	submitHandler(){
+		this.props.joinOrganizations(relatedOrgs)
+	}
+
+	submitClick(orgsData){
+		const relatedOrgs = []
+		relatedOrgs.push(parseInt(orgsData.target.getAttribute('value')))
+		debugger
+	}
 
 	render() {
 
+		const {fields: {orgs}, handleSubmit, handleClick} = this.props;
 		return(
-			<div>
-			Select your organizations
-			<ul>
-			{this.mapOrgs()}
-			</ul>
-			</div>
-	)}
-}
-
-function mapDispatchToProps(dispatch){
-	return bindActionCreators({getOrganizations: getOrganizations},dispatch)
+			<form id="join_org" onSubmit={handleSubmit(this.submitHandler.bind(this))}>
+				<label>Choose your organizations</label>
+					<div {...orgs}>
+						{this.props.orgs.map((org,ind) =>
+							<div key={ind} value={org.id} onClick={this.submitClick.bind(this)}>
+							{org.name}
+       				</div>
+					)}
+					</div>
+				<button type='submit'>Done</button>
+			</form>
+		)}
 }
 
 function mapStateToProps(state){
@@ -35,6 +48,7 @@ function mapStateToProps(state){
   }
 }
 
-const SmartAllOrganizations = connect(mapStateToProps, mapDispatchToProps)(AllOrganizations)
-
-export default SmartAllOrganizations
+export default reduxForm({
+ form: 'AllOrganizations',
+ fields: ['orgs']
+}, mapStateToProps,{joinOrganizations})(AllOrganizations);
