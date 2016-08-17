@@ -14,8 +14,11 @@ class User < ApplicationRecord
   end
 
   def all_listings_for_orgs
-    self.organizations.joins
+    list = []
+    self.organizations.map {|org| list << org.get_listings}
+    return list.flatten
   end
+
 
 
 end

@@ -1,3 +1,3 @@
 class OrganizationSerializer < ActiveModel::Serializer
-  attributes :id, :name, :all_listings
+  attributes :id, :name, :listings
 end
