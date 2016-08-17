@@ -3,6 +3,11 @@ import OrganizationBox from '../components/organizationBox'
 import { connect } from 'react-redux'
 
 const AllOrganizations = class extends Component {
+
+	componentWillMount(){
+		
+	}
+
 	render() {
 		return(
 			<div>
