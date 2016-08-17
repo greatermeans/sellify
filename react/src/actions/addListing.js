@@ -8,7 +8,10 @@ const addListing = (listingData)=>{
   		data: JSON.stringify({listing: listingData}),
   		contentType: "application/json; charset=utf-8",
   		dataType:"json"
-  })
+  }).then(function(resp){
+			debugger
+			browserHistory.push(`/listings/${resp.listing.id}`)
+	})
 
 	return {
 		type: 'ADD_LISTING',
