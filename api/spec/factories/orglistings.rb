@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :community do
-    user {User.all.sample}
+  factory :orglisting do
     organization {Organization.all.sample}
+    listing {Listing.all.sample}
   end
 end

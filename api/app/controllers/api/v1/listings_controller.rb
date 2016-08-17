@@ -7,31 +7,23 @@ module Api
 			end
 
       def create
-        new_seller = Seller.find_or_create_by(user_id: user_params[:user_id])
-        new_params = listing_params.to_h
-        new_params[:seller_id] = new_seller.id
-        @listing = Listing.create(new_params)
-        render json: @listing, include: ['seller', 'user']
+        @listing = Listing.create(listing_params)
+        render json: @listing, include: ['user']
       end
 
 			def show
 			end
 
 			def index
-				render json: Listing.all, include: ['sellers','users']
+				render json: Listing.all, include: ['users']
 			end
 
       private
 
 
       def listing_params
-        params.require(:listing).permit(:title, :description, :price, :location, :image,:seller_id)
+        params.require(:listing).permit(:title, :description, :price, :location, :image, :user_id)
       end
-
-      def user_params
-        params.require(:listing).permit(:user_id)
-      end
-
 
 		end
 	end
