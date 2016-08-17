@@ -7,7 +7,7 @@ import SmartAllOrganizations from './containers/allOrganizations'
 import AuthDashboard from './containers/dashboard'
 import AuthAllListing from './containers/allListings'
 import AuthMyProfile from './components/myProfile'
-import SmartAllListing from './components/allListing'
+import SmartAllListing from './components/dashboardListing'
 import Listing from './containers/listing'
 
 const Routes = (
