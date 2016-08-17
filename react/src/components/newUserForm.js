@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 import addUser from '../actions/addUser'
+import authenticate from '../actions/authenticate'
 import getOrganizations from '../actions/getOrganizations'
 import { reduxForm } from 'redux-form';
 import { browserHistory } from 'react-router'
@@ -23,9 +24,10 @@ class NewUserForm extends Component {
 
   submitHandler(userData) {
     this.props.addUser(userData)
-    .then(() => {
+    .then((() => {
+      this.props.authenticate(true)
       browserHistory.push('/home')
-    })
+    }).bind(this))
   }
 
  render() {
@@ -61,14 +63,14 @@ class NewUserForm extends Component {
 }
 
 
-
 function mapStateToProps(state){
   return {
-    users: state.users
+    user: state.user, authenticated: state.authenticated
   }
 }
+
 
 export default reduxForm({
  form: 'newUserForm',
  fields: ['first_name', 'last_name', 'email', 'password', 'zipcode']
-}, mapStateToProps,{addUser})(NewUserForm);
+}, mapStateToProps,{addUser, authenticate})(NewUserForm);

@@ -1,22 +1,14 @@
 import React from 'react';
 import { Route, Router, IndexRoute } from 'react-router';
-import SmartApp from './App';
-import Start from './components/start'
-import NavBar from './components/navBar'
-import Login from './containers/login'
-import MyProfile from './components/myProfile'
-import LogInSignUp from './components/logInSignUp'
-import NewUserForm from './components/newUserForm'
+import App from './App';
+import AuthHome from './containers/home'
+import AuthMyProfile from './components/myProfile'
 
 const Routes = (
   <Router>
-    <Route path='/' component={Start}>
-      <IndexRoute component={LogInSignUp}/>
-      <Route path='/log_in' component={Login} />
-      <Route path='/sign_up' component={NewUserForm} />
-    </Route>
-    <Route path='/home' component={SmartApp}>
-      <Route path='/my_profile' component={MyProfile} />
+    <Route path='/' component={App} />
+    <Route path='/home' component={AuthHome}>
+      <Route path='/my_profile' component={AuthMyProfile} />
     </Route>
   </Router>
 )

@@ -10,7 +10,7 @@ const Reducers = combineReducers({
   user: userReducer,
   form:formReducer,
   listing: listingReducer,
-  authenticate: authenticateReducer,
+  authenticated: authenticateReducer,
   orgs: orgReducer
 	})
 export default Reducers
