@@ -6,13 +6,11 @@ import BookMarked from '../components/bookmarked'
 import SmartAllListing from '../components/allListing'
 import auth from './authenticationResource'
 
-const Home = class extends Component {
+const LoggedIn = class extends Component {
 	render() {
 		return(
 			<div>
-				<NewListingForm />
-			  SmartAllListing here
-				<BookMarked />
+				<NavBar />
 				{this.props.children}
 			</div>
 	)}
@@ -22,7 +20,7 @@ function mapStateToProps(state) {
 	return { user: state.user, authenticated: state.authenticated }
 }
 
-const SmartHome = connect(mapStateToProps)(Home)
+const SmartLoggedIn = connect(mapStateToProps)(LoggedIn)
 
-const AuthHome = auth(SmartHome)
-export default AuthHome;
+const AuthLoggedIn = auth(SmartLoggedIn)
+export default AuthLoggedIn;

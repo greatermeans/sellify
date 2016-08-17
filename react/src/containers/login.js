@@ -19,7 +19,7 @@ class LoginForm extends Component {
     this.props.userLogin(userData)
     .then((()=>{
       this.props.authenticate(true)
-      browserHistory.push('/home')
+      browserHistory.push('/dashboard')
     }).bind(this))
   }
 

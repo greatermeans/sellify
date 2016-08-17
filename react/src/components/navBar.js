@@ -6,7 +6,7 @@ export default class NavBar extends Component {
     return(
       <div className='nav-bar'>
         <ul>
-          <li> <Link to={'/home'}>Home</Link> </li>
+          <li> <Link to={'/dashboard'}>Dashboard</Link> </li>
           <li> <Link to={'/my_profile'}>My Profile</Link> </li>
           <li> <Link to={'/'}>Logout</Link> </li>
           <li> <input type="text" name="search" placeholder="Search" /> </li>
