@@ -13,7 +13,7 @@ class AllListing extends Component {
     return(
       <div>
       Organization Listings
-      {this.displayListings()}
+      {/* {this.displayListings()} */}
       </div>
     )
   }

@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20160817170607) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.integer  "seller_id"
+    t.integer  "user_id"
     t.string   "title"
     t.string   "description"
     t.string   "location"
@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20160817170607) do
 
   create_table "messages", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "seller_id"
     t.string  "subject"
     t.text    "content"
   end
@@ -67,12 +66,6 @@ ActiveRecord::Schema.define(version: 20160817170607) do
     t.integer  "listing_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-  end
-
-  create_table "sellers", force: :cascade do |t|
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "tags", force: :cascade do |t|

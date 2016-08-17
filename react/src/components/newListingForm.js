@@ -19,12 +19,9 @@ export default class NewListingForm extends Component{
 
     submitHandler(listingData) {
       listingData.user_id = this.props.user.id
-      this.props.addListing(listingData)
-      debugger
-      // .then(
-      //
-      //   //initiate view route
-      //   browserHistory.push('/listings/:id'))
+      this.props.addListing(listingData).then(function(resp){
+        browserHistory.push(`/listings/${resp.payload.id}`)
+      })
     }
 
     render() {
