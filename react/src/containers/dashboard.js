@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import NewListingForm from '../components/newListingForm'
 import BookMarked from '../components/bookmarked'
-import SmartAllListing from '../components/allListing'
+import SmartDashboardListing from '../components/dashboardListing'
 import auth from './authenticationResource'
 
 const Dashboard = class extends Component {
@@ -10,7 +10,7 @@ const Dashboard = class extends Component {
 		return(
 			<div>
 				<NewListingForm />
-			  <SmartAllListing />
+			  <SmartDashboardListing />
 				<BookMarked />
 			</div>
 	)}
