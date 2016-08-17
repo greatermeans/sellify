@@ -5,7 +5,8 @@ import ListingBox from './listingBox'
 class AllListing extends Component {
 
   displayListings() {
-    debugger
+    this.props.all_listings_for_orgs.map ( (listing) => {
+    })
   }
 
   render(){
