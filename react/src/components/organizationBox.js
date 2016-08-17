@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-const ListingBox = ({title, price, image, description}) => (
+const OrganizationBox = ({name}) => (
   <div className="row">
   <div className="col-sm-6 col-md-4">
     <div className="thumbnail">
-      <img src={image} alt="..." />
+      <img src='' alt="..." />
       <div className="caption">
-        <h3>{title}</h3>
-        <p> ${price} {description}</p>
+        <h3>{name}</h3>
+        <p></p>
         <p>
         <a href='' className="btn btn-primary" role="button">click to view</a>
         </p>
@@ -18,4 +18,4 @@ const ListingBox = ({title, price, image, description}) => (
   )
 
 
-export default ListingBox
+export default OrganizationBox

@@ -26,7 +26,7 @@ class NewUserForm extends Component {
     this.props.addUser(userData)
     .then((() => {
       this.props.authenticate(true)
-      browserHistory.push('/dashboard')
+      browserHistory.push('/organizations')
     }).bind(this))
   }
 
