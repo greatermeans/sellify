@@ -11,7 +11,7 @@ const Home = class extends Component {
 		return(
 			<div>
 				<NewListingForm />
-			  SmartAllListing here
+			  <SmartAllListing />
 				<BookMarked />
 				{this.props.children}
 			</div>
