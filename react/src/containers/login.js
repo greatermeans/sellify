@@ -1,15 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import userLogin from '../actions/userLogin'
 import authenticate from '../actions/authenticate'
+import { browserHistory } from 'react-router'
 import { reduxForm } from 'redux-form';
 var Modal = require('boron/DropModal');
 
 
 class LoginForm extends Component {
-  static contextTypes = {
-    router:PropTypes.object
-  }
-
   showModal() {
     this.refs.modal.show();
   }
@@ -22,7 +19,7 @@ class LoginForm extends Component {
     this.props.userLogin(userData)
     .then((()=>{
       this.props.authenticate(true)
-      this.context.router.push('/home')
+      browserHistory.push('/home')
     }).bind(this))
   }
 
@@ -40,7 +37,7 @@ class LoginForm extends Component {
               <input type='password' {...password}/><br/>
               <button type='submit'>Login</button>
             </form>
-          <button onClick={this.hideModal.bind(this)}>Close</button>
+          <button onClick={this.hideModal.bind(this)}>x</button>
           </Modal>
       </div>
     )
