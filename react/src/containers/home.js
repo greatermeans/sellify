@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import NavBar from  '../components/navBar'
 import NewListingForm from '../components/newListingForm'
 import BookMarked from '../components/bookmarked'
 import SmartAllListing from '../components/allListing'
@@ -13,7 +12,6 @@ const Home = class extends Component {
 				<NewListingForm />
 			  <SmartAllListing />
 				<BookMarked />
-				{this.props.children}
 			</div>
 	)}
 }
