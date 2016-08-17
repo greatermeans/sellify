@@ -5,13 +5,14 @@ import ListingBox from './listingBox'
 class AllListing extends Component {
 
   displayListings() {
+    debugger
   }
 
   render(){
     return(
       <div>
       Organization Listings
-      this.displayListings
+      {this.displayListings()}
       </div>
     )
   }
