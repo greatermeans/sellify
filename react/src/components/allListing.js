@@ -5,7 +5,7 @@ import ListingBox from './listingBox'
 class AllListing extends Component {
 
   displayListings() {
-    debugger
+    
   }
 
   render(){

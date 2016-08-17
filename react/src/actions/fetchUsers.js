@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 function fetchUsers() {
-	var request = 'http://localhost:3000/api/v1/users/12/listings'
+	var request = 'i'
 
 	axios.get(request)
 	.then(function (response) {
