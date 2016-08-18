@@ -5,8 +5,13 @@ import ListingBox from '../components/listingBox'
 
 const AllListing = class extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {listings: this.props.user.all_listings}
+  }
+
   displayAllListings() {
-    return this.props.user.all_listings.map ( (listing, idx) => {
+    return this.state.listings.map ( (listing, idx) => {
       return <ListingBox key={idx} {...listing}/>
     })
   }
@@ -14,7 +19,7 @@ const AllListing = class extends Component {
   createDropdown() {
     return (
       <div>
-      <select value="" onChange={this.handleonChange.bind(this)}>
+      <select value="" onChange={this.handleOnChange.bind(this)}>
        <option value="" selected>All Organizations</option>
         {this.props.user.organizations.map ( (org, idx) => {
           return <option value={org.id}> {org.name} </option>
@@ -24,11 +29,11 @@ const AllListing = class extends Component {
     )
   }
 
-  handleonChange(event) {
-    debugger
-    this.props.user.organizations.filter((org)=>{
+  handleOnChange(event) {
+    let chosenOrg = this.props.user.organizations.filter((org)=>{
       return org.id === parseInt(event.target.value)
     })
+    this.setState({listings: chosenOrg[0].listings})
   }
 
   render() {
