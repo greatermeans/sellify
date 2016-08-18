@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import userLogin from '../actions/userLogin'
-import authenticate from '../actions/authenticate'
+import { authorizeUser } from '../actions/authentication'
 import { browserHistory } from 'react-router'
 import { reduxForm } from 'redux-form';
 var Modal = require('boron/DropModal');
@@ -16,11 +15,7 @@ class LoginForm extends Component {
   }
 
   submitHandler(userData) {
-    this.props.userLogin(userData)
-    .then((()=>{
-      this.props.authenticate(true)
-      browserHistory.push('/dashboard')
-    }).bind(this))
+    this.props.authorizeUser(userData)
   }
 
   render() {
@@ -51,4 +46,4 @@ function mapStateToProps(state) {
 export default reduxForm({
  form: 'userLoginForm',
  fields: ['email', 'password']
-}, mapStateToProps,{userLogin, authenticate})(LoginForm);
+}, mapStateToProps,{authorizeUser})(LoginForm);

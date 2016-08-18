@@ -12,7 +12,8 @@ const AllOrganizations = class extends Component {
 		this.props.joinOrganizations(relatedOrgs)
 	}
 
-	submitClick(orgsData){
+	handleClick(orgsData){
+		debugger
 		relatedOrgs.push(parseInt(orgsData.target.getAttribute('value')))
 	}
 
@@ -24,9 +25,9 @@ const AllOrganizations = class extends Component {
 				<label>Choose your organizations</label>
 					<div {...orgs}>
 						{this.props.orgs.map((org,ind) =>
-							<div key={ind} value={org.id} onClick={this.submitClick.bind(this)}>
+							<button value={org.id} onClick={this.handleClick.bind(this)}>
 							{org.name}
-       				</div>
+							</button>
 					)}
 					</div>
 				<button type='submit'>Done</button>
