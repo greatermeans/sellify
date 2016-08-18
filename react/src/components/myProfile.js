@@ -5,7 +5,6 @@ import ListingBox from './listingBox'
 
 const MyProfile = class extends Component {
   render(){
-    debugger
     return(
       <div>
       <h3>My Listings</h3>

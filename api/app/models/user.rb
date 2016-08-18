@@ -18,7 +18,7 @@ class User < ApplicationRecord
   end
 
   def dashboard_listings
-    Listing.where(id: all_listings.map(&:id)).order(:created_at).first(6)
+    Listing.where(id: all_listings.map(&:id)).order(created_at: :desc).first(6)
   end
 
 end
