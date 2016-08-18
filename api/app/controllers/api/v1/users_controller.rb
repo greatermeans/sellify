@@ -36,7 +36,6 @@ module Api
       end
 
       def add_org
-        binding.pry
         @user = User.find(params[:id])
       end
 

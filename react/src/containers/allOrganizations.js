@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
 import OrganizationBox from '../components/organizationBox'
 import { connect } from 'react-redux'
-import joinOrganizations from '../actions/getOrganizations'
+import joinOrganizations from '../actions/joinOrganizations'
 import { bindActionCreators } from 'redux'
 import { reduxForm } from 'redux-form';
 
+const relatedOrgs = []
 const AllOrganizations = class extends Component {
-	mapOrgs(){
-		return (
-			this.props.orgs.map((org)=>{
-				return <OrganizationBox {...org}/>
-			})
-		)
-	}
 
 	submitHandler(){
 		this.props.joinOrganizations(relatedOrgs)
 	}
 
 	submitClick(orgsData){
-		const relatedOrgs = []
 		relatedOrgs.push(parseInt(orgsData.target.getAttribute('value')))
-		debugger
 	}
 
 	render() {
