@@ -20,7 +20,6 @@ module Api
       end
 
       def show
-        binding.pry
         @user = User.find(params[:id])
         render json: @user, include: ['listings','organizations']
       end
