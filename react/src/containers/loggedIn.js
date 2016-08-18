@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import NavBar from  '../components/navBar'
-import NewListingForm from '../components/newListingForm'
-import BookMarked from '../components/bookmarked'
-import SmartDashboardListing from '../components/dashboardListing'
 import auth from './authenticationResource'
 
 const LoggedIn = class extends Component {

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import auth from '../containers/authenticationResource'
 import ListingBox from './listingBox'
+import { Link } from 'react-router'
+
 
 const MyProfile = class extends Component {
   render(){
@@ -11,6 +13,12 @@ const MyProfile = class extends Component {
         {this.props.user.listings.map((listing, ind)=>{
           return <ListingBox key={ind} {...listing} />
         })}
+
+        <Link to="/organizations" className="btn btn-primary">
+          Edit organizations
+        </Link>
+
+
       </div>
     )
   }

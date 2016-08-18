@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 export default class OrganizationBox extends Component {
   onChange(e){
-    debugger
     this.setState({ inputValue: e.target.value });
   }
 
