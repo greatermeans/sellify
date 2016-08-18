@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import joinOrganizations from '../actions/joinOrganizations'
 import { bindActionCreators } from 'redux'
 import { reduxForm } from 'redux-form';
+import { browserHistory } from 'react-router'
 
 
 const relatedGroups = [{name:""}]
@@ -19,6 +20,7 @@ const AllOrganizations = class extends Component {
 
 	submitHandler(){
 		this.props.joinOrganizations(this.state)
+		browserHistory.push('/dashboard')
 	}
 
 	logChange(val) {
@@ -27,14 +29,12 @@ const AllOrganizations = class extends Component {
 	}
 
 	handleClick(orgsData){
-		debugger
 		relatedOrgs.push(parseInt(orgsData.target.getAttribute('value')))
 	}
 
 	render() {
 
 		const {fields: {orgs}, handleSubmit, handleClick} = this.props;
-
 		var options = this.props.orgs.map((org)=>{
 			return {value: org.id, label: org.name, obj:org}
 		})

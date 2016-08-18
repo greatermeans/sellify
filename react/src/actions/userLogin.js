@@ -8,6 +8,10 @@ export default function userLogin(dispatch, userData){
   		headers: { authorization: localStorage.getItem('token')}
   }).done((response)=> {
       dispatch({type: 'USER_LOGIN', payload: response})
-      browserHistory.push('/dashboard')
-  	  })
+      if (response.organizations.length > 0) {
+      	browserHistory.push('/dashboard')
+      } else {
+      	browserHistory.push('/organizations')
+      }
+  	})
 }

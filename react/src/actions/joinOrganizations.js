@@ -7,10 +7,11 @@ const joinOrganizations = (orgsAndUser)=>{
   		type:"POST",
   		data: JSON.stringify({relatedGroups:orgsAndUser.cleanOrgs}),
   		contentType: "application/json; charset=utf-8",
-  		dataType:"json"
+  		dataType:"json",
+  		headers: { authorization: localStorage.getItem('token')}
   })
 	return {
-		type: 'JOIN_ORG',
+		type: 'USER_LOGIN',
 		payload: request
 	}
 

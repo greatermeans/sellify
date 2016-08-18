@@ -29,7 +29,6 @@ class NewUserForm extends Component {
       this.props.getOrganizations()
     })
     
-    
   }
 
  render() {
