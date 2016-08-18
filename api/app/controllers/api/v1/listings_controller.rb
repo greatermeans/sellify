@@ -4,7 +4,7 @@ module Api
   module V1
 
 		class ListingsController < ApplicationController
-
+      @@counter = 1
 
 			def new
 			end
@@ -24,12 +24,10 @@ module Api
 
       def add_image
         binding.pry
-        counter = 1
         file = image_params[:image]
-        root_dir = Rails.root.join('app','assets','listings','images',"#{counter}.jpg")
-        counter += 1
+        root_dir = Rails.root.join('app','assets','listings','images',"#{@@counter}.jpg")
+        @@counter += 1
         File.open(root_dir,'wb') { |f| f.write(file.read)}
-        binding.pry
       end
 
       private
