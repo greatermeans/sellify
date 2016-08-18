@@ -1,6 +1,7 @@
 import $ from 'jquery'
 
 const userLogin = (userData)=>{
+	debugger
 	const URL = 'http://localhost:3000/authorize'
 	var request = $.ajax({
   		url: URL,
