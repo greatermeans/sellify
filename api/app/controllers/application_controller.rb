@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  include Knock::Authenticable
+  before_action :authenticate 
   # protect_from_forgery with: :exception
   # before_action :login_required
   # helper_method :current_user, :logged_in?
