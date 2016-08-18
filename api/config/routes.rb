@@ -4,11 +4,13 @@ Rails.application.routes.draw do
     	namespace :v1 do
     		resources :users
     		resources :listings
-            resources :organizations	
+            resources :organizations
 			post '/users/:id/add_org', to: 'users#add_org'
             mount Knock::Engine => "/knock"
     		get '/users/:id/listings', to: 'users#show_listings'
     		get '/users/:id/conversations', to: 'users#show_conversations'
+
+				post '/listings/add_image', to: 'listings#add_image'
     	end
     end
 
