@@ -9,14 +9,19 @@ const MyProfile = class extends Component {
   render(){
     return(
       <div>
+      <h3>My Organizations</h3>
+      {this.props.user.organizations.map((organization,ind)=>{
+        return <p>{organization.name}</p>
+      })}
+      <Link to="/organizations" className="btn btn-primary">
+        Edit organizations
+      </Link>
       <h3>My Listings</h3>
         {this.props.user.listings.map((listing, ind)=>{
           return <ListingBox key={ind} {...listing} />
         })}
 
-        <Link to="/organizations" className="btn btn-primary">
-          Edit organizations
-        </Link>
+
 
 
       </div>
