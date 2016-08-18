@@ -25,7 +25,6 @@ const MyProfile = class extends Component {
 }
 
 function mapStateToProps(state) {
-
 	return { user: state.user, authenticated: state.authenticated }
 }
 
