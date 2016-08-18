@@ -1,19 +1,13 @@
 import $ from 'jquery'
+import { browserHistory } from 'react-router'
 
-const userLogin = (userData)=>{
-	const URL = 'http://localhost:3000/authorize'
-	var request = $.ajax({
-  		url: URL,
-  		type:"POST",
-  		data: JSON.stringify({user: userData}),
-  		contentType: "application/json; charset=utf-8",
-  		dataType:"json"
-  })
-	return {
-		type: 'USER_LOGIN',
-		payload: request
-	}
-
+export default function userLogin(dispatch, userData){
+    $.ajax({
+  		url: `http://localhost:3000/api/v1/users/${userData.id}`,
+  		type:"GET",
+  		headers: { authorization: localStorage.getItem('token')}
+  }).done((response)=> {
+      dispatch({type: 'USER_LOGIN', payload: response})
+      browserHistory.push('/dashboard')
+  	  })
 }
-
-export default userLogin

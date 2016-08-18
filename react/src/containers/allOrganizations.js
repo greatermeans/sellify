@@ -26,7 +26,8 @@ const AllOrganizations = class extends Component {
 			this.setState({selectedOrganizations: val, cleanOrgs: cleanOrgs})
 	}
 
-	submitClick(orgsData){
+	handleClick(orgsData){
+		debugger
 		relatedOrgs.push(parseInt(orgsData.target.getAttribute('value')))
 	}
 

@@ -13,7 +13,6 @@ module Api
       def create
         @user = User.new(user_params)
         if @user.save
-          login(@user)
           render json: @user, include: ['listings','organizations']
         else
           render json: @user.errors.full_messages
@@ -21,6 +20,7 @@ module Api
       end
 
       def show
+        binding.pry
         @user = User.find(params[:id])
         render json: @user, include: ['listings','organizations']
       end
