@@ -7,7 +7,6 @@ import SmartAllOrganizations from './containers/allOrganizations'
 import AuthDashboard from './containers/dashboard'
 import AuthAllListing from './containers/allListings'
 import AuthMyProfile from './components/myProfile'
-import SmartAllListing from './components/dashboardListing'
 import Listing from './containers/listing'
 
 const Routes = (
@@ -18,9 +17,8 @@ const Routes = (
         <Route path='/home' component={LoggedIn} >
           <Route path='/organizations' component={SmartAllOrganizations} />
           <Route path='/dashboard' component={AuthDashboard} />
-          <Route path='/view_listings' component={AuthAllListing} />
+          <Route path='/listings' component={AuthAllListing} />
           <Route path='/my_profile' component={AuthMyProfile} />
-          <Route path='/listings' component={SmartAllListing} />
           <Route path='/listings/:id' component={Listing} />
         </Route>
     </Route>

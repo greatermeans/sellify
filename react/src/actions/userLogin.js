@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import { browserHistory } from 'react-router'
 
+
 export default function userLogin(dispatch, userData){
     $.ajax({
   		url: `http://localhost:3000/api/v1/users/${userData.id}`,
