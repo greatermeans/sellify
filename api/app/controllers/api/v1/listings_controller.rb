@@ -23,11 +23,12 @@ module Api
 			end
 
       def add_image
+        binding.pry
         counter = 1
-        url = image_params[:image].split("blob:").pop
-        root_dir = Rails.root.join('app','assets','listings','images','#{counter}.jpg')
+        file = image_params[:image]
+        root_dir = Rails.root.join('app','assets','listings','images',"#{counter}.jpg")
         counter += 1
-        File.open(root_dir,'wb') { |f| f.write(open(url).read)}
+        File.open(root_dir,'wb') { |f| f.write(file.read)}
         binding.pry
       end
 
