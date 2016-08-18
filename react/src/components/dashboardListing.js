@@ -5,7 +5,6 @@ import ListingBox from './listingBox'
 class DashboardListing extends Component {
 
   displayListings() {
-    debugger
     return this.props.user.dashboard_listings.map ( (listing, idx) => {
       return <ListingBox key={idx} {...listing}/>
     })

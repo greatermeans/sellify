@@ -1,9 +1,8 @@
-import React, {Component, PropTypes} from 'react'
+import React, { Component } from 'react'
 import addUser from '../actions/addUser'
 import { authorizeUser } from '../actions/authentication'
 import getOrganizations from '../actions/getOrganizations'
 import { reduxForm } from 'redux-form';
-import { browserHistory } from 'react-router'
 
 var Modal = require('boron/DropModal');
 
@@ -28,7 +27,7 @@ class NewUserForm extends Component {
     }).then(()=>{
       this.props.getOrganizations()
     })
-    
+
   }
 
  render() {

@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import {browserHistory} from 'react-router'
 
 const addListing = (listingData)=>{
 	const URL = 'http://localhost:3000/api/v1/listings'

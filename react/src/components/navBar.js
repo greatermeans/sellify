@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Link } from 'react-router'
 
 export default class NavBar extends Component {
   render(){

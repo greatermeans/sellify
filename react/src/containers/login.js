@@ -1,6 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { authorizeUser } from '../actions/authentication'
-import { browserHistory } from 'react-router'
 import { reduxForm } from 'redux-form';
 var Modal = require('boron/DropModal');
 
