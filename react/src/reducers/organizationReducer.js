@@ -4,7 +4,7 @@ const orgReducer = (state=[], action)=>{
 			return state.concat(action.payload.data)
 		case 'JOIN_ORG':
 			debugger
-			return
+			return state
 		default:
 			return state
 	}

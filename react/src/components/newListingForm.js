@@ -3,7 +3,6 @@ import { reduxForm } from 'redux-form';
 import addListing from '../actions/addListing'
 import {browserHistory} from 'react-router'
 import Dropzone from 'react-dropzone'
-
 var Modal = require('boron/DropModal');
 
 
@@ -19,7 +18,6 @@ export default class NewListingForm extends Component{
 
     submitHandler(listingData) {
       listingData.user_id = this.props.user.id
-      debugger
       this.props.addListing(listingData).then(function(resp){
         browserHistory.push(`/listings/${resp.payload.id}`)
       })

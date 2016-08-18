@@ -35,8 +35,13 @@ module Api
         render json: @user.conversations
       end
 
-      def add_org
+      def join_org
         @user = User.find(params[:id])
+        params[:relatedGroups].map do |organization|
+          @user.organizations << Organization.find(organization[:id])
+        end
+        @user.save
+        render json: @user, include: ['listings','organizations']
       end
 
       # def update
