@@ -9,6 +9,8 @@ Rails.application.routes.draw do
         mount Knock::Engine => "/knock"
     		get '/users/:id/listings', to: 'users#show_listings'
     		get '/users/:id/conversations', to: 'users#show_conversations'
+
+				post '/listings/add_image', to: 'listings#add_image'
     	end
     end
 
