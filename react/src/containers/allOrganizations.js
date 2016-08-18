@@ -15,17 +15,24 @@ const relatedGroups = [{name:""}]
 const AllOrganizations = class extends Component {
 	constructor(props){
 		super(props)
-		this.state = {selectedOrganizations: [], cleanOrgs:[], currentUser:this.props.user}
+		this.state = {selectedOrganizations: this.makeOptions(), currentUser:this.props.user}
+	}
+
+	makeOptions(){
+		return this.props.user.organizations.map((org)=>{
+			return {value: org.id, label:org.name}
+		})
 	}
 
 	submitHandler(){
 		this.props.joinOrganizations(this.state)
+		debugger
 		browserHistory.push('/dashboard')
 	}
 
+
 	logChange(val) {
-			let cleanOrgs = val.map((org)=>{return org.obj})
-			this.setState({selectedOrganizations: val, cleanOrgs: cleanOrgs})
+			this.setState({selectedOrganizations: val})
 	}
 
 	handleClick(orgsData){
@@ -36,8 +43,10 @@ const AllOrganizations = class extends Component {
 
 		const {fields: {orgs}, handleSubmit, handleClick} = this.props;
 		var options = this.props.orgs.map((org)=>{
-			return {value: org.id, label: org.name, obj:org}
+			return {value: org.id, label: org.name}
 		})
+
+
 		return(
 			<form id="join_org" onSubmit={handleSubmit(this.submitHandler.bind(this))}>
 				<label>Choose your organizations</label><br />
