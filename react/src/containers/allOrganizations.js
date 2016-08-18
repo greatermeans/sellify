@@ -26,7 +26,6 @@ const AllOrganizations = class extends Component {
 
 	submitHandler(){
 		this.props.joinOrganizations(this.state)
-		debugger
 		browserHistory.push('/dashboard')
 	}
 

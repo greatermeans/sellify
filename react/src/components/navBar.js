@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
 import {connect} from 'react-redux'
+import SearchBar from '../containers/searchBar'
 
 const NavBar = class extends Component {
 
@@ -12,7 +13,7 @@ const NavBar = class extends Component {
           <li> <Link to={'/listings'}>Listings</Link> </li>
           <li> <Link to={'/my_profile'}>My Profile</Link> </li>
           <li> <Link to={'/'} onClick>Logout</Link> </li>
-          <li> <input type="text" name="search" placeholder="Search" /> </li>
+          <li> <SearchBar /> </li>
         </ul>
       </div>
     )

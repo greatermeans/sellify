@@ -36,7 +36,6 @@ module Api
 
       def join_org
         @user = User.find(params[:id])
-        binding.pry
         @user.organizations.destroy_all
         params[:orgIds].map do |orgId|
           @user.organizations << Organization.find(orgId)
