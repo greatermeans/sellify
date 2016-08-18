@@ -7,7 +7,7 @@ import SmartAllOrganizations from './containers/allOrganizations'
 import AuthDashboard from './containers/dashboard'
 import AuthAllListing from './containers/allListings'
 import AuthMyProfile from './components/myProfile'
-import Listing from './containers/listing'
+import AuthListing from './containers/listing'
 
 const Routes = (
   // Listing routes need to be authorized!
@@ -19,7 +19,7 @@ const Routes = (
           <Route path='/dashboard' component={AuthDashboard} />
           <Route path='/listings' component={AuthAllListing} />
           <Route path='/my_profile' component={AuthMyProfile} />
-          <Route path='/listings/:id' component={Listing} />
+          <Route path='/listings/:id' component={AuthListing} />
         </Route>
     </Route>
   </Router>

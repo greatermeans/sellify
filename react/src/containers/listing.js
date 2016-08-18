@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
+import auth from '../containers/authenticationResource'
 
 const Listing = class extends Component {
 
@@ -21,4 +22,7 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps)(Listing)
+const SmartListing = connect(mapStateToProps)(Listing)
+
+const AuthListing = auth(SmartListing)
+export default AuthListing;
