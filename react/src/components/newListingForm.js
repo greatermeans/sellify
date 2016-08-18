@@ -28,12 +28,13 @@ export default class NewListingForm extends Component{
 
     onDrop(file) {
       var formdata = new FormData()
-      formdata.append('image', file)
+      formdata.append('image', file[0])
       debugger
       $.ajax({
         url: 'http://localhost:3000/api/v1/listings/add_image',
         type: 'POST',
         data: formdata,
+        dataType: "json",
         processData: false,  // tell jQuery not to process the data
         contentType: false   // tell jQuery not to set contentType
       })
@@ -62,7 +63,7 @@ export default class NewListingForm extends Component{
             </form>
             <label>Image(s):</label>
             <Dropzone
-              multiple={true}
+              multiple={false}
               accept="image/*"
               onDrop={this.onDrop.bind(this)}>
                 <p>Drag an image here or click to select a file to upload</p>
