@@ -56,6 +56,7 @@ module Api
       # end
 
       def index
+        binding.pry
         @users = User.all
         render json: @users, include: ['listings','communities','conversations','organizations']
       end
