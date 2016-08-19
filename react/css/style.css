@@ -415,7 +415,6 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .fh5co-counters .fh5co-counter {
   font-size: 50px;
   display: block;
-  color: #fff;
   font-family: "Montserrat", Arial, sans-serif;
   width: 100%;
   margin-bottom: .5em;
@@ -461,7 +460,6 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .fh5co-cards .fh5co-flex-wrap > div {
   width: 49.5%;
   margin-right: 1%;
-  background: #fff;
   padding: 30px;
   margin-bottom: 10px;
 }
