@@ -10,7 +10,7 @@ const NavBar = class extends Component {
       <div id='id="fh5co-page"'>
       <aside id="fh5co-aside" role="complementary" className="border js-fullheight">
         <h1 id="fh5co-logo">
-        <img src="images/logo.png"  /><br />
+        <img src="images/logo.png" alt='logo' /><br />
         </h1>
         <nav id="fh5co-main-menu" role="navigation">
           <ul>

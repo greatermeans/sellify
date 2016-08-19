@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import WelcomeView from './welcomeView.js'
 import MainView from './mainView.js'
 
@@ -11,7 +11,7 @@ var Chat = React.createClass({
   },
 
   _onName: function(e){
-   if (e.nativeEvent.keyCode != 13) return;
+   if (e.nativeEvent.keyCode !== 13) return;
    var username = e.target.value;
    this.setState({username: username});
  },

@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-import OrganizationBox from '../components/organizationBox'
-import { connect } from 'react-redux'
 import joinOrganizations from '../actions/joinOrganizations'
-import { bindActionCreators } from 'redux'
 import { reduxForm } from 'redux-form';
 import { browserHistory } from 'react-router'
-
-
-const relatedGroups = [{name:""}]
 
 const AllOrganizations = class extends Component {
 	constructor(props){

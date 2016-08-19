@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const ListingBox = ({title, price, image, description}) => (
   <div className="col-sm-6 col-md-6">

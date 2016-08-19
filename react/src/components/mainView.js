@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import $ from 'jquery'
 
 var MainView = React.createClass({
 
@@ -9,7 +10,7 @@ var MainView = React.createClass({
   },
 
   _onMessage: function(e){
-  if (e.nativeEvent.keyCode != 13) return;
+  if (e.nativeEvent.keyCode !== 13) return;
 
   var input = e.target;
   var text = input.value;
