@@ -11,7 +11,11 @@ module Api
 
       def create
         binding.pry
-        @listing = Listing.create(lp)
+        listingData = JSON.parse(params[:listing])
+        file = params[:image]
+        root_dir = Rails.root.join('app','assets','listings','images',"#{listingData[:title]}.jpg")
+        File.open(root_dir,'wb') { |f| f.write(file.read)}
+        @listing = Listing.create(listing_params)
         render json: @listing, include: ['user']
       end
 
@@ -22,23 +26,11 @@ module Api
 				render json: Listing.all, include: ['users']
 			end
 
-      def add_image
-        binding.pry
-        file = image_params[:image]
-        root_dir = Rails.root.join('app','assets','listings','images',"#{@@counter}.jpg")
-        @@counter += 1
-        File.open(root_dir,'wb') { |f| f.write(file.read)}
-      end
-
       private
 
 
       def listing_params
-        params.require(:listing).permit(:title, :description, :price, :location, :user_id)
-      end
-
-      def image_params
-        params.permit(:image)
+        params.require(:listing).permit(:title, :description, :price, :location, :image, :user_id)
       end
 
 		end

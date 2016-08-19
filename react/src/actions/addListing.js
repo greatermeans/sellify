@@ -1,13 +1,17 @@
 import $ from 'jquery'
 
-const addListing = (listingData)=>{
+const addListing = (listingData, image)=>{
 	const URL = 'http://localhost:3000/api/v1/listings'
+	var listing = JSON.stringify(listingData)
+	image.append("listing", listing)
+
 	var request = $.ajax({
   		url: URL,
   		type:"POST",
-  		data: JSON.stringify({listing: listingData}),
-  		contentType: "application/json; charset=utf-8",
-  		dataType:"json"
+			contentType: false,
+  		data: image,  //{listing: listing, image: image},
+  		dataType:"json",
+			processData: false
   })
 
 	return {

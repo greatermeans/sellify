@@ -9,6 +9,10 @@ var Modal = require('boron/DropModal');
 
 
 export default class NewListingForm extends Component{
+  constructor(props){
+    super(props)
+    this.state = {image: ''}
+  }
 
     showModal() {
       this.refs.modal.show();
@@ -20,7 +24,7 @@ export default class NewListingForm extends Component{
 
     submitHandler(listingData) {
       listingData.user_id = this.props.user.id
-      this.props.addListing(listingData).then(function(resp){
+      this.props.addListing(listingData, this.state.image).then(function(resp){
         browserHistory.push(`/listings/${resp.payload.id}`)
       })
     }
@@ -28,15 +32,7 @@ export default class NewListingForm extends Component{
     onDrop(file) {
       var formdata = new FormData()
       formdata.append('image', file[0])
-      debugger
-      $.ajax({
-        url: 'http://localhost:3000/api/v1/listings/add_image',
-        type: 'POST',
-        data: formdata,
-        dataType: "json",
-        processData: false,  // tell jQuery not to process the data
-        contentType: false   // tell jQuery not to set contentType
-      })
+      this.setState({image: formdata})
     }
 
     render() {
@@ -55,18 +51,17 @@ export default class NewListingForm extends Component{
               <label>Location:</label>
               <input type='text' {...location}/><br/>
               <label>Price:</label>
-              <input input type="number" min="0.01" step="0.01" max="2500" {...price}/><br/>
-
+              <input type="number" min="0.01" step="0.01" max="2500" {...price}/><br/>
+              <Dropzone
+                multiple={false}
+                accept="image/*"
+                onDrop={this.onDrop.bind(this)}>
+              <p>Drag an image here or click to select a file to upload</p>
+              </Dropzone>
               <br/>
-              <button type='submit'>Add</button>
+              <input type='submit' value="Add"/>
             </form>
             <label>Image(s):</label>
-            <Dropzone
-              multiple={false}
-              accept="image/*"
-              onDrop={this.onDrop.bind(this)}>
-                <p>Drag an image here or click to select a file to upload</p>
-            </Dropzone>
             <button onClick={this.hideModal.bind(this)}>Close</button>
           </Modal>
         </div>
