@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import auth from './authenticationResource'
-<<<<<<< HEAD
-import ListingBox from '../components/listingBox'
 let _ = require('underscore')
-=======
 import SmartListingBox from '../components/listingBox'
->>>>>>> 4c19dff563100f7bf4698bf7a5a41d2c98c0f836
 
 const AllListing = class extends Component {
 
@@ -33,19 +29,19 @@ const AllListing = class extends Component {
     if (this.props.search.length > 0 && this.state.chosenOrg.length > 0) {
       var filteredByOrg = _.intersectionObjects(this.state.chosenOrg[0].listings, searchResults)
       return filteredByOrg.map ( (listing, idx) => {
-        return <ListingBox key={idx} {...listing}/>
+        return <SmartListingBox key={idx} {...listing}/>
       })
     } else if (this.props.search.length > 0 && this.state.chosenOrg.length == 0 ) {
         return this.props.search.map ( (listing, idx) => {
-          return <ListingBox key={idx} {...listing}/>
+          return <SmartListingBox key={idx} {...listing}/>
         })
     } else if (this.state.chosenOrg.length > 0 && this.props.search.length == 0 ) {
         return this.state.chosenOrg[0].listings.map ( (listing, idx) => {
-          return <ListingBox key={idx} {...listing}/>
+          return <SmartListingBox key={idx} {...listing}/>
         })
     } else {
       return this.props.user.all_listings.map ( (listing, idx) => {
-        return <ListingBox key={idx} {...listing}/>
+        return <SmartListingBox key={idx} {...listing}/>
       })
     }
   }
