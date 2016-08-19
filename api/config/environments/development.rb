@@ -36,7 +36,8 @@ Rails.application.configure do
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
-
+  config.serve_static_assets = true
+  config.action_controller.asset_host = "assets.example.com"
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
