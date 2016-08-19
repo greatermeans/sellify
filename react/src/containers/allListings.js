@@ -10,6 +10,10 @@ const AllListing = class extends Component {
     this.state = {listings: this.props.user.all_listings}
   }
 
+  displayBySearch(searchResult) {
+    this.setState({listings: searchResult})
+  }
+
   displayAllListings() {
     return this.state.listings.map ( (listing, idx) => {
       return <ListingBox key={idx} {...listing}/>
@@ -53,7 +57,11 @@ const AllListing = class extends Component {
 }
 
 function mapStateToProps(state) {
-	return { user: state.user, authenticated: state.authenticated }
+	return {
+    user: state.user,
+    authenticated: state.authenticated,
+    search: state.search
+  }
 }
 
 const SmartAllListing = connect(mapStateToProps)(AllListing)
