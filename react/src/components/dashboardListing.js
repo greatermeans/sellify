@@ -13,8 +13,11 @@ class DashboardListing extends Component {
   render(){
     return(
       <div>
-      <h1>Organizations Listings</h1>
+      <h2 className="fh5co-heading animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">Here are the listings from your organizations</h2>
+      <div className='row animate-box fadeInLeft animated' data-animate-effect='fadeInLeft'>
+
       {this.displayListings()}
+      </div>
       </div>
     )
   }

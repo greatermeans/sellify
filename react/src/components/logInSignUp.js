@@ -5,7 +5,8 @@ import NewUserForm from './newUserForm'
 export default class LogInSignUp extends Component {
   render(){
     return(
-      <div className="fh5co-narrow-content">
+      <div id='graybg'>
+      <div className="fh5co-narrow-content" id='landing'>
 				<div className="row">
 					<div className="col-md-8 animate-box" data-animate-effect="fadeInLeft">
 						<h1 className="fh5co-heading-colored">
@@ -27,6 +28,7 @@ export default class LogInSignUp extends Component {
 					</div>
 				</div>
 			</div>
+      </div>
     )
   }
 }

@@ -45,7 +45,6 @@ const AllOrganizations = class extends Component {
 			return {value: org.id, label: org.name}
 		})
 
-
 		return(
 			<form id="join_org" onSubmit={handleSubmit(this.submitHandler.bind(this))}>
 				<label>Choose your organizations</label><br />

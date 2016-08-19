@@ -12,7 +12,6 @@ const Dashboard = class extends Component {
 		if (this.props.user.organizations.length === 0) {
 			return(
 				<div>
-
 					<h4> To add listings, you must first belong to at least 1 organization. </h4>
 					<h5> <Link to='/organizations'>Click here to add organizations</Link> </h5>
 				</div>
