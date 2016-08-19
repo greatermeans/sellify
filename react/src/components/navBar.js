@@ -28,7 +28,7 @@ const NavBar = class extends Component {
         </div>
 
       </aside>
-
+      </div>
 
     )
   }
