@@ -15,7 +15,6 @@ const joinOrganizations = (orgsAndUser)=>{
 		type: 'USER_LOGIN',
 		payload: request
 	}
-
 }
 
 export default joinOrganizations
