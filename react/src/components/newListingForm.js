@@ -52,6 +52,7 @@ export default class NewListingForm extends Component{
               <input type='text' {...location}/><br/>
               <label>Price:</label>
               <input type="number" min="0.01" step="0.01" max="2500" {...price}/><br/>
+              <label>Image:</label>
               <Dropzone
                 multiple={false}
                 accept="image/*"
@@ -61,7 +62,6 @@ export default class NewListingForm extends Component{
               <br/>
               <input type='submit' value="Add"/>
             </form>
-            <label>Image(s):</label>
             <button onClick={this.hideModal.bind(this)}>Close</button>
           </Modal>
         </div>

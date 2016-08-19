@@ -26,13 +26,6 @@ module Api
 				render json: Listing.all, include: ['users']
 			end
 
-      # private
-      #
-      #
-      # def listing_params
-      #   params.require(:listing).permit(:title, :description, :price, :location, :image, :user_id)
-      # end
-
 		end
 	end
 end
