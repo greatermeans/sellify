@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-import OrganizationBox from '../components/organizationBox'
-import { connect } from 'react-redux'
 import joinOrganizations from '../actions/joinOrganizations'
-import { bindActionCreators } from 'redux'
 import { reduxForm } from 'redux-form';
 import { browserHistory } from 'react-router'
-
-
-const relatedGroups = [{name:""}]
 
 const AllOrganizations = class extends Component {
 	constructor(props){
@@ -45,7 +38,6 @@ const AllOrganizations = class extends Component {
 			return {value: org.id, label: org.name}
 		})
 
-
 		return(
 			<form id="join_org" onSubmit={handleSubmit(this.submitHandler.bind(this))}>
 				<label>Choose your organizations</label><br />
@@ -56,7 +48,7 @@ const AllOrganizations = class extends Component {
 				    onChange={this.logChange.bind(this)}
 						multi={true}
 					/>
-				<button type='submit'>Done</button>
+				<button type='submit' className="btn btn-primary btn-outline">Done</button>
 			</form>
 		)}
 }

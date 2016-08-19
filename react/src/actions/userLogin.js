@@ -2,9 +2,9 @@ import $ from 'jquery'
 import { browserHistory } from 'react-router'
 
 
-export default function userLogin(dispatch, userData){
+export default function userLogin(userData, dispatch){
     $.ajax({
-  		url: `http://localhost:3000/api/v1/users/${userData.id}`,
+  		url: 'http://localhost:3000/api/v1/users/',
   		type:"GET",
   		headers: { authorization: localStorage.getItem('token')}
   }).done((response)=> {

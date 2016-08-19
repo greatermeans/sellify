@@ -15,9 +15,17 @@ const AllListing = class extends Component {
   }
 
   displayAllListings() {
-    return this.state.listings.map ( (listing, idx) => {
-      return <ListingBox key={idx} {...listing}/>
-    })
+
+    return
+    (
+      <div className="row">
+      {this.state.listings.map ( (listing, idx) =>{
+        return <ListingBox key={idx} {...listing}/>
+      })}
+      </div>
+      )
+  
+
   }
 
   handleOnChange(event) {

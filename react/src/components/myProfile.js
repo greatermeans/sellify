@@ -11,7 +11,8 @@ const MyProfile = class extends Component {
       <div>
       <h3>My Organizations</h3>
       {this.props.user.organizations.map((organization,ind)=>{
-        return <p>{organization.name}</p>
+        return (<li>{organization.name}</li>)
+
       })}
       <Link to="/organizations" className="btn btn-primary">
         Edit organizations

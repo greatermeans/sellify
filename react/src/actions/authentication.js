@@ -12,7 +12,7 @@ export function authorizeUser(formProps){
     dataType:"json"
     }).done((response)=> {
       localStorage.setItem('token', response.auth.token)
-      userLogin(dispatch, {id: response.user_id})
+      userLogin({id: response.user_id},dispatch)
       dispatch({type: 'CHANGE_AUTH', payload: true})
     }).catch(()=> {
       dispatch(authError('You suck'))

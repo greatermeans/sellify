@@ -1,4 +1,5 @@
 import $ from 'jquery'
+
 function getOrganizations() {
 
 	let request = $.ajax({
