@@ -12,7 +12,7 @@ module Api
       def create
         listingData = JSON.parse(params[:listing])
         file = params[:image]
-        root_dir = Rails.root.join('app','assets','listings','images',"#{listingData["title"]}.jpg")
+        root_dir = Rails.root.join('app','assets','images',"#{listingData["title"]}.jpg")
         File.open(root_dir,'wb') { |f| f.write(file.read)}
         listingData["image"] = root_dir
         @listing = Listing.create(listingData)
@@ -20,6 +20,8 @@ module Api
       end
 
 			def show
+        @listing = Listing.find(params[:id])
+        render json: @listing, include: ['user']
 			end
 
 			def index

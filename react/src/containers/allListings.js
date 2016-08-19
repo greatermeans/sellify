@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import auth from './authenticationResource'
-import ListingBox from '../components/listingBox'
+import SmartListingBox from '../components/listingBox'
 
 const AllListing = class extends Component {
 
@@ -11,11 +11,8 @@ const AllListing = class extends Component {
   }
 
     displayAllListings() {
-      if (this.state.search.length > 0) {
-
-      }
       return this.state.listings.map ( (listing, idx) => {
-        return <ListingBox key={idx} {...listing}/>
+        return <SmartListingBox key={idx} {...listing}/>
       })
     }
 
