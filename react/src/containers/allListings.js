@@ -10,23 +10,14 @@ const AllListing = class extends Component {
     this.state = {listings: this.props.user.all_listings}
   }
 
-  displayBySearch(searchResult) {
-    this.setState({listings: searchResult})
-  }
+    displayAllListings() {
+      if (this.state.search.length > 0) {
 
-  displayAllListings() {
-
-    return
-    (
-      <div className="row">
-      {this.state.listings.map ( (listing, idx) =>{
+      }
+      return this.state.listings.map ( (listing, idx) => {
         return <ListingBox key={idx} {...listing}/>
-      })}
-      </div>
-      )
-  
-
-  }
+      })
+    }
 
   handleOnChange(event) {
     let chosenOrg = this.props.user.organizations.filter((org)=>{
