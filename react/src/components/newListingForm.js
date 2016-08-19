@@ -28,7 +28,7 @@ export default class NewListingForm extends Component{
       const {fields: {title, description, location, price, image}, handleSubmit} = this.props;
       return (
         <div>
-          <button onClick={this.showModal.bind(this)}>Create new listing</button>
+          <button className="btn btn-primary btn-outline" onClick={this.showModal.bind(this)}>Create new listing</button>
           <Modal ref="modal">
             <h3>Create New Listing</h3>
             <form id='new_listing' onSubmit={handleSubmit(this.submitHandler.bind(this))}>

@@ -6,7 +6,7 @@ import auth from './authenticationResource'
 const LoggedIn = class extends Component {
 	render() {
 		return(
-			<div>
+			<div id="fh5co-main" className="fh5co-narrow-content">
 				<NavBar />
 				{this.props.children}
 			</div>

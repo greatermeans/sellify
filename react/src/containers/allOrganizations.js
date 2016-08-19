@@ -26,7 +26,6 @@ const AllOrganizations = class extends Component {
 
 	submitHandler(){
 		this.props.joinOrganizations(this.state)
-		debugger
 		browserHistory.push('/dashboard')
 	}
 
@@ -57,7 +56,7 @@ const AllOrganizations = class extends Component {
 				    onChange={this.logChange.bind(this)}
 						multi={true}
 					/>
-				<button type='submit'>Done</button>
+				<button type='submit' className="btn btn-primary btn-outline">Done</button>
 			</form>
 		)}
 }

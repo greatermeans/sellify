@@ -34,7 +34,7 @@ class NewUserForm extends Component {
    const {fields: {first_name, last_name, password, email, zipcode}, handleSubmit} = this.props;
    return (
     <div>
-      <button onClick={this.showModal.bind(this)}>Sign Up</button>
+      <button className="btn btn-md btn-primary" onClick={this.showModal.bind(this)}>Get Started</button>
       <form id='new_user' onSubmit={handleSubmit(this.submitHandler.bind(this))}>
         <Modal ref="modalone">
           <h3>Sign Up</h3>

@@ -21,17 +21,22 @@ class LoginForm extends Component {
     const {fields: {email, password}, handleSubmit} = this.props;
     return(
       <div>
-        <button onClick={this.showModal.bind(this)}>Login</button>
+        <button className="btn btn-primary btn-outline" onClick={this.showModal.bind(this)}>Login</button>
+
         <Modal ref="modal">
           <h3>Login</h3>
             <form id='new_user' onSubmit={handleSubmit(this.submitHandler.bind(this))}>
-              <label>Email:</label>
-              <input type='text' {...email}/><br/>
-              <label>Password:</label>
-              <input type='password' {...password}/><br/>
-              <button type='submit'>Login</button>
+            <fieldset>
+              <label >Email:</label>
+              <input type='text' {...email} /><br/>
+
+              <label >Password:</label>
+              <input type='password' {...password}  /><br/>
+              <button className="btn btn-primary" role="button" type='submit'>Login</button>
+            </fieldset>
+
             </form>
-          <button onClick={this.hideModal.bind(this)}>x</button>
+          <button className="btn btn-primary" role="button" onClick={this.hideModal.bind(this)}>x</button>
           </Modal>
       </div>
     )
