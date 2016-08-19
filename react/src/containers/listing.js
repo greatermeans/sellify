@@ -7,7 +7,7 @@ const Listing = class extends Component {
 		return(
 		<div className="listing-container">
 			<h2>{this.props.listing.listing.title}</h2>
-			<img src={this.props.listing.listing.image}/>
+			<img src={this.props.listing.listing.image} />
 			<p>{this.props.listing.listing.price}</p>
 			<br/>
 			<p>{this.props.listing.listing.description}</p>
