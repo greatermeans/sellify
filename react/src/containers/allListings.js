@@ -2,31 +2,60 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import auth from './authenticationResource'
 import ListingBox from '../components/listingBox'
+let _ = require('underscore')
 
 const AllListing = class extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {listings: this.props.user.all_listings}
+    this.state = {org_id: '',
+                  chosenOrg: []}
   }
 
-    displayAllListings() {
-      if (this.state.search.length > 0) {
+  displayAllListings() {
+    var searchResults = this.props.search
 
-      }
-      return this.state.listings.map ( (listing, idx) => {
+      _.intersectionObjects = _.intersect = function(array) {
+      var slice = Array.prototype.slice;
+      var rest = slice.call(arguments, 1);
+      return _.filter(_.uniq(array), function(item) {
+        return _.every(rest, function(other) {
+          //return _.indexOf(other, item) >= 0;
+          return _.any(other, function(element) { return _.isEqual(element, item); });
+        });
+      });
+    };
+
+    if (this.props.search.length > 0 && this.state.chosenOrg.length > 0) {
+      var filteredByOrg = _.intersectionObjects(this.state.chosenOrg[0].listings, searchResults)
+      return filteredByOrg.map ( (listing, idx) => {
+        return <ListingBox key={idx} {...listing}/>
+      })
+    } else if (this.props.search.length > 0 && this.state.chosenOrg.length == 0 ) {
+        return this.props.search.map ( (listing, idx) => {
+          return <ListingBox key={idx} {...listing}/>
+        })
+    } else if (this.state.chosenOrg.length > 0 && this.props.search.length == 0 ) {
+        return this.state.chosenOrg[0].listings.map ( (listing, idx) => {
+          return <ListingBox key={idx} {...listing}/>
+        })
+    } else {
+      return this.props.user.all_listings.map ( (listing, idx) => {
         return <ListingBox key={idx} {...listing}/>
       })
     }
+  }
 
   handleOnChange(event) {
+    let orgId = parseInt(event.target.value)
     let chosenOrg = this.props.user.organizations.filter((org)=>{
-      return org.id === parseInt(event.target.value)
+      return org.id === parseInt(orgId)
     })
-    if (chosenOrg.length === 0) {
-      this.setState({listings: this.props.user.all_listings})
+    if (chosenOrg.length > 0) {
+      this.setState({ org_id: orgId,
+                      chosenOrg: chosenOrg })
     } else {
-    this.setState({listings: chosenOrg[0].listings})
+      this.setState({ chosenOrg: [] })
     }
   }
 
