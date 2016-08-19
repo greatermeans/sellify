@@ -4,7 +4,6 @@ module Api
 		class MessagesController < ApplicationController
 
 			def new
-          binding.pry
           username = request.form['username']
           text = cgi.escape(request.form['text']) # let's escape it for security's sake
           time = request.form['time']

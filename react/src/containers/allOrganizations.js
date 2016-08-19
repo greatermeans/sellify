@@ -11,6 +11,7 @@ const AllOrganizations = class extends Component {
 		this.state = {selectedOrganizations: this.makeOptions(), currentUser:this.props.user}
 	}
 
+
 	makeOptions(){
 		return this.props.user.organizations.map((org)=>{
 			return {value: org.id, label:org.name}
@@ -27,13 +28,10 @@ const AllOrganizations = class extends Component {
 			this.setState({selectedOrganizations: val})
 	}
 
-	handleClick(orgsData){
-		relatedOrgs.push(parseInt(orgsData.target.getAttribute('value')))
-	}
 
 	render() {
 
-		const {fields: {orgs}, handleSubmit, handleClick} = this.props;
+		const {fields: {orgs}, handleSubmit} = this.props;
 		var options = this.props.orgs.map((org)=>{
 			return {value: org.id, label: org.name}
 		})

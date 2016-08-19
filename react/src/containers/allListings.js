@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import auth from './authenticationResource'
+<<<<<<< HEAD
 import ListingBox from '../components/listingBox'
 let _ = require('underscore')
+=======
+import SmartListingBox from '../components/listingBox'
+>>>>>>> 4c19dff563100f7bf4698bf7a5a41d2c98c0f836
 
 const AllListing = class extends Component {
 

@@ -9,7 +9,7 @@ const addListing = (listingData, image)=>{
   		url: URL,
   		type:"POST",
 			contentType: false,
-  		data: image,  //{listing: listing, image: image},
+  		data: image,  
   		dataType:"json",
 			processData: false
   })
