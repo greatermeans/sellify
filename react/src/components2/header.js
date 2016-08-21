@@ -18,15 +18,14 @@ class Header extends Component {
 
   renderSignInLinks(authenticatedUser) {
     if(authenticatedUser) {
-      debugger
       return (
         <ul className="nav  nav-pills navbar-right">
-            <li style={{paddingRight: '10px'}} role="presentation">      
+            <li style={{paddingRight: '10px'}} role="presentation">
               <Link role="presentation" style={{color:'#996633',  fontSize: '17px'}} to="/my_profile">
               {authenticatedUser.name}
               </Link>
             </li>
-            <li style={{paddingRight: '10px'}} role="presentation">      
+            <li style={{paddingRight: '10px'}} role="presentation">
               <a style={{color:'#996633',  fontSize: '17px'}}  onClick={this.props.logout} href="javascript:void(0)">
               Log out
               </a>
@@ -37,14 +36,14 @@ class Header extends Component {
       browserHistory.push('/')
     }
   }
-  
+
 	renderLinks() {
 		const { type, authenticatedUser } = this.props;
 		if(type === 'posts_index') {
        return (
         <div className="container">
           <ul className="nav  nav-pills navbar-right">
-      			<li style={{paddingRight: '10px'}} role="presentation">      
+      			<li style={{paddingRight: '10px'}} role="presentation">
       				<Link style={{color:'#337ab7',  fontSize: '17px'}} to="/posts/new">
       				New Post
     					</Link>
@@ -59,19 +58,19 @@ class Header extends Component {
         <div className="container">
           {this.renderSignInLinks(authenticatedUser)}
           <ul className="nav  nav-pills navbar-left">
-      			<li style={{paddingRight: '10px'}} role="presentation">      
+      			<li style={{paddingRight: '10px'}} role="presentation">
       				<Link className="text-xs-right"  style={{color:'#337ab7',  fontSize: '17px'}}  to="/">Back To Index</Link>
       			</li>
     			</ul>
         </div>
-  		 );  		
+  		 );
   	} else if(type === 'posts_show') {
   			return (
   			 <div className="container">
     			<ul className="nav  nav-pills navbar-left">
       			<li style={{paddingRight: '10px'}} style={{color:'#337ab7',  fontSize: '17px'}}  role="presentation"><Link to="/">Back To Index</Link></li>
     			</ul>
-         
+
     			<div className="navbar-form navbar-right" style={{paddingRight: '50px'}}>
       			<button className="btn btn-warning pull-xs-right"  onClick={()=> {this.props.onDeleteClick()}}>Delete Post</button>
       		</div>
@@ -86,8 +85,8 @@ class Header extends Component {
 			 <nav className="navbar navbar-default navbar-static-top">
 			      <div id="navbar" className="navbar-collapse collapse">
 			      {this.renderLinks()}
-	      		</div>     
-			 </nav>				
+	      		</div>
+			 </nav>
 			);
 	}
 }

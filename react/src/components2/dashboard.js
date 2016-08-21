@@ -11,7 +11,6 @@ import { bindActionCreators } from 'redux'
 const Dashboard = class extends Component {
 
 	checkUserOrgs() {
-		debugger
 		if (this.props.user.organizations.length === 0) {
 			return(
 				<div>

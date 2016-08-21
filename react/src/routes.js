@@ -10,10 +10,12 @@ import SignUp from './pages/SignUp';
 import ForgotPwd from './pages/ForgotPwd';
 import ValidateEmail from './pages/ValidateEmail';
 import Profile from './pages/Profile';
+import Landing from './pages/Landing';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={ListingsIndex} />
+    <IndexRoute component={Landing} />
+    <Route path="/dashboard" component={ListingsIndex} />
     <Route path="listings/new" component={ListingsNew} />
     <Route path="listings/:id" component={ListingsShow} />
     <Route path="/signin" component={SignIn} />

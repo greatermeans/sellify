@@ -3,14 +3,23 @@ import { Component } from 'react';
 
 export default class App extends Component {
 	componentWillMount() {
-    this.props.loadUserFromToken();
+    this.props.loadUserFromToken()
   }
 
   render() {
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    );
+		if(sessionStorage.jwtToken){
+			return (
+				<div>
+					{this.props.children}
+				</div>
+			)
+		}
+		else{
+			return (
+	      <div>
+	        {this.props.children}
+	      </div>
+	    );
+		}
   }
 }

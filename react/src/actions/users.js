@@ -124,7 +124,7 @@ export function resetUser() {
 
 export function signInUser(formValues) {
   const {username, password} = formValues
-  const request = axios.post(`${ROOT_URL}/signin`, 
+  const request = axios.post(`${ROOT_URL}/signin`,
     {user: {email: username, password: password}
   });
 
@@ -153,7 +153,6 @@ export function signInUserFailure(error) {
 }
 
 export function logoutUser() {
-  debugger
   return {
     type: LOGOUT_USER
   };
@@ -164,5 +163,3 @@ export function updateUserEmail(email) {
     payload:email
   };
 }
-
-

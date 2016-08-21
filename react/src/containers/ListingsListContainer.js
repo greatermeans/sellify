@@ -5,7 +5,7 @@ import ListingsList from '../components/ListingsList';
 
 
 const mapStateToProps = (state) => {
-  return { 
+  return {
     listingsList: state.listings.listingsList
   };
 }

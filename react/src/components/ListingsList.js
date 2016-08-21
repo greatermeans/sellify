@@ -33,14 +33,14 @@ class ListingsList extends Component {
     const { listings, loading, error } = this.props.listingsList;
 
     if(loading) {
-      return <div className="container"><h1>Listings</h1><h3>Loading...</h3></div>      
+      return <div className="container"><h1>Listings</h1><h3>Loading...</h3></div>
     } else if(error) {
       return <div className="alert alert-danger">Error: {error.message}</div>
     }
 
     return (
       <div className="container">
-        <h1>Listings</h1>
+        <h1>Recent Listings in Your Organizations</h1>
         <ul className="list-group">
           {this.renderListings(listings)}
         </ul>
