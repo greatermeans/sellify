@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Reducers from './reducers/combineReducer'
-import { createStore , applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import ReduxPromise from 'redux-promise'
-import reduxThunk from 'redux-thunk'
-import { Router, browserHistory } from 'react-router'
-import Routes from './routes'
+import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import routes from './routes';
+import configureStore from './store/configureStore.js';
 
-const createStoreWithMiddleware = applyMiddleware(reduxThunk,ReduxPromise)(createStore)
+const store = configureStore();
 
 ReactDOM.render(
-	<Provider store={createStoreWithMiddleware(Reducers)}>
-	  		<Router history={browserHistory} routes={Routes} />
-  	</Provider>,
-  document.getElementById('root')
-);
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes} />
+  </Provider>
+  , document.getElementById('root'));
