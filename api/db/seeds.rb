@@ -10,7 +10,7 @@ Category.destroy_all
   FactoryGirl.create(:organization)
 end
 
-10.times do
+100.times do
 	FactoryGirl.create(:tag)
 end
 
@@ -31,6 +31,6 @@ end
 	FactoryGirl.create(:community)
 end
 
-10.times do
+100.times do
 	FactoryGirl.create(:category)
 end

@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'simple_command'
 gem 'active_model_serializers'
 gem 'factory_girl_rails'
 gem 'faker'
 gem 'rspec-rails'
 gem 'pry-byebug'
-gem 'knock'
+gem 'jwt'
 gem "paperclip", "~> 5.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
