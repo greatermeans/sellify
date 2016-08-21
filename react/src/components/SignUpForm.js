@@ -61,18 +61,6 @@ class SignUpForm extends Component {
         <Link to="/" className="btn btn-error">Cancel</Link>
       </form>
 
-
-      <br/>
-      <br/>
-      <br/>
-
-      <div className="panel panel-default">
-      <div className="panel-heading"><h3>Check out Form Validations!</h3></div>
-      <div className="panel-body">
-        <b>Learn how to implement it by going through: <a href="https://medium.com/@rajaraodv/adding-a-robust-form-validation-to-react-redux-apps-616ca240c124" target="_blank">Adding A Robust Form Validation To React Redux Apps</a></b> 
-        </div>
-      </div>
-
       </div>
 
     );
