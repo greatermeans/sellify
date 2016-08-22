@@ -7,9 +7,9 @@ import {
 } from '../actions/listings';
 
 
-	const INITIAL_STATE = { listingsList: {listings: [], error:null, loading: false},  
-							newListing:{listing:null, error: null, loading: false}, 
-							activeListing:{listing:null, error:null, loading: false}, 
+	const INITIAL_STATE = { listingsList: {listings: [], error:null, loading: false},
+							newListing:{listing:null, error: null, loading: false},
+							activeListing:{listing:null, error:null, loading: false},
 							deletedListing: {listing: null, error:null, loading: false},
 						};
 
@@ -18,7 +18,7 @@ export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
 
   case FETCH_LISTINGS:// start fetching listings and set loading = true
-  	return { ...state, listingsList: {listings:[], error: null, loading: true} }; 
+  	return { ...state, listingsList: {listings:[], error: null, loading: true} };
   case FETCH_LISTINGS_SUCCESS:// return list of listings and make loading = false
     return { ...state, listingsList: {listings: action.payload.data, error:null, loading: false} };
   case FETCH_LISTINGS_FAILURE:// return error and make loading = false

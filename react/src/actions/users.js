@@ -17,7 +17,6 @@ export const SIGNIN_USER = 'SIGNIN_USER';
 export const SIGNIN_USER_SUCCESS = 'SIGNIN_USER_SUCCESS';
 export const SIGNIN_USER_FAILURE = 'SIGNIN_USER_FAILURE';
 
-
 //validate email, if success, then load user and login
 export const VALIDATE_EMAIL = 'VALIDATE_EMAIL';
 export const VALIDATE_EMAIL_SUCCESS = 'VALIDATE_EMAIL_SUCCESS';
@@ -26,13 +25,10 @@ export const VALIDATE_EMAIL_FAILURE = 'VALIDATE_EMAIL_FAILURE';
 //called when email is updated in profile to update main user's email state
 export const UPDATE_USER_EMAIL = 'UPDATE_USER_EMAIL';
 
-
 //log out user
 export const LOGOUT_USER = 'LOGOUT_USER';
 
-
 const ROOT_URL = 'http://localhost:3000/api/v1'
-
 
 export function validateEmail(validateEmailToken) {
   //check if token from welcome email is valid, if so, update email as verified and login the user from response

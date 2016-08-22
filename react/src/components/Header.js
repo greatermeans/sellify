@@ -25,33 +25,17 @@ class Header extends Component {
   renderSignInLinks(authenticatedUser) {
     if(authenticatedUser) {
       return (
-        <ul className="nav  nav-pills navbar-right">
-            <li style={{paddingRight: '10px'}} role="presentation">
-              <Link role="presentation" style={{color:'#996633',  fontSize: '17px'}} to="/profile">
-              {authenticatedUser.name}
-              </Link>
-            </li>
-            <li style={{paddingRight: '10px'}} role="presentation">
-              <a style={{color:'#996633',  fontSize: '17px'}}  onClick={this.props.logout} href="javascript:void(0)">
-              Log out
-              </a>
-            </li>
+        <ul>
+          <li><Link to={'/profile'}>{authenticatedUser.name}</Link></li>
+          <li><Link to={'/dashboard'}>Dashboard</Link></li>
+          <li><a onClick={this.props.logout}>Log out</a></li>
         </ul>
       );
     }
-
     return (
-      <ul className="nav  nav-pills navbar-right">
-          <li style={{paddingRight: '10px'}} role="presentation">
-            <Link  role="presentation" style={{color:'#996633',  fontSize: '17px'}} to="/signup">
-            Sign up
-            </Link>
-          </li>
-          <li style={{paddingRight: '10px'}} role="presentation">
-            <Link style={{color:'#996633',  fontSize: '17px'}} to="/signin">
-            Sign in
-            </Link>
-          </li>
+      <ul>
+        <li><Link to={'/signup'}>Sign Up</Link></li>
+        <li><Link to={'/signin'}>Sign In</Link></li>
       </ul>
    );
   }
@@ -60,53 +44,58 @@ class Header extends Component {
 		const { type, authenticatedUser } = this.props;
 		if(type === 'listings_index') {
        return (
-        <div className="container">
-          <ul className="nav  nav-pills navbar-right">
-      			<li style={{paddingRight: '10px'}} role="presentation">
-      				<Link style={{color:'#337ab7',  fontSize: '17px'}} to="/listings/new">
-      				New Listing
-    					</Link>
-            </li>
-    			</ul>
-         {this.renderSignInLinks(authenticatedUser)}
-
-        </div>
+         <ul>
+           <li><Link to={'/listings/new'}>New Listing</Link></li>
+           {this.renderSignInLinks(authenticatedUser)}
+         </ul>
   		 );
   	} else if(type === 'listings_new') {
        return (
-        <div className="container">
-          {this.renderSignInLinks(authenticatedUser)}
-          <ul className="nav  nav-pills navbar-left">
-      			<li style={{paddingRight: '10px'}} role="presentation">
-      				<Link className="text-xs-right"  style={{color:'#337ab7',  fontSize: '17px'}}  to="/">Back To Index</Link>
-      			</li>
-    			</ul>
-        </div>
+         <ul>
+           {this.renderSignInLinks(authenticatedUser)}
+         </ul>
   		 );
   	} else if(type === 'listings_show') {
   			return (
-  			 <div className="container">
-    			<ul className="nav  nav-pills navbar-left">
-      			<li style={{paddingRight: '10px'}} style={{color:'#337ab7',  fontSize: '17px'}}  role="presentation"><Link to="/">Back To Index</Link></li>
-    			</ul>
-
-    			<div className="navbar-form navbar-right" style={{paddingRight: '50px'}}>
-      			<button className="btn btn-warning pull-xs-right"  onClick={()=> {this.props.onDeleteClick()}}>Delete Listing</button>
-      		</div>
-           {this.renderSignInLinks(authenticatedUser)}
-    	   </div>
+          <ul>
+            <li><a onClick={this.props.onDeleteClick}>Delete Listing</a></li>
+            {this.renderSignInLinks(authenticatedUser)}
+    	   </ul>
   		);
   	}
+    else if(type === 'users_new') {
+  			return (
+          <ul>
+          {this.renderSignInLinks(authenticatedUser)}
+    	   </ul>
+  		);
+  	}
+    else if(type === 'join_organizations') {
+      			return (
+              <ul>
+              {this.renderSignInLinks(authenticatedUser)}
+        	   </ul>
+      		);
+      	}
 	};
 
 	render() {
 			return (
+        <div id='id="fh5co-page"'>
+        <aside id="fh5co-aside" role="complementary" className="border js-fullheight">
+          <h1 id="fh5co-logo">
+          <img src="/images/logo.png" alt='logo' /><br />
+          </h1>
+          <nav id="fh5co-main-menu" role="navigation">
+            {this.renderLinks()}
+          </nav>
+          <div className="fh5co-footer">
+          <small>© 2016 Sellify</small><br />
+          <a href='https://github.com/greatermeans/sellify'><i className='icon-github'/></a>
+          </div>
 
-			 <nav className="navbar navbar-default navbar-static-top">
-			      <div id="navbar" className="navbar-collapse collapse">
-			      {this.renderLinks()}
-	      		</div>
-			 </nav>
+        </aside>
+        </div>
 			);
 	}
 }

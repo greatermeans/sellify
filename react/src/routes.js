@@ -12,6 +12,7 @@ import ForgotPwd from './pages/ForgotPwd';
 import ValidateEmail from './pages/ValidateEmail';
 import Profile from './pages/Profile';
 import Landing from './pages/Landing';
+import JoinOrganizations from './pages/JoinOrganizations';
 
 export default (
   <Route path="/" component={App}>
@@ -24,5 +25,6 @@ export default (
     <Route path="/forgotPwd" component={ForgotPwd} />
     <Route path="/validateEmail/:token" component={ValidateEmail} />
     <Route path="/profile" component={Profile} />
+    <Route path="/organizations" component={JoinOrganizations} />
   </Route>
 );
