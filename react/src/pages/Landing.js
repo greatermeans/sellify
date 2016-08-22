@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import LandingContainer from '../containers/LandingContainer'
+import SignIn from './SignIn'
 
 export default class Landing extends Component {
   render(){
@@ -38,14 +38,10 @@ export default class Landing extends Component {
                  <Link
                     to={{
                       pathname: `/signin`,
-                      state: { modal: true, returnTo: this.props.location.pathname }
+                      state: { modal: true, returnTo: this.props.location.pathname },
                     }}
                     className="btn btn-md btn-primary"
                   > Sign In now </Link>
-
-
-
-        <LandingContainer {...this.props} />
 
 
         </div>
