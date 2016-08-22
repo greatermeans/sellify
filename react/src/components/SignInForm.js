@@ -1,6 +1,31 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
+const Modal = class extends Component {
+  debugger
+  styles: {
+    position: 'fixed',
+    top: '20%',
+    right: '20%',
+    bottom: '20%',
+    left: '20%',
+    padding: 20,
+    boxShadow: '0px 0px 150px 130px rgba(0, 0, 0, 0.5)',
+    overflow: 'auto',
+    background: '#fff'
+  }
+
+  render() {
+    return (
+      <div style={this.styles}>
+        <p><Link to={this.props.returnTo}>Back</Link></p>
+        {this.props.children}
+      </div>
+    )
+  }
+}
+
+
 class SignInForm extends Component {
   static contextTypes = {
     router: PropTypes.object
@@ -27,11 +52,11 @@ class SignInForm extends Component {
 
   render() {
     const {asyncValidating, fields: {username, password}, handleSubmit, submitting, user } = this.props;
-
+    debugger
     return (
       <div className="container">
         <form onSubmit={handleSubmit(this.props.signInUser.bind(this))}>
-
+        <Modal>
           <div className={`form-group ${username.touched && username.invalid ? 'has-error' : ''}`}>
             <label className="control-label">@username*</label>
             <input  placeholder="email" type="text" className="form-control" {...username} />
@@ -53,6 +78,7 @@ class SignInForm extends Component {
           </div>
           <button type="submit" className="btn btn-primary"  disabled={submitting} >Submit</button>
           <Link to="/" className="btn btn-error">Cancel</Link>
+          </Modal>
         </form>
     </div>
 

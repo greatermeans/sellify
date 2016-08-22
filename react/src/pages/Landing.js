@@ -4,7 +4,6 @@ import LandingContainer from '../containers/LandingContainer'
 
 export default class Landing extends Component {
   render(){
-    debugger
     return(
       <div id='graybg'>
         <div className="fh5co-narrow-content" id='landing'>
@@ -46,7 +45,7 @@ export default class Landing extends Component {
 
 
 
-        <LandingContainer type={this.props} />
+        <LandingContainer {...this.props} />
 
 
         </div>

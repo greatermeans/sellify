@@ -42,9 +42,9 @@ const LandingContainer = class extends Component {
   }
 
   render() {
-    debugger
-    let { location } = this.props
 
+    let { location } = this.props
+    debugger
     let isModal = (
       location.state &&
       location.state.modal &&
@@ -53,7 +53,6 @@ const LandingContainer = class extends Component {
 
     return (
       <div>
-        <h1>Pinterest Style Routes</h1>
 
         <div>
           {isModal ?

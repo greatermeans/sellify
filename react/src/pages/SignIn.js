@@ -4,10 +4,11 @@ import SignInFormContainer from '../containers/SignInFormContainer.js';
 
 class UserNew extends Component {
   render() {
+  	debugger
     return (
       <div>
-        <HeaderContainer type="user_new"/>
-        <SignInFormContainer />
+        {/*<HeaderContainer type="user_new"/>*/}
+        <SignInFormContainer {...this.props}/>
       </div>
     );
   }
