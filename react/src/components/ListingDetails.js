@@ -24,13 +24,16 @@ class ListingDetails extends Component {
     } else if(error) {
       return  <div className="alert alert-danger">{error.message}</div>
     } else if(!listing) {
-      return <span />
+      return (
+        <span />
+      )
     }
 
     return (
       <div className="container">
         <h3>{listing.title}</h3>
-        <h6>Categories: {listing.categories}</h6>
+        <img src={listing.image} alt={listing.name} />
+        <h6> Categories: {listing.tags.map((tag)=>{return tag.name})}</h6>
         <p>{listing.content}</p>
       </div>
     );

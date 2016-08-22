@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import { fetchListings, resetDeletedListing, deleteListing, deleteListingSuccess, deleteListingFailure } from '../actions/listings';
 import { logoutUser } from '../actions/users';
 import Header from '../components/Header.js';
+import { browserHistory} from 'react-router'
 
 
 
 function mapStateToProps(state) {
-  return { 
+  return {
     deletedListing: state.listings.deletedListing,
     authenticatedUser: state.user.status === 'authenticated' ? state.user.user : null,
     user: state.user
@@ -36,6 +37,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
      logout: () => {
          sessionStorage.removeItem('jwtToken');
          dispatch(logoutUser());
+         browserHistory.push('/')
      }
   }
 }

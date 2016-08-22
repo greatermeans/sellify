@@ -132,7 +132,11 @@ export function resetDeletedListing() {
 };
 
 export function fetchListing(id) {
-  const request = axios.get(`${ROOT_URL}/listings/${id}`);
+  const request = axios({
+    method: 'get',
+    url: `${ROOT_URL}/listings/${id}`,
+    headers: {Authorization: sessionStorage.jwtToken}
+  });
 
   return {
     type: FETCH_LISTING,
@@ -165,7 +169,7 @@ export function deleteListing(id, tokenFromStorage) {
   const request = axios({
     method: 'delete',
     url: `${ROOT_URL}/listings/${id}`,
-   headers: {'Authorization': `Bearer ${tokenFromStorage}`}
+    headers: {'Authorization': `Bearer ${tokenFromStorage}`}
   });
   return {
     type: DELETE_LISTING,
