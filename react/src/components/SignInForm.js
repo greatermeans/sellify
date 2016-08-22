@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import BModal from 'boron/DropModal'
 
 class SignInForm extends Component {
   static contextTypes = {
@@ -28,7 +27,6 @@ class SignInForm extends Component {
 
   render() {
     const {asyncValidating, fields: {username, password}, handleSubmit, submitting, user, location} = this.props;
-    debugger
     return (
       <div className="container">
         <form onSubmit={handleSubmit(this.props.signInUser.bind(this))}>

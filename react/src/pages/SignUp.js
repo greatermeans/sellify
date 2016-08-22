@@ -6,7 +6,6 @@ class UserNew extends Component {
   render() {
     return (
       <div>
-        <HeaderContainer type="user_new"/>
         <SignUpFormContainer />
       </div>
     );

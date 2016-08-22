@@ -23,25 +23,19 @@ export default class Landing extends Component {
             </p>
 
 
-            <Link to="/signup" className="btn btn-md btn-primary">Get Started</Link>
+            <Link to={{
+              pathname: `/signup`,
+              state: { modal: true, returnTo: this.props.location.pathname }
+              }}
+              className="btn btn-md btn-primary">Get Started</Link>
+
             <br />Already a member?<br />
-            <Link to="/signin" className="btn btn-md btn-primary">Sign In</Link>
 
-                <Link
-                   to={{
-                     pathname: `/signup`,
-                     state: { modal: true, returnTo: this.props.location.pathname }
-                   }}
-                   className="btn btn-md btn-primary"
-                 > Sign up </Link>
-
-                 <Link
-                    to={{
-                      pathname: `/signin`,
-                      state: { modal: true, returnTo: this.props.location.pathname },
-                    }}
-                    className="btn btn-md btn-primary"
-                  > Sign In now </Link>
+            <Link   to={{
+                pathname: `/signin`,
+                state: { modal: true, returnTo: this.props.location.pathname },
+                }}
+              className="btn btn-md btn-primary">Sign In</Link>
 
 
         </div>
