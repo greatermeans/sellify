@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-
+import { Link, browserHistory } from 'react-router';
 
 class Header extends Component {
   static contextTypes = {
@@ -19,7 +18,7 @@ class Header extends Component {
     } else if(nextProps.deletedListing.listing && !nextProps.deletedListing.error) {//delete success
       this.context.router.push('/');
     } else if(this.props.user.user && !nextProps.user.user) {//logout (had user(this.props.user.user) but no loger the case (!nextProps.user.user))
-      this.context.router.push('/');
+      browserHistory.push('/');
     }
   }
 

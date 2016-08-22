@@ -6,6 +6,7 @@ import ListingsIndex from './pages/ListingsIndex';
 import ListingsNew from './pages/ListingsNew';
 import ListingsShow from './pages/ListingsShow';
 import SignIn from './pages/SignIn';
+import SignInFormContainer from './containers/SignInFormContainer.js';
 import SignUp from './pages/SignUp';
 import ForgotPwd from './pages/ForgotPwd';
 import ValidateEmail from './pages/ValidateEmail';
