@@ -4,7 +4,6 @@ import { browserHistory } from 'react-router'
 import { fetchListings, resetDeletedListing, deleteListing, deleteListingSuccess, deleteListingFailure } from '../actions/listings';
 import { logoutUser } from '../actions/users';
 import Header from '../components/Header.js';
-import { browserHistory} from 'react-router'
 
 
 

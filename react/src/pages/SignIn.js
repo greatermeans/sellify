@@ -7,7 +7,6 @@ class UserNew extends Component {
   render() {
     return (
       <div>
-        <HeaderContainer type="user_new"/>
         <SignInFormContainer {...this.props}/>
       </div>
     )
