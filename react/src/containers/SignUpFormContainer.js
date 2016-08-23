@@ -14,10 +14,6 @@ function validate(values) {
     errors.name = 'Enter a name';
     hasErrors = true;
   }
-  if (!values.username || values.username.trim() === '') {
-    errors.username = 'Enter username';
-    hasErrors = true;
-  }
   if(!values.email || values.email.trim() === '') {
     errors.email = 'Enter email';
     hasErrors = true;
@@ -33,7 +29,6 @@ function validate(values) {
 
   if(values.confirmPassword  && values.confirmPassword.trim() !== '' && values.password  && values.password.trim() !== '' && values.password !== values.confirmPassword) {
     errors.password = 'Password And Confirm Password don\'t match';
-    errors.password = 'Password And Confirm Password don\'t match';
     hasErrors = true;
   }
    return hasErrors && errors;
@@ -42,16 +37,14 @@ function validate(values) {
 
 //For instant async server validation
 const asyncValidate = (values, dispatch) => {
-
   return new Promise((resolve, reject) => {
-
     dispatch(validateUserFields(values))
     .then((response) => {
         let data = response.payload.data;
         //if status is not 200 or any one of the fields exist, then there is a field error
-        if(response.payload.status != 200 || data.username || data.email) {
+        if(response.payload.status != 200) {
           //let other components know of error by updating the redux` state
-          dispatch(validateUserFieldsFailure(response.payload));
+          dispatch(validateUserFieldsFailure(response.payload.response.data.error));
            reject(data); //this is for redux-form itself
          } else {
             //let other components know that everything is fine by updating the redux` state
@@ -64,10 +57,13 @@ const asyncValidate = (values, dispatch) => {
 
 //For any field errors upon submission (i.e. not instant check)
 const validateAndSignUpUser = (values, dispatch) => {
-
   return new Promise((resolve, reject) => {
-
-   dispatch(signUpUser(values))
+    let formValues = {email: values.email,
+      first_name: values.name.split(' ')[0],
+      last_name: values.name.split(' ')[1],
+      password: values.password
+    }
+   dispatch(signUpUser(formValues))
     .then((response) => {
         let data = response.payload.data;
         //if any one of these exist, then there is a field error 
@@ -112,8 +108,8 @@ function mapStateToProps(state, ownProps) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'SignUpForm', 
-  fields: ['name', 'username', 'email', 'password', 'confirmPassword'], 
+  fields: ['name', 'email', 'password', 'confirmPassword'], 
   asyncValidate,
-  asyncBlurFields: ['username', 'email'],
+  asyncBlurFields: ['email'],
   validate 
 }, mapStateToProps, mapDispatchToProps)(SignUpForm);

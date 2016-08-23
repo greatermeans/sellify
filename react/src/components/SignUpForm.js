@@ -19,8 +19,7 @@ class SignUpForm extends Component {
   }
 
   render() {
-    const {asyncValidating, fields: { name, username, email, password, confirmPassword }, handleSubmit, submitting } = this.props;
-
+    const {asyncValidating, fields: { name, email, password, confirmPassword}, validateFields, handleSubmit, submitting } = this.props;
     return (
       <div className="container">
       <form onSubmit={handleSubmit(this.props.signUpUser.bind(this))}>
@@ -36,6 +35,7 @@ class SignUpForm extends Component {
           <label className="control-label">Email*</label>
           <input type="email" className="form-control" {...email} />
           <div className="help-block">
+            {email.touched ? validateFields.error : ''}
             {email.touched ? email.error : ''}
           </div>
           <div className="help-block">
