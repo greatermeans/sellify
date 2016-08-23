@@ -77,10 +77,6 @@ GEM
     jsonapi (0.1.1.beta2)
       json (~> 1.8)
     jwt (1.5.4)
-    knock (1.5)
-      bcrypt (~> 3.1)
-      jwt (~> 1.5)
-      rails (>= 4.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -165,6 +161,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    simple_command (0.0.9)
     slop (3.6.0)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
@@ -194,7 +191,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   factory_girl_rails
   faker
-  knock
+  jwt
   listen (~> 3.0.5)
   paperclip (~> 5.0.0)
   pg (~> 0.18)
@@ -204,6 +201,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 5.0.0, >= 5.0.0.1)
   rspec-rails
+  simple_command
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
-import userLogin from './actions/userLogin'
 
 class App extends Component {
+  componentWillMount() {
+    this.props.loadUserFromToken();
+  }
   render() {
-
     return (
-      <div>
-        {this.props.children}
-      </div>
+    <div id="fh5co-main" className="fh5co-narrow-content">
+			{this.props.children}
+		</div>
     );
   }
 }

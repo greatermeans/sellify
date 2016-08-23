@@ -34,6 +34,10 @@ module Api
         render json: @user.conversations
       end
 
+      def signin
+        @user = User.find(params[:id])
+      end
+
       def join_org
         @user = User.find(params[:id])
         @user.organizations.destroy_all
@@ -56,8 +60,7 @@ module Api
       # end
 
       def index
-        @user = User.find(current_user.id)
-        render json: @user, include: ['listings','communities','conversations','organizations']
+        render json: @current_user, include: ['listings','communities','conversations','organizations']
       end
 
       private
@@ -66,10 +69,6 @@ module Api
       def user_params
         params.require(:user).permit(:first_name, :last_name, :zipcode, :password, :email)
       end
-
-      # def ensure_user_is_current
-      #   redirect_to root_url unless params[:id].to_i == current_user.id
-      # end
     end
   end
 end

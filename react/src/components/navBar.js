@@ -17,7 +17,7 @@ const NavBar = class extends Component {
             <li className='fh5co-active'><Link to={'/dashboard'}>Dashboard</Link></li>
             <li><Link to={'/listings'}>Listings</Link></li>
             <li><Link to={'/my_profile'}>My Profile</Link></li>
-            <li><Link to={'/'} onClick>Logout</Link></li>
+            <li><Link to={'/logout'} onClick>Logout</Link></li>
             <li> <SearchBar /> </li>
 
           </ul>

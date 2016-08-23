@@ -28,7 +28,7 @@ module Api
 			end
 
 			def index
-				render json: Listing.all, include: ['users']
+				render json: current_user.dashboard_listings, include: ['tags','categories']
 			end
 
 		end

@@ -1,29 +1,30 @@
 import React from 'react';
-import { Route, Router, IndexRoute } from 'react-router';
-import App from './App';
-import LogInSignUp from './components/logInSignUp'
-import LoggedIn from './containers/loggedIn'
-import SmartAllOrganizations from './containers/allOrganizations'
-import AuthDashboard from './containers/dashboard'
-import AuthAllListing from './containers/allListings'
-import AuthMyProfile from './components/myProfile'
-import AuthListing from './containers/listing'
-import Chat from './components/chat'
-const Routes = (
-  // Listing routes need to be authorized!
-  <Router>
-    <Route path='/' component={App} >
-      <IndexRoute component={LogInSignUp} />
-        <Route path='/home' component={LoggedIn} >
-          <Route path='/organizations' component={SmartAllOrganizations} />
-          <Route path='/dashboard' component={AuthDashboard} />
-          <Route path='/listings' component={AuthAllListing} />
-          <Route path='/chat' component={Chat} />
-          <Route path='/my_profile' component={AuthMyProfile} />
-          <Route path='/listings/:id' component={AuthListing} />
-        </Route>
-    </Route>
-  </Router>
-)
+import { Route, IndexRoute } from 'react-router';
 
-export default Routes
+import App from './pages/App';
+import ListingsIndex from './pages/ListingsIndex';
+import ListingsNew from './pages/ListingsNew';
+import ListingsShow from './pages/ListingsShow';
+import SignIn from './pages/SignIn';
+import SignInFormContainer from './containers/SignInFormContainer.js';
+import SignUp from './pages/SignUp';
+import ForgotPwd from './pages/ForgotPwd';
+import ValidateEmail from './pages/ValidateEmail';
+import Profile from './pages/Profile';
+import Landing from './pages/Landing';
+import JoinOrganizations from './pages/JoinOrganizations';
+
+export default (
+  <Route path="/" component={App}>
+    <IndexRoute component={Landing} />
+    <Route path="/dashboard" component={ListingsIndex} />
+    <Route path="listings/new" component={ListingsNew} />
+    <Route path="listings/:id" component={ListingsShow} />
+    <Route path="/signin" component={SignIn} />
+    <Route path="/signup" component={SignUp} />
+    <Route path="/forgotPwd" component={ForgotPwd} />
+    <Route path="/validateEmail/:token" component={ValidateEmail} />
+    <Route path="/profile" component={Profile} />
+    <Route path="/organizations" component={JoinOrganizations} />
+  </Route>
+);
