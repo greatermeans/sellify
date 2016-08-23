@@ -32,8 +32,11 @@ export default class NewListingForm extends Component{
       listingData.user_id = this.props.user.id
       var fd = new FormData()
       fd.append('image', this.state.image)
+      this.props.addListing(listingData, fd).then(function(resp){
+        browserHistory.push(`/listings/${resp.payload.id}`)
+      })
+    }
 
-      debugger
       // AWS.config.credentials = {accessKeyId: API_KEY, secretAccessKey: SECRET_KEY}
       // var file = this.state.image
       // var s3bucket = new AWS.S3({params: {Bucket: 'sellify'}})
@@ -55,10 +58,6 @@ export default class NewListingForm extends Component{
       //
       // })
 
-      this.props.addListing(listingData, fd).then(function(resp){
-        browserHistory.push(`/listings/${resp.payload.id}`)
-      })
-    }
 
     onDrop(file) {
       // var formdata = new FormData()

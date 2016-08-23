@@ -5,6 +5,7 @@ import auth from '../containers/authenticationResource'
 const Listing = class extends Component {
 
 	render() {
+		debugger
 		return(
 		<div className="listing-container">
 			<h2>{this.props.listing.listing.title}</h2>

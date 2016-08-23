@@ -4,7 +4,6 @@ import userLogin from './actions/userLogin'
 
 class App extends Component {
   render() {
-  	debugger
 
     return (
       <div>
