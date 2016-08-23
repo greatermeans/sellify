@@ -12,10 +12,7 @@ const addListing = (listingData, fd)=>{
   		data: fd,  //{listing: listing, image: image},
   		dataType:"json",
 			processData: false
-  }).done((resp)=>{
-
-		debugger
-	})
+  })
 
 	return {
 		type: 'ADD_LISTING',

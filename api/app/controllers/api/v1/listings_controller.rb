@@ -21,7 +21,6 @@ module Api
         obj.upload_file("#{Rails.root}/app/assets/images/#{listingData["title"]}.jpg")
         listingData["image"] = "http://s3.amazonaws.com/sellify/#{listingData["title"]}.jpg"
         @listing = Listing.create(listingData)
-        sleep(0.5)
         render json: @listing, include: ['user']
       end
 
