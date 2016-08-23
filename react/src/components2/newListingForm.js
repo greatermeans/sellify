@@ -4,9 +4,7 @@ import addListing from '../actions/addListing'
 import {browserHistory} from 'react-router'
 import Dropzone from 'react-dropzone'
 import $ from 'jquery'
-import API_KEY from '../aws_key'
 import AWS from 'aws-sdk/dist/aws-sdk'
-import SECRET_KEY from '../secret_key'
 
 
 var Modal = require('boron/DropModal');
