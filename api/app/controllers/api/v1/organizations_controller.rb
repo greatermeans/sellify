@@ -8,7 +8,6 @@ module Api
 
 			def index
 				render json: Organization.all, include: ['listings']
-        binding.pry
 			end
 		end
 	end

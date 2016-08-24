@@ -4,7 +4,7 @@ import {
   ME_FROM_TOKEN, ME_FROM_TOKEN_SUCCESS, ME_FROM_TOKEN_FAILURE, RESET_TOKEN,
 	SIGNUP_USER, SIGNUP_USER_SUCCESS, SIGNUP_USER_FAILURE, RESET_USER,
 	SIGNIN_USER, SIGNIN_USER_SUCCESS,  SIGNIN_USER_FAILURE,
-	LOGOUT_USER, UPDATE_USER_EMAIL
+	LOGOUT_USER, UPDATE_USER_EMAIL, GET_USER_DATA
 } from '../actions/users';
 
 
@@ -23,7 +23,8 @@ const INITIAL_STATE = {user: null, status:null, error:null, loading: false};
 export default function(state = INITIAL_STATE, action) {
   let error;
   switch(action.type) {
-
+    case GET_USER_DATA:// get updated user data
+    return { ...state, user: action.payload.data, status:'authenticated', error:null, loading: false};
     case VALIDATE_EMAIL://check email verification token
     return { ...state, user: null, status:'validate_email', error:null, loading: true};
     case VALIDATE_EMAIL_SUCCESS:
