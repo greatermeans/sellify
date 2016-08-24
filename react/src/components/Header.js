@@ -29,7 +29,6 @@ class Header extends Component {
           <li><Link to={'/profile'}>{authenticatedUser.name}</Link></li>
           <li><Link to={'/dashboard'}>Dashboard</Link></li>
           <li><Link to={'/organizations'}>My organizations</Link></li>
-          <li><a onClick={this.props.logout}>Log out</a></li>
           <li><Link to={'/'} onClick={this.props.logout}>Log Out</Link></li>
         </ul>
       );
