@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import SignIn from './SignIn'
+import { connect } from 'react-redux';
 
-export default class Landing extends Component {
+class Landing extends Component {
+
+  componentDidMount () {
+    if (this.props.user.status === 'logout') {
+      window.location.reload()
+    }
+
+  }
+
   render(){
     return(
-      
       <div id='graybg'>
         <div className="fh5co-narrow-content" id='landing'>
           <div className="row">
@@ -46,3 +54,12 @@ export default class Landing extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    user: state.user
+  };
+}
+
+export default connect(mapStateToProps)(Landing);
+

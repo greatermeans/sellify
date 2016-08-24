@@ -36,8 +36,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
      logout: () => {
          sessionStorage.removeItem('jwtToken');
-         dispatch(logoutUser());
-         browserHistory.push('/')
+         dispatch(logoutUser())
      }
   }
 }
