@@ -25,13 +25,11 @@ export const QUIT_ORGANIZATION_FAILURE = 'QUIT_ORGANIZATION_FAILURE';
 const ROOT_URL = 'http://localhost:3000/api/v1'
 
 export function fetchOrganizations() {
-  debugger
   const request = axios({
     method: 'get',
     url: `${ROOT_URL}/organizations`,
     headers: {Authorization: sessionStorage.jwtToken}
   });
-  debugger
   return {
     type: FETCH_ORGANIZATIONS,
     payload: request

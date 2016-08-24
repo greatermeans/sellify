@@ -22,6 +22,10 @@ module Api
 			def show
 			end
 
+      def all_listings
+        render json: current_user.all_listings, include: ['tags','categories']
+      end
+
 			def index
 				render json: current_user.dashboard_listings, include: ['tags','categories']
 			end
