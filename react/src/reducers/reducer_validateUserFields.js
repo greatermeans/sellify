@@ -22,8 +22,7 @@ export default function(state = INITIAL_STATE, action) {
     case VALIDATE_USER_FIELDS_SUCCESS:// same as RESET_USER_FIELDS
     return { ...state, error:null, loading: false}; 
     case VALIDATE_USER_FIELDS_FAILURE:
-    error = action.payload.data ? action.payload.data : {message: action.payload.message}
-    return { ...state, error:error, loading: false}; 
+    return { ...state, error: action.payload, loading: false}; 
     case RESET_VALIDATE_USER_FIELDS:
     return { ...state, error:null, loading: false};
     default:

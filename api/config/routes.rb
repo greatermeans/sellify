@@ -5,6 +5,7 @@ Rails.application.routes.draw do
             resources :messages
         	resources :listings
             resources :organizations
+            post '/users/validate/fields', to: 'users#validate'
             post '/signin', to: 'authentication#authenticate'
     		post '/users/:id/join_org', to: 'users#join_org'
             get '/users/:id/listings', to: 'users#show_listings'

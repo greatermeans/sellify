@@ -3,8 +3,12 @@ import { reduxForm } from 'redux-form';
 import addListing from '../actions/addListing'
 import {browserHistory} from 'react-router'
 import Dropzone from 'react-dropzone'
+import $ from 'jquery'
+import AWS from 'aws-sdk/dist/aws-sdk'
+
 
 var Modal = require('boron/DropModal');
+// AWS.config.region = 'us-east-1'
 
 
 export default class NewListingForm extends Component{
@@ -23,15 +27,39 @@ export default class NewListingForm extends Component{
 
     submitHandler(listingData) {
       listingData.user_id = this.props.user.id
-      this.props.addListing(listingData, this.state.image).then(function(resp){
+      var fd = new FormData()
+      fd.append('image', this.state.image)
+      this.props.addListing(listingData, fd).then(function(resp){
         browserHistory.push(`/listings/${resp.payload.id}`)
       })
     }
 
+      // AWS.config.credentials = {accessKeyId: API_KEY, secretAccessKey: SECRET_KEY}
+      // var file = this.state.image
+      // var s3bucket = new AWS.S3({params: {Bucket: 'sellify'}})
+      // var params = {Key: file.name, ContentType: file.type, Body: file};
+      // s3bucket.upload(params)
+      // debugger
+
+
+
+
+      // $.ajax({
+      //   url: "http://s3.amazonaws.com/sellify",
+      // 	method: "POST",
+      // 	data: formDataObj,
+      //   contentType: false,
+      //   processData: false  //{listing: listing, image: image},
+      // }).then((resp) =>{
+      //   debugger;
+      //
+      // })
+
+
     onDrop(file) {
-      var formdata = new FormData()
-      formdata.append('image', file[0])
-      this.setState({image: formdata})
+      // var formdata = new FormData()
+      this.setState({image: file[0]})
+      // this.setState({image: formdata})
     }
 
     render() {

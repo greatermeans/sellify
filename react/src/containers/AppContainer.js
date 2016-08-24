@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch) => {
   	 loadUserFromToken: () => {
   	 	let token = sessionStorage.getItem('jwtToken');
   	 	if(!token || token === '') {//if there is no token, dont bother
-  	 		return;
+        return;
   	 	}
 
   	 //fetch user from token (if server deems it's valid token)
