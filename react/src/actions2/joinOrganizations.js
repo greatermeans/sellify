@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 const joinOrganizations = (orgsAndUser)=>{
 	let orgIds = orgsAndUser.selectedOrganizations.map((org)=>{return org.value})
-	const URL = 'http://localhost:3000/api/v1/users/'+`${orgsAndUser.currentUser.id}`+'/join_org'
+	const URL = 'http://localhost:3000/api/v1/users/'+`${orgsAndUser.currentUser}`+'/join_org'
 	var request = $.ajax({
   		url: URL,
   		type:"POST",

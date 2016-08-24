@@ -39,10 +39,12 @@ module Api
       end
 
       def join_org
-        @user = User.find(params[:id])
-        @user.organizations.destroy_all
+        @user = User.find(params[:id].to_i)
+        @user.organizations = []
         params[:orgIds].map do |orgId|
-          @user.organizations << Organization.find(orgId)
+          if !@user.organizations.include?(Organization.find(orgId))
+            @user.organizations << Organization.find(orgId)
+          end
         end
         @user.save
         render json: @user, include: ['listings','organizations']

@@ -27,6 +27,7 @@ export default function(state = INITIAL_STATE, action) {
     case VALIDATE_EMAIL://check email verification token
     return { ...state, user: null, status:'validate_email', error:null, loading: true};
     case VALIDATE_EMAIL_SUCCESS:
+    debugger
     return { ...state, user: action.payload.data.user, status:'authenticated', error:null, loading: false}; //<-- authenticated & email verified
     case VALIDATE_EMAIL_FAILURE:
     error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
