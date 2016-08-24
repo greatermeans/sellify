@@ -7,7 +7,7 @@ import { browserHistory } from 'react-router'
 const JoinOrganizationsMenu = class extends Component {
 constructor(props){
   super(props)
-  this.state = {selectedOrganizations: this.makeOptions(),currentUser:this.props.user.id}
+  this.state = {selectedOrganizations: [],currentUser:this.props.user.id}
 }
 
   componentDidMount(){
@@ -33,6 +33,8 @@ constructor(props){
     event.preventDefault()
     var orgsAndUser = this.state
     this.props.joinOrganizations(orgsAndUser)
+    this.setState({selectedOrganizations: this.makeOptions()})
+    debugger
     browserHistory.push('/dashboard')
   }
 
