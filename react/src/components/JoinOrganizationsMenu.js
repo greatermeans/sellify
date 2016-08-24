@@ -12,6 +12,8 @@ constructor(props){
 
   componentDidMount(){
     this.props.fetchOrganizations();
+    var orgsAndUser = this.state
+    this.props.getUserData(orgsAndUser.currentUser)
     this.state = {selectedOrganizations: this.makeOptions(),currentUser:this.props.user.id}
   }
 
@@ -31,7 +33,6 @@ constructor(props){
     event.preventDefault()
     var orgsAndUser = this.state
     this.props.joinOrganizations(orgsAndUser)
-    
     browserHistory.push('/dashboard')
   }
 
@@ -41,7 +42,6 @@ constructor(props){
 
   currentOrgs(){
     if(this.props.user.organizations.length != 0){
-      debugger
       return
         this.props.user.organizations.map((org)=>{return org.name})
     }
@@ -53,7 +53,7 @@ constructor(props){
     return(
       <div>
       <h3>My Organizations:</h3>
-      {this.props.user.organizations.map((org)=>{return <li>{org.name}</li>})}
+      {this.props.user.organizations.map((org)=>{return <li key={org.id}>{org.name}</li>})}
       <form id="join_org" onSubmit={this.submitHandler.bind(this)}>
       <Select multi
       name="form-field-name"

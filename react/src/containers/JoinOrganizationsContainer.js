@@ -2,6 +2,8 @@ import { fetchOrganizations, fetchOrganizationsSuccess, fetchOrganizationsFailur
 import { connect } from 'react-redux';
 import JoinOrganizationsMenu from '../components/JoinOrganizationsMenu'
 import { joinOrganizations } from '../actions/organizations'
+import { getUserData } from '../actions/users'
+
 import { bindActionCreators } from 'redux'
 
 
@@ -15,6 +17,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch) => {
   return {
     joinOrganizations: bindActionCreators(joinOrganizations, dispatch),
+    getUserData: bindActionCreators(getUserData, dispatch),
 
     fetchOrganizations: () => {
       dispatch(fetchOrganizations()).then((response) => {

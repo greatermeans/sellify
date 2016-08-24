@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+export const GET_USER_DATA = 'GET_USER_DATA';
+
 //Get current user(me) from token in localStorage
 export const ME_FROM_TOKEN = 'ME_FROM_TOKEN';
 export const ME_FROM_TOKEN_SUCCESS = 'ME_FROM_TOKEN_SUCCESS';
@@ -59,11 +61,21 @@ export function meFromToken(tokenFromStorage) {
   const request = axios.get(`${ROOT_URL}/users`,{
     headers: {Authorization: tokenFromStorage}
   })
-
   return {
     type: ME_FROM_TOKEN,
     payload: request
   };
+}
+
+
+export function getUserData(userId){
+  const request = axios.get(`${ROOT_URL}/users/${userId}`,{
+    headers: {Authorization: sessionStorage.jwtToken}
+  })
+  return {
+    type: GET_USER_DATA,
+    payload: request
+  }
 }
 
 export function meFromTokenSuccess(currentUser) {
