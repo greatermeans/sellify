@@ -71,7 +71,7 @@ const AllListings = class extends Component {
   }
 
   displaySearch() {
-
+    //still in progress
   }
 
   render() {
@@ -87,7 +87,6 @@ const AllListings = class extends Component {
       <div>
         <h3>Filter by Organization </h3>
           {this.createDropdown()}
-        <h3>Search Result</h3>
           {this.displaySearch()}
         <h1> Listings </h1>
           {this.displayAllListings(listings)}
