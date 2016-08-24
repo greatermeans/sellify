@@ -33,5 +33,6 @@ module Sellify
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.action_controller.permit_all_parameters = true
+
   end
 end
