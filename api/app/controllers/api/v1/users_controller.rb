@@ -4,12 +4,12 @@ module Api
     class UsersController < ApplicationController
 
       def create
-        binding.pry
         @user = User.new(user_params)
         if @user.save
-          render json: @user, include: ['listings','organizations']
+          command = AuthenticateUser.call(user_params[:email], user_params[:password])
+          render json: { auth_token: command.result, user: @user }, include: ['listings','communities','conversations','organizations']
         else
-          render json: @user.errors.full_messages
+          render json: @user.errors
         end
       end
 

@@ -75,9 +75,9 @@ const validateAndSignUpUser = (values, dispatch) => {
           //store JWT Token to browser session storage 
           //If you use localStorage instead of sessionStorage, then this w/ persisted across tabs and new windows.
           //sessionStorage = persisted only in current tab
-          sessionStorage.setItem('jwtToken', response.payload.data.token);
+          sessionStorage.setItem('jwtToken', data.auth_token);
           //let other components know that we got user and things are fine by updating the redux` state 
-          dispatch(signUpUserSuccess(response.payload)); 
+          dispatch(signUpUserSuccess(data.user)); 
           resolve();//this is for redux-form itself
         }
       });
