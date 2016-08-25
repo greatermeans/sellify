@@ -31,7 +31,7 @@ class SignInForm extends Component {
       <div className="container">
         <form onSubmit={handleSubmit(this.props.signInUser.bind(this))}>
           <div className={`form-group ${username.touched && username.invalid ? 'has-error' : ''}`}>
-            <label className="control-label">@username*</label>
+            <label className="control-label">@Email*</label>
             <input  placeholder="email" type="text" className="form-control" {...username} />
             <div className="help-block">
               {username.touched ? username.error : ''}

@@ -32,7 +32,6 @@ class ListingDetails extends Component {
         <span />
       )
     }
-
     return (
       <div className="container">
       <h3><a onClick={this.callDeleteMethod.bind(this)}>Delete Listing</a></h3>
