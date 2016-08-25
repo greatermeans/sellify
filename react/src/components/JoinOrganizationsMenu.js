@@ -34,7 +34,6 @@ constructor(props){
     var orgsAndUser = this.state
     this.props.joinOrganizations(orgsAndUser)
     this.setState({selectedOrganizations: this.makeOptions()})
-    debugger
     browserHistory.push('/dashboard')
   }
 
