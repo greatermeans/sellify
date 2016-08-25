@@ -38,14 +38,13 @@ class UpdateAccountForm extends Component {
 
   render() {
     const {asyncValidating, fields: {email, zipcode}, handleSubmit, submitting, user } = this.props;
-    debugger
     return (
       <form onSubmit={handleSubmit(this.props.validateAndUpdateAccount.bind(this))}>
         <div className="col-md-5">
         {this.getMessage()}
         <div><label className="control-label">Name*</label></div>
         <div>{user.user.name}</div>
-        
+
         <div className={`form-group ${email.touched && email.invalid ? 'has-error' : ''}`}>
           <label className="control-label">Email*</label>
           <input type="email" className="form-control" {...email} />
@@ -66,11 +65,13 @@ class UpdateAccountForm extends Component {
         </div>
         <button type="submit" className="btn btn-primary"  disabled={submitting} >Update Account</button>
         </div>
+        <div className='container'>
         <div className="col-md-5">
           <h4>My Organizations:</h4>
           {user.user.organizations.map((organization)=>{
             return <li>{organization.name}</li>
           })}
+        </div>
         </div>
 
       </form>

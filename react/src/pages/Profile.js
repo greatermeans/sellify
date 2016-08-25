@@ -11,7 +11,9 @@ class Profile extends Component {
         <div className="container">
         	<h2>Profile</h2>
           <div className='well'>
+          <div className='container'>
             <UpdateAccountFormContainer />
+          </div>
           </div>
         </div>
         </div>

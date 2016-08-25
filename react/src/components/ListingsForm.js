@@ -37,6 +37,7 @@ class ListingsForm extends Component {
     return (
       <div className="container">
       {this.renderError(newListing)}
+      <h2>Create New Listing</h2>
       <form onSubmit={handleSubmit(this.props.createListing.bind(this))}>
         <div className={`form-group ${title.touched && title.invalid ? 'has-error' : ''}`}>
           <label className="control-label">Title*</label>
@@ -91,8 +92,8 @@ class ListingsForm extends Component {
         <button type="submit" className="btn btn-primary"  disabled={submitting} >Submit</button>
         <Link to="/" className="btn btn-error">Cancel</Link>
       </form>
-
       </div>
+
 
     );
   }
