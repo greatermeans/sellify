@@ -10,13 +10,16 @@ module Api
         save_image
         @listing_params["image"] = "http://s3.amazonaws.com/sellify/#{filepath}"
         @listing_params['user_id'] = current_user.id
-        binding.pry
         @listing = Listing.new(@listing_params)
+        @listing.tags = find_or_create_tags
+        @listing.save
         @@counter += 1
         render json: @listing, include: ['user','tags']
       end
 
 			def show
+        @listing = Listing.find(params[:id].to_i)
+        render json: @listing, include: ['tags','categories']
 			end
 
       def all_listings
@@ -51,8 +54,16 @@ module Api
         Aws.config.update({credentials: Aws::Credentials.new(Rails.application.secrets.API_KEY, Rails.application.secrets.SECRET_KEY)})
       end
 
+      def find_or_create_tags
+        listing_tags = @tags.split(", ").map do |tagname|
+          Tag.find_or_create_by(name: tagname)
+        end
+      end
+
       def parse_params
-          @tags = JSON.parse(params["listing"]).delete("tags")
+          parse_params = JSON.parse(params["listing"])
+          @tags = parse_params.delete("tags")
+          parse_params
       end
 
 

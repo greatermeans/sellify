@@ -12,12 +12,14 @@ body {
   font-size: 20px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.5);
+  background-image: url("../images/bg.png");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%;
+
 }
 
 #root {
-  background-image: url("../images/bg.png");
-  background-attachment: fixed;
-
 }
 
 #landing {
@@ -93,7 +95,6 @@ figure {
 
 #fh5co-page {
   width: 100%;
-  overflow: hidden;
   position: relative;
 }
 
@@ -115,7 +116,7 @@ figure {
 }
 @media screen and (max-width: 1200px) {
   #fh5co-aside {
-    width: 25%;
+    width: 30%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -252,7 +253,7 @@ figure {
 }
 @media screen and (max-width: 1200px) {
   #fh5co-main {
-    width: 90%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -264,7 +265,7 @@ figure {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  padding: 4em 0;
+  padding: 0em 0;
 }
 @media screen and (max-width: 768px) {
   #fh5co-main .fh5co-narrow-content {

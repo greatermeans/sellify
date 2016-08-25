@@ -88,6 +88,7 @@ const AllListings = class extends Component {
         <h3>Filter by Organization </h3>
           {this.createDropdown()}
           {this.displaySearch()}
+          <br/>
         <h1> Listings </h1>
           {this.displayAllListings(listings)}
       </div>

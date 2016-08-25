@@ -142,7 +142,6 @@ export function fetchListing(id) {
     url: `${ROOT_URL}/listings/${id}`,
     headers: {Authorization: sessionStorage.jwtToken}
   });
-
   return {
     type: FETCH_LISTING,
     payload: request

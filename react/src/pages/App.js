@@ -26,7 +26,7 @@ export default class App extends Component {
     )
     return (
     	<AppContainer>
-        <div>
+        <div id='fh5co-main'>
           {isModal ?
             this.previousChildren :
             this.props.children
