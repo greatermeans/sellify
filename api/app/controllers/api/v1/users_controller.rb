@@ -2,6 +2,7 @@ module Api
   module V1
 
     class UsersController < ApplicationController
+      skip_before_action :authenticate_request, only: [:create]
 
       def create
         @user = User.new(user_params)
@@ -58,7 +59,7 @@ module Api
       end
 
       def validate
-        if !User.find_by(email: user_params[:email])
+        if !User.find_by(email: user_params[:email]) || params.header
           render json: 'success', status: 200
         else
           render json: { error: 'User already exists' }, status: 401

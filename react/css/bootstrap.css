@@ -13,7 +13,6 @@ body {
 .root {
     padding-top: 100px;
     padding-right: 200px;
-    padding-bottom: 200px;
     padding-left: 200px;
 }
 
@@ -336,7 +335,15 @@ body {
   background-color: #fff;
 }
 
-input,
+input {
+  background-color: #fff;
+  border: none;
+
+
+
+}
+
+
 button,
 select,
 textarea {
@@ -4691,20 +4698,20 @@ a.thumbnail.active {
 .list-group-item {
   position: relative;
   display: block;
-  width: 75%;
+  width: 50%;
   padding: 10px 15px;
-  margin-bottom: -1px;
+  margin-bottom: 10px;
   background-color: #fff;
   border: 1px solid #ddd;
 }
 .list-group-item:first-child {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 a.list-group-item,
@@ -5279,6 +5286,7 @@ button.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
+  width:50%;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;

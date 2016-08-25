@@ -97,28 +97,6 @@ export function fetchListingsFailure(error) {
   };
 }
 
-export function validateListingFields(props) {
-  //note: we cant have /listings/validateFields because it'll match /listings/:id path!
-  const request = axios.post(`${ROOT_URL}/listings/validate/fields`, props);
-
-  return {
-    type: VALIDATE_LISTING_FIELDS,
-    payload: request
-  };
-}
-
-export function validateListingFieldsSuccess() {
-  return {
-    type: VALIDATE_LISTING_FIELDS_SUCCESS
-  };
-}
-
-export function validateListingFieldsFailure(error) {
-  return {
-    type: VALIDATE_LISTING_FIELDS_FAILURE,
-    payload: error
-  };
-}
 
 export function resetListingFields() {
   return {
@@ -128,13 +106,8 @@ export function resetListingFields() {
 
 
 export function createListing(props, tokenFromStorage) {
-  //const request = axios.listing(`${ROOT_URL}/listings`, props);
-  const request = axios({
-    method: 'post',
-    data: props,
-    url: `${ROOT_URL}/listings`,
-   headers: {'Authorization': `Bearer ${tokenFromStorage}`}
-  });
+  const request = axios.post(`${ROOT_URL}/listings`,
+    props, {headers:{Authorization: tokenFromStorage }})
 
   return {
     type: CREATE_LISTING,
@@ -174,7 +147,6 @@ export function fetchListing(id) {
     url: `${ROOT_URL}/listings/${id}`,
     headers: {Authorization: sessionStorage.jwtToken}
   });
-
   return {
     type: FETCH_LISTING,
     payload: request

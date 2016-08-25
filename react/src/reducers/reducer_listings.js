@@ -4,7 +4,7 @@ import {
 	FETCH_LISTING, FETCH_LISTING_SUCCESS,  FETCH_LISTING_FAILURE, RESET_ACTIVE_LISTING,
 	CREATE_LISTING, CREATE_LISTING_SUCCESS, CREATE_LISTING_FAILURE, RESET_NEW_LISTING,
 	DELETE_LISTING, DELETE_LISTING_SUCCESS, DELETE_LISTING_FAILURE, RESET_DELETED_LISTING,
-  VALIDATE_LISTING_FIELDS,VALIDATE_LISTING_FIELDS_SUCCESS, VALIDATE_LISTING_FIELDS_FAILURE, RESET_LISTING_FIELDS,
+  RESET_LISTING_FIELDS,
 	SEARCH, SEARCH_TERM, RESET_SEARCH_TERM
 } from '../actions/listings';
 
@@ -73,18 +73,6 @@ export default function(state = INITIAL_STATE, action) {
   case RESET_DELETED_LISTING:
   	return {...state,  deletedListing:{listing:null, error:null, loading: false}}
 
-  case VALIDATE_LISTING_FIELDS:
-    return {...state, newListing:{...state.newListing, error: null, loading: true}}
-  case VALIDATE_LISTING_FIELDS_SUCCESS:
-    return {...state, newListing:{...state.newListing, error: null, loading: false}}
-  case VALIDATE_LISTING_FIELDS_FAILURE:
-    let result = action.payload.data;
-    if(!result) {
-      error = {message: action.payload.message};
-    } else {
-      error = {title: result.title, categories: result.categories, description: result.description};
-    }
-    return {...state, newListing:{...state.newListing, error: error, loading: false}}
   case RESET_LISTING_FIELDS:
     return {...state, newListing:{...state.newListing, error: null, loading: null}}
 

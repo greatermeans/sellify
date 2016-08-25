@@ -28,13 +28,16 @@ class ListingDetails extends Component {
         <span />
       )
     }
-
+    debugger
     return (
       <div className="container">
+      <h3><a onClick={this.props.onDeleteClick}>Delete Listing</a></h3>
+
         <h3>{listing.title}</h3>
         <img src={listing.image} alt={listing.name} />
-        <h6> Categories: {listing.tags.map((tag)=>{return tag.name})}</h6>
-        <p>{listing.content}</p>
+        <h6> Categories: {listing.tags.map((tag)=>{return `${tag.name}, `})}</h6>
+        <br/>
+        <p>{listing.description}</p>
       </div>
     );
   }

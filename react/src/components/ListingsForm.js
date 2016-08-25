@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+import Dropzone from 'react-dropzone'
 
 class ListingsForm extends Component {
+
   static contextTypes = {
     router: PropTypes.object
   };
@@ -31,8 +33,7 @@ class ListingsForm extends Component {
   }
 
   render() {
-    const {asyncValidating, fields: { title, categories, content }, handleSubmit, submitting, newListing } = this.props;
-
+    const {fields: { title, description, zipcode, price, tags }, handleSubmit, submitting, newListing, onDrop} = this.props;
     return (
       <div className="container">
       {this.renderError(newListing)}
@@ -43,24 +44,47 @@ class ListingsForm extends Component {
           <div className="help-block">
             {title.touched ? title.error : ''}
           </div>
+        </div>
+
+        <div className={`form-group ${description.touched && description.invalid ? 'has-error' : ''}`}>
+          <label className="control-label">Description*</label>
+          <textarea className="form-control" {...description} />
           <div className="help-block">
-            {asyncValidating === 'title'? 'validating..': ''}
+            {description.touched ? description.error : ''}
           </div>
         </div>
 
-        <div className={`form-group ${categories.touched && categories.invalid ? 'has-error' : ''}`}>
-          <label className="control-label">Categories*</label>
-          <input type="text" className="form-control" {...categories} />
+        <div className={`form-group ${price.touched && price.invalid ? 'has-error' : ''}`}>
+          <label className="control-label">Price*</label>
+          <input type="numeric" className="form-control" {...price} />
           <div className="help-block">
-            {categories.touched ? categories.error : ''}
+            {price.touched ? price.error : ''}
           </div>
         </div>
 
-        <div className={`form-group ${content.touched && content.invalid ? 'has-error' : ''}`}>
-          <label className="control-label">Content*</label>
-          <textarea className="form-control" {...content} />
+        <div className={`form-group ${zipcode.touched && zipcode.invalid ? 'has-error' : ''}`}>
+          <label className="control-label">Zip Code(5-digit)*</label>
+          <input type="text" pattern="[0-9]{5}" className="form-control" {...zipcode} />
           <div className="help-block">
-            {content.touched ? content.error : ''}
+            {zipcode.touched ? zipcode.error : ''}
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label className="control-label">Add an Image</label>
+          <Dropzone
+            multiple={false}
+            accept="image/*"
+            onDrop={onDrop.bind(this)}>
+          </Dropzone>
+        </div>
+
+
+        <div className={`form-group ${tags.touched && tags.invalid ? 'has-error' : ''}`}>
+          <label className="control-label">Choose Your Tags*</label>
+          <input type="text" className="form-control" {...tags} />
+          <div className="help-block">
+            {tags.touched ? tags.error : ''}
           </div>
         </div>
 
