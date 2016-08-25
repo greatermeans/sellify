@@ -1,6 +1,7 @@
 import ListingsForm from '../components/ListingsForm.js';
 import { createListing, createListingSuccess, createListingFailure, resetNewListing} from '../actions/listings';
 import {reduxForm} from 'redux-form';
+import { browserHistory } from 'react-router'
 
 var listingData;
 
@@ -47,6 +48,7 @@ const validateAndCreateListing = (values, dispatch) => {
     listingData.append("listing", values)
     dispatch(createListing(listingData, token))
       .then((response) => {
+        debugger
         let data = response.payload.data;
         //if any one of these exist, then there is a field error
         if (response.payload.status != 200) {
@@ -56,9 +58,12 @@ const validateAndCreateListing = (values, dispatch) => {
         } else {
           //let other components know that everything is fine by updating the redux` state
           dispatch(createListingSuccess(response.payload));
+          browserHistory.push(`/listings/${response.payload.data.id}`);
           resolve(); //this is for redux-form itself
         }
-      });
+      })
+      // .then(function(resp){
+      //   browserHistory.push(`/listings/${resp.payload.id}`)});
 
   });
 };
