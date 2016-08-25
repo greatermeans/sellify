@@ -20,15 +20,24 @@ const AllListings = class extends Component {
 
     if (search.length == 0 && chosenOrg == '') {
       return this.state.listings.map ( (listing, idx) => {
-        return <ListingsBox key={idx} {...listing}/>
+        return(
+          <li className="list-group-item" key={listing.id}>
+            <ListingsBox key={idx} {...listing}/>
+          </li>)
       })
     } else if (search.length == 0 && chosenOrg !== '') {
       return this.state.listings.map ( (listing, idx) => {
-        return <ListingsBox key={idx} {...listing}/>
-      })
+        return(
+          <li className="list-group-item" key={listing.id}>
+            <ListingsBox key={idx} {...listing}/>
+          </li>)
+              })
     } else if (search.length > 0 && chosenOrg == '') {
       return search.map ( (listing, idx) => {
-        return <ListingsBox key={idx} {...listing}/>
+        return(
+          <li className="list-group-item" key={listing.id}>
+            <ListingsBox key={idx} {...listing}/>
+          </li>)
       })
     } else if (search.length > 0 && chosenOrg !== '') {
         for(var arr in (listings)){
@@ -39,7 +48,10 @@ const AllListings = class extends Component {
           }
         }
         return searchList.map ( (listing, idx) => {
-          return <ListingsBox key={idx} {...listing}/>
+          return(
+            <li className="list-group-item" key={listing.id}>
+              <ListingsBox key={idx} {...listing}/>
+            </li>)
         })
     }
   }
@@ -92,7 +104,9 @@ const AllListings = class extends Component {
           {this.showSearchButton()}
           <br/>
         <h1> Listings </h1>
+        <ul className="list-group">
           {this.displayAllListings(listings)}
+        </ul>
       </div>
     )
   }

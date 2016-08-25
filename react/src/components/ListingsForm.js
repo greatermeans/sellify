@@ -36,6 +36,8 @@ class ListingsForm extends Component {
     const {fields: { title, description, zipcode, price, tags }, handleSubmit, submitting, newListing, onDrop} = this.props;
     return (
       <div className="container">
+      <div className="well">
+
       {this.renderError(newListing)}
       <h2>Create New Listing</h2>
       <form onSubmit={handleSubmit(this.props.createListing.bind(this))}>
@@ -94,6 +96,7 @@ class ListingsForm extends Component {
       </form>
       </div>
 
+      </div>
 
     );
   }

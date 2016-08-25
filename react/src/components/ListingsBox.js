@@ -5,7 +5,7 @@ import ListingsTags from './ListingsTags'
 const ListingsBox =({title, price, id, image, description, tags}) => {
   return(
     <div className='container'>
-    <div className="col-md-6">
+    <div className="col-md-4">
       <Link style={{color:'black'}} to={"listings/" + id}>
         <img src={image} alt={title} />
         <h3 className="list-group-item-heading">{title}</h3>

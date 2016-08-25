@@ -8,8 +8,10 @@ const AllListings = class extends Component {
     return (
       <div>
         <HeaderContainer type="all_listings"/>
+        <div className='container'>
         <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
           <AllListingsContainer />
+        </div>
         </div>
       </div>
     )
