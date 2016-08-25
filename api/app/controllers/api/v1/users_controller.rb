@@ -2,20 +2,15 @@ module Api
   module V1
 
     class UsersController < ApplicationController
-      # skip_before_action :login_required, only: [:new, :create]
-
-      # before_action :ensure_user_is_current, only: :show
-
-      # def new
-      #   @user = User.new
-      # end
+      skip_before_action :authenticate_request, only: [:create]
 
       def create
         @user = User.new(user_params)
         if @user.save
-          render json: @user, include: ['listings','organizations']
+          command = AuthenticateUser.call(user_params[:email], user_params[:password])
+          render json: { auth_token: command.result, user: @user }, include: ['listings','communities','conversations','organizations']
         else
-          render json: @user.errors.full_messages
+          render json: @user.errors
         end
       end
 
@@ -34,19 +29,23 @@ module Api
         render json: @user.conversations
       end
 
-      def join_org
+      def signin
         @user = User.find(params[:id])
-        @user.organizations.destroy_all
+      end
+
+      def join_org
+        @user = User.find(params[:id].to_i)
+        @user.organizations = []
         params[:orgIds].map do |orgId|
-          @user.organizations << Organization.find(orgId)
+          if !@user.organizations.include?(Organization.find(orgId))
+            @user.organizations << Organization.find(orgId)
+          end
         end
         @user.save
         render json: @user, include: ['listings','organizations']
       end
 
-      # def update
 
-      # end
 
       # def edit
       #   @user = User.find(params[:id])
@@ -56,8 +55,15 @@ module Api
       # end
 
       def index
-        @user = User.find(current_user.id)
-        render json: @user, include: ['listings','communities','conversations','organizations']
+        render json: @current_user, include: ['listings','communities','conversations','organizations']
+      end
+
+      def validate
+        if !User.find_by(email: user_params[:email])
+          render json: 'success', status: 200
+        else
+          render json: { error: 'User already exists' }, status: 401
+        end
       end
 
       private
@@ -66,10 +72,6 @@ module Api
       def user_params
         params.require(:user).permit(:first_name, :last_name, :zipcode, :password, :email)
       end
-
-      # def ensure_user_is_current
-      #   redirect_to root_url unless params[:id].to_i == current_user.id
-      # end
     end
   end
 end

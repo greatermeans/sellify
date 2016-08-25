@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+src/aws_key.js
+src/secret_key.js
+
+npm-debug.log
 # dependencies
 node_modules
 
@@ -8,4 +12,3 @@ build
 
 # misc
 .DS_Store
-npm-debug.log
