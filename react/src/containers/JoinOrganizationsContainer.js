@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import JoinOrganizationsMenu from '../components/JoinOrganizationsMenu'
 import { joinOrganizations } from '../actions/organizations'
 import { getUserData } from '../actions/users'
-
 import { bindActionCreators } from 'redux'
 
 

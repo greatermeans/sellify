@@ -34,6 +34,11 @@ export const DELETE_LISTING_SUCCESS = 'DELETE_LISTING_SUCCESS';
 export const DELETE_LISTING_FAILURE = 'DELETE_LISTING_FAILURE';
 export const RESET_DELETED_LISTING = 'RESET_DELETED_LISTING';
 
+//Search listings
+export const SEARCH = 'SEARCH'
+export const SEARCH_TERM = 'SEARCH_TERM'
+export const RESET_SEARCH_TERM = 'RESET_SEARCH_TERM'
+
 
 const ROOT_URL = 'http://localhost:3000/api/v1'
 
@@ -221,4 +226,25 @@ export function deleteListingFailure(response) {
     type: DELETE_LISTING_FAILURE,
     payload: response
   };
+}
+
+export function searchListings(listingData) {
+    return {
+        type: 'SEARCH',
+        payload: listingData
+    }
+}
+
+export function searchTerm(searchTerm) {
+    return {
+        type: 'SEARCH_TERM',
+        payload: searchTerm
+    }
+}
+
+export function resetSearchTerm() {
+    return {
+        type: 'RESET_SEARCH_TERM',
+        payload: searchTerm
+    }
 }

@@ -26,7 +26,6 @@ class ListingsList extends Component {
     } else if(error) {
       return <div className="alert alert-danger">Error: {error.message}</div>
     }
-
     return (
       <div className="container">
         <h3><Link to={'/listings/new'}>Create New Listing</Link></h3>

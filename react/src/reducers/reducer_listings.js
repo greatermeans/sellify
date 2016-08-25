@@ -4,7 +4,8 @@ import {
 	FETCH_LISTING, FETCH_LISTING_SUCCESS,  FETCH_LISTING_FAILURE, RESET_ACTIVE_LISTING,
 	CREATE_LISTING, CREATE_LISTING_SUCCESS, CREATE_LISTING_FAILURE, RESET_NEW_LISTING,
 	DELETE_LISTING, DELETE_LISTING_SUCCESS, DELETE_LISTING_FAILURE, RESET_DELETED_LISTING,
-  VALIDATE_LISTING_FIELDS,VALIDATE_LISTING_FIELDS_SUCCESS, VALIDATE_LISTING_FIELDS_FAILURE, RESET_LISTING_FIELDS
+  VALIDATE_LISTING_FIELDS,VALIDATE_LISTING_FIELDS_SUCCESS, VALIDATE_LISTING_FIELDS_FAILURE, RESET_LISTING_FIELDS,
+	SEARCH, SEARCH_TERM, RESET_SEARCH_TERM
 } from '../actions/listings';
 
 
@@ -13,6 +14,8 @@ import {
 													newListing: {listing:null, error: null, loading: false},
 													activeListing: {listing:null, error:null, loading: false},
 													deletedListing: {listing: null, error:null, loading: false},
+													searchResults: {listings: []},
+													searchTerm: ''
 												};
 
 export default function(state = INITIAL_STATE, action) {
@@ -84,6 +87,14 @@ export default function(state = INITIAL_STATE, action) {
     return {...state, newListing:{...state.newListing, error: error, loading: false}}
   case RESET_LISTING_FIELDS:
     return {...state, newListing:{...state.newListing, error: null, loading: null}}
+
+	case SEARCH:
+	  return { ...state, searchResults: {listings: action.payload}};
+	case SEARCH_TERM:
+		return { ...state, searchTerm: action.payload};
+	case RESET_SEARCH_TERM:
+		return { ...state, searchTerm: '', searchResults: {listings: []} };
+
   default:
     return state;
   }
