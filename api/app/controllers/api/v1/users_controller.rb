@@ -59,7 +59,7 @@ module Api
       end
 
       def validate
-        if !User.find_by(email: user_params[:email])
+        if !User.find_by(email: user_params[:email]) || params.header
           render json: 'success', status: 200
         else
           render json: { error: 'User already exists' }, status: 401
