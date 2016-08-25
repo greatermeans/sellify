@@ -17,6 +17,10 @@ module Api
         render json: @listing, include: ['user','tags']
       end
 
+      def destroy
+        binding.pry
+      end
+
 			def show
         @listing = Listing.find(params[:id].to_i)
         render json: @listing, include: ['tags','categories']
