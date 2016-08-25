@@ -18,7 +18,7 @@ module Api
       end
 
       def destroy
-        binding.pry
+        Listing.find(params[:id].to_i).destroy
       end
 
 			def show

@@ -16,6 +16,10 @@ class ListingDetails extends Component {
     this.props.fetchListing(this.props.listingId);
   }
 
+  callDeleteMethod(){
+    this.props.DeleteClick(this.props)
+  }
+
 
   render() {
     const { listing, loading, error } = this.props.activeListing;
@@ -28,10 +32,10 @@ class ListingDetails extends Component {
         <span />
       )
     }
-    debugger
+
     return (
       <div className="container">
-      <h3><a onClick={this.props.onDeleteClick}>Delete Listing</a></h3>
+      <h3><a onClick={this.callDeleteMethod.bind(this)}>Delete Listing</a></h3>
 
         <h3>{listing.title}</h3>
         <img src={listing.image} alt={listing.name} />
