@@ -6,12 +6,10 @@
   font-style: normal;
 }
 
-.uploaded {
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  width: 100px;
+img {
+  max-width: 100%;
 }
+
 
 .Select--multi .Select-value {
   color: #ff004e !important;

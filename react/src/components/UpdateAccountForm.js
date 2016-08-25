@@ -41,7 +41,7 @@ class UpdateAccountForm extends Component {
     const {asyncValidating, fields: {email, zipcode}, handleSubmit, submitting, user } = this.props;
     return (
       <form onSubmit={handleSubmit(this.props.validateAndUpdateAccount.bind(this))}>
-        <div className='row'> 
+        <div className='row'>
         <div className="col-md-5">
         {this.getMessage()}
         <div><label className="control-label">Name*</label></div>
@@ -75,7 +75,8 @@ class UpdateAccountForm extends Component {
           })}
         </div>
         </div>
-        <div> <h4>Your Listings</h4><br/>
+        <br />
+        <div> <h4>My Listings</h4><br/>
         {user.user.listings.map((listing)=>{
             return <ListingsBox {...listing} />
           })}
