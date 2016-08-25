@@ -15,8 +15,8 @@ const rootReducer = combineReducers({
   form: formReducer, // <-- redux-form
   resendEmail: ResendEmailReducer,
   updateEmail: UpdateEmailReducer,
-  search: SearchReducer
-  organizations: OrganizationsReducer,
+  search: SearchReducer,
+  organizations: OrganizationsReducer
 });
 
 export default rootReducer;
