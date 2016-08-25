@@ -5,6 +5,8 @@ import NewListingForm from '../components/newListingForm'
 import BookMarked from '../components/bookmarked'
 import SmartDashboardListing from '../components/dashboardListing'
 import auth from './authenticationResource'
+import ChatApp from '../chat/chatApp'
+
 
 const Dashboard = class extends Component {
 
@@ -26,6 +28,7 @@ const Dashboard = class extends Component {
 			<div>
 				{this.checkUserOrgs()}
 			  <SmartDashboardListing />
+				<ChatApp />
 				<BookMarked />
 			</div>
 	)}
