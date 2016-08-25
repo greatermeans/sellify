@@ -6,31 +6,53 @@
   font-style: normal;
 }
 
+.uploaded {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+}
+
+.Select--multi .Select-value {
+  color: #ff004e !important;
+  background-color: #f7dde2 !important;
+  border-color: #ff004e !important;
+}
+
+.Select--multi .Select-value-icon {
+  border-right: 1px solid #ff004e !important;
+}
+
+.Select-control {
+  width: 45% !important;
+}
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.6;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-#root {
-  /*background-image: url("../images/bg.png");*/
   background-image: url("../images/bg.png");
   background-attachment: fixed;
   background-size: cover;
   min-height: 100%;
-
 }
 
 #root {
+
+
 }
+
 
 #landing {
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+#graybg {
+  margin-top: 100px;
 }
 
 .yc {
@@ -105,7 +127,7 @@ figure {
 #fh5co-aside {
   padding-top: 40px;
   padding-bottom: 40px;
-  width: 15%;
+  width: 25%;
   position: fixed;
   bottom: 0;
   top: 0;

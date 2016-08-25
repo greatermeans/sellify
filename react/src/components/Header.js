@@ -91,7 +91,7 @@ class Header extends Component {
 			return (
         <aside id="fh5co-aside" role="complementary" className="border js-fullheight">
           <h1 id="fh5co-logo">
-          <img src="/images/logo.png" alt='logo' /><br />
+          <a href='/dashboard'><img src="/images/logo.png" alt='logo' /><br /></a>
           </h1>
           <nav id="fh5co-main-menu" role="navigation">
             {this.renderLinks()}

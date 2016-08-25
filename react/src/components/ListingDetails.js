@@ -34,7 +34,13 @@ class ListingDetails extends Component {
       <h3><a onClick={this.props.onDeleteClick}>Delete Listing</a></h3>
 
         <h3>{listing.title}</h3>
+        <div className='container'>
+        <div className='row'>
+        <div className='col-md-6'>
         <img src={listing.image} alt={listing.name} />
+        </div>
+        </div>
+        </div>
         <h6> Categories: {listing.tags.map((tag)=>{return `${tag.name}, `})}</h6>
         <br/>
         <p>{listing.description}</p>

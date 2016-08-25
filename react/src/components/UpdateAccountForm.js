@@ -46,7 +46,7 @@ class UpdateAccountForm extends Component {
         {this.getMessage()}
         <div><label className="control-label">Name*</label></div>
         <div>{user.user.name}</div>
-        
+
         <div className={`form-group ${email.touched && email.invalid ? 'has-error' : ''}`}>
           <label className="control-label">Email*</label>
           <input type="email" className="form-control" {...email} />
@@ -67,6 +67,7 @@ class UpdateAccountForm extends Component {
         </div>
         <button type="submit" className="btn btn-primary"  disabled={submitting} >Update Account</button>
         </div>
+        <div className='container'>
         <div className="col-md-5">
           <h4>My Organizations:</h4>
           {user.user.organizations.map((organization)=>{
@@ -78,7 +79,7 @@ class UpdateAccountForm extends Component {
         {user.user.listings.map((listing)=>{
             return <ListingsBox {...listing} />
           })}
-
+        </div>
         </div>
 
       </form>

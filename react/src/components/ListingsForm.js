@@ -35,8 +35,12 @@ class ListingsForm extends Component {
   render() {
     const {fields: { title, description, zipcode, price, tags }, handleSubmit, submitting, newListing, onDrop} = this.props;
     return (
+      <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
       <div className="container">
+      <div className="well">
+
       {this.renderError(newListing)}
+      <h2>Create New Listing</h2>
       <form onSubmit={handleSubmit(this.props.createListing.bind(this))}>
         <div className={`form-group ${title.touched && title.invalid ? 'has-error' : ''}`}>
           <label className="control-label">Title*</label>
@@ -91,7 +95,8 @@ class ListingsForm extends Component {
         <button type="submit" className="btn btn-primary"  disabled={submitting} >Submit</button>
         <Link to="/" className="btn btn-error">Cancel</Link>
       </form>
-
+      </div>
+      </div>
       </div>
 
     );

@@ -55,7 +55,8 @@ constructor(props){
 
         <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
 
-
+        <div className='well'>
+        <div className='container'>
 
       <h3>My Current Organizations:</h3>
       {this.props.user.organizations.map((org)=>{return <li key={org.id}>{org.name}</li>})}
@@ -73,7 +74,8 @@ constructor(props){
       <button type='submit' className="btn btn-primary btn-outline">Done</button>
       </form>
       </div>
-
+      </div>
+      </div>
     )
   }
 
