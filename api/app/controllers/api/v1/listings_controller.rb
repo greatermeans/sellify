@@ -25,6 +25,8 @@ module Api
       end
 
 			def show
+        @listing = Listing.find(params[:id].to_i)
+        render json: @listing, include: ['tags','categories']
 			end
 
       def all_listings

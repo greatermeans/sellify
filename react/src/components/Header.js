@@ -90,7 +90,6 @@ class Header extends Component {
 
 	render() {
 			return (
-        <div id='id="fh5co-page"'>
         <aside id="fh5co-aside" role="complementary" className="border js-fullheight">
           <h1 id="fh5co-logo">
           <img src="/images/logo.png" alt='logo' /><br />
@@ -104,7 +103,6 @@ class Header extends Component {
           </div>
 
         </aside>
-        </div>
 			);
 	}
 }

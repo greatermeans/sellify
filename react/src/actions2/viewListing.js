@@ -9,7 +9,7 @@ const viewListing = (listingData)=>{
   		contentType: "application/json; charset=utf-8",
   		dataType:"json"
   })
-
+	
 	return {
 		type: 'ADD_LISTING',
 		payload: request

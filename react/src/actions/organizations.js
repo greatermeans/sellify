@@ -87,7 +87,8 @@ export function resetActiveOrganization() {
 export function joinOrganizations(orgsAndUser) {
   let orgIds = orgsAndUser.selectedOrganizations.map((org)=>{return org.value})
   const request = axios.post(`${ROOT_URL}/users/${orgsAndUser.currentUser}/join_org`,
-    {orgIds: orgIds}, {headers: {Authorization: sessionStorage.jwtToken}});
+    {orgIds: orgIds},
+    {headers: {Authorization: sessionStorage.jwtToken}});
 
 
 	return {
