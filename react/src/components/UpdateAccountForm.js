@@ -38,7 +38,6 @@ class UpdateAccountForm extends Component {
 
   render() {
     const {asyncValidating, fields: {email, zipcode}, handleSubmit, submitting, user } = this.props;
-    debugger
     return (
       <form onSubmit={handleSubmit(this.props.validateAndUpdateAccount.bind(this))}>
         <div className="col-md-5">

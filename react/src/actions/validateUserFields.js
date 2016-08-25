@@ -13,7 +13,8 @@ const ROOT_URL = 'http://localhost:3000/api/v1'
 
 export function validateUserFields(values) {
   //note: we cant have /users/validateFields because it'll match /users/:id path!
-  const request = axios.post(`${ROOT_URL}/users/validate/fields`, values);
+  const request = axios.post(`${ROOT_URL}/users/validate/fields`,
+    {user: values, header: sessionStorage.jwtToken});
 
   return {
     type: VALIDATE_USER_FIELDS,

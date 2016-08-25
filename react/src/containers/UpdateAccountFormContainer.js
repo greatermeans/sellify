@@ -26,7 +26,6 @@ function validate(values) {
 const asyncValidate = (values, dispatch) => {
 
   return new Promise((resolve, reject) => {
-
     dispatch(validateUserFields(values))
     .then((response) => {
         let data = response.payload.data;
