@@ -35,6 +35,7 @@ class ListingsForm extends Component {
   render() {
     const {fields: { title, description, zipcode, price, tags }, handleSubmit, submitting, newListing, onDrop} = this.props;
     return (
+      <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
       <div className="container">
       <div className="well">
 
@@ -95,7 +96,7 @@ class ListingsForm extends Component {
         <Link to="/" className="btn btn-error">Cancel</Link>
       </form>
       </div>
-
+      </div>
       </div>
 
     );
