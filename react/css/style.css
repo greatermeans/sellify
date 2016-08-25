@@ -6,6 +6,17 @@
   font-style: normal;
 }
 
+.Select--multi .Select-value {
+  color: #ff004e !important;
+  background-color: #f7dde2 !important;
+  border-color: #ff004e !important;
+}
+
+
+.Select-control {
+  width: 45% !important;
+}
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
@@ -102,7 +113,7 @@ figure {
 #fh5co-aside {
   padding-top: 40px;
   padding-bottom: 40px;
-  width: 15%;
+  width: 25%;
   position: fixed;
   bottom: 0;
   top: 0;
