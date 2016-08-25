@@ -63,7 +63,7 @@ class ListingsForm extends Component {
         </div>
 
         <div className={`form-group ${zipcode.touched && zipcode.invalid ? 'has-error' : ''}`}>
-          <label className="control-label">Zip Code*</label>
+          <label className="control-label">Zip Code(5-digit)*</label>
           <input type="text" pattern="[0-9]{5}" className="form-control" {...zipcode} />
           <div className="help-block">
             {zipcode.touched ? zipcode.error : ''}

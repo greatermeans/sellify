@@ -1,7 +1,7 @@
-import UpdateEmailForm from '../components/UpdateEmailForm.js';
-import {updateEmail, updateEmailSuccess, updateEmailFailure, resetUpdateEmailState } from '../actions/updateEmail';
+import UpdateAccountForm from '../components/UpdateAccountForm.js';
+import {updateAccount, updateAccountSuccess, updateAccountFailure, resetUpdateAccountState } from '../actions/updateAccount';
 import { validateUserFields, validateUserFieldsSuccess, validateUserFieldsFailure, resetValidateUserFields } from '../actions/validateUserFields';
-import { updateUserEmail } from '../actions/users';
+import { updateUserAccount } from '../actions/users';
 
 import { reduxForm } from 'redux-form';
 
@@ -13,6 +13,10 @@ function validate(values) {
   if (!values.email || values.email.trim() === '') {
     errors.username = 'Enter email';
     hasErrors = true;
+  }
+  if (!values.zipcode || values.zipcode.trim() === '' || values.zipcode.length !== 5) {
+    errors.zipcode = 'Invalid Zip Code';
+    hasErrors = true
   }
    return hasErrors && errors;
 } 
@@ -42,7 +46,7 @@ const asyncValidate = (values, dispatch) => {
 
 
 //For any field errors upon submission (i.e. not instant check)
-const validateAndUpdateEmail = (values, dispatch) => {
+const validateAndUpdateAccount = (values, dispatch) => {
 
   return new Promise((resolve, reject) => {
 
@@ -53,18 +57,18 @@ const validateAndUpdateEmail = (values, dispatch) => {
     return;
   }
 
-   dispatch(updateEmail(values, jwtToken))
+   dispatch(updateAccount(values, jwtToken))
     .then((response) => {
         let data = response.payload.data;
         //if any one of these exist, then there is a field error 
         if(response.payload.status != 200) {
           //let other components know of error by updating the redux` state
-          dispatch(updateEmailFailure(response.payload));
+          dispatch(updateAccountFailure(response.payload));
            reject(data); //this is for redux-form itself
          } else {
           //let other components know that we got user and things are fine by updating the redux` state 
-          dispatch(updateEmailSuccess(response.payload)); 
-          dispatch(updateUserEmail(values));//update current user's email (in user's state)
+          dispatch(updateAccountSuccess(response.payload)); 
+          dispatch(updateUserAccount(values));//update current user's email (in user's state)
           resolve();//this is for redux-form itself
         }
       });
@@ -75,9 +79,9 @@ const validateAndUpdateEmail = (values, dispatch) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-   validateAndUpdateEmail: validateAndUpdateEmail,
+   validateAndUpdateAccount: validateAndUpdateAccount,
    resetMe: () =>{
-     dispatch(resetUpdateEmailState());
+     dispatch(resetUpdateAccountState());
      dispatch(resetValidateUserFields());
     }
   }
@@ -86,8 +90,9 @@ const mapDispatchToProps = (dispatch) => {
 
 function mapStateToProps(state, ownProps) {
   return { 
-    updateEmail: state.updateEmail,
-    initialValues: {email: state.user.user && state.user.user.email}
+    updateAccount: state.updateAccount,
+    user: state.user,
+    initialValues: {email: state.user.user && state.user.user.email,zipcode: state.user.user && state.user.user.zipcode}
   };
 }
 
@@ -95,9 +100,9 @@ function mapStateToProps(state, ownProps) {
 // connect: first argument is mapStateToProps, 2nd is mapDispatchToProps
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
-  form: 'UpdateEmailForm', 
-  fields: ['email'], 
+  form: 'UpdateAccountForm', 
+  fields: ['email','zipcode'], 
   asyncValidate,
   asyncBlurFields: ['email'],
   validate 
-}, mapStateToProps, mapDispatchToProps)(UpdateEmailForm);
+}, mapStateToProps, mapDispatchToProps)(UpdateAccountForm);

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-class UpdateEmailForm extends Component {
+class UpdateAccountForm extends Component {
   static contextTypes = {
     router: PropTypes.object
   };
@@ -26,24 +26,28 @@ class UpdateEmailForm extends Component {
   // }
 
   getMessage() {
-    const {error, emailUpdated} = this.props.updateEmail;
+    const {error, accountUpdated} = this.props.updateAccount;
     if(error) {
       return <div className="alert alert-danger">{error.message}</div>
-    } else if(emailUpdated) {
-      return <div className="alert alert-info">Email was updated </div>
+    } else if(accountUpdated) {
+      return <div className="alert alert-info">Account was updated </div>
     } else {
       return <span/>
     }
   }
 
   render() {
-    const {asyncValidating, fields: {email}, handleSubmit, submitting } = this.props;
-
+    const {asyncValidating, fields: {email, zipcode}, handleSubmit, submitting, user } = this.props;
+    debugger
     return (
-      <form onSubmit={handleSubmit(this.props.validateAndUpdateEmail.bind(this))}>
+      <form onSubmit={handleSubmit(this.props.validateAndUpdateAccount.bind(this))}>
+        <div className="col-md-5">
         {this.getMessage()}
+        <div><label className="control-label">Name*</label></div>
+        <div>{user.user.name}</div>
+        
         <div className={`form-group ${email.touched && email.invalid ? 'has-error' : ''}`}>
-          <label className="control-label">Update Email*</label>
+          <label className="control-label">Email*</label>
           <input type="email" className="form-control" {...email} />
           <div className="help-block">
             {email.touched ? email.error : ''}
@@ -53,10 +57,25 @@ class UpdateEmailForm extends Component {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary"  disabled={submitting} >Update Email</button>
+        <div className={`form-group ${zipcode.touched && zipcode.invalid ? 'has-error' : ''}`}>
+          <label className="control-label">Zip Code(5-digit)*</label>
+          <input type="text" pattern="[0-9]{5}" className="form-control" {...zipcode} />
+          <div className="help-block">
+            {zipcode.touched ? zipcode.error : ''}
+          </div>
+        </div>
+        <button type="submit" className="btn btn-primary"  disabled={submitting} >Update Account</button>
+        </div>
+        <div className="col-md-5">
+          <h4>My Organizations:</h4>
+          {user.user.organizations.map((organization)=>{
+            return <li>{organization.name}</li>
+          })}
+        </div>
+
       </form>
     );
   }
 }
 
-export default UpdateEmailForm;
+export default UpdateAccountForm;
