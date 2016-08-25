@@ -47,7 +47,7 @@
     "axios": "^0.13.1",
     "boron": "^0.2.3",
     "express": "^4.10.2",
-    "socket.io": "^1.4.8",
+    "fuse.js": "^2.4.1",
     "jquery": "^3.1.0",
     "json-loader": "^0.5.4",
     "material-ui": "^0.15.4",
@@ -64,7 +64,8 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
     "s3-uploader": "^2.0.1",
-    "sass": "^0.5.0"
+    "sass": "^0.5.0",
+    "socket.io": "^1.4.8"
   },
   "scripts": {
     "start": "node ./scripts/start.js",

@@ -1,4 +1,5 @@
 import {
+	FETCH_ALL_LISTINGS, FETCH_ALL_LISTINGS_SUCCESS, FETCH_ALL_LISTINGS_FAILURE, RESET_ALL_LISTINGS,
 	FETCH_LISTINGS, FETCH_LISTINGS_SUCCESS, FETCH_LISTINGS_FAILURE, RESET_LISTINGS,
 	FETCH_LISTING, FETCH_LISTING_SUCCESS,  FETCH_LISTING_FAILURE, RESET_ACTIVE_LISTING,
 	CREATE_LISTING, CREATE_LISTING_SUCCESS, CREATE_LISTING_FAILURE, RESET_NEW_LISTING,
@@ -8,16 +9,17 @@ import {
 
 
 	const INITIAL_STATE = { listingsList: {listings: [], error:null, loading: false},
-							newListing:{listing:null, error: null, loading: false},
-							activeListing:{listing:null, error:null, loading: false},
-							deletedListing: {listing: null, error:null, loading: false},
-						};
+													allListings: {listings: [], error:null, loading: false},
+													newListing: {listing:null, error: null, loading: false},
+													activeListing: {listing:null, error:null, loading: false},
+													deletedListing: {listing: null, error:null, loading: false},
+												};
 
 export default function(state = INITIAL_STATE, action) {
   let error;
   switch(action.type) {
 
-  case FETCH_LISTINGS:// start fetching listings and set loading = true
+	case FETCH_LISTINGS:// start fetching listings and set loading = true
   	return { ...state, listingsList: {listings:[], error: null, loading: true} };
   case FETCH_LISTINGS_SUCCESS:// return list of listings and make loading = false
     return { ...state, listingsList: {listings: action.payload.data, error:null, loading: false} };
@@ -26,6 +28,16 @@ export default function(state = INITIAL_STATE, action) {
     return { ...state, listingsList: {listings: [], error: error, loading: false} };
   case RESET_LISTINGS:// reset listingList to initial state
     return { ...state, listingsList: {listings: [], error:null, loading: false} };
+
+	case FETCH_ALL_LISTINGS: // fetch all listings for current user
+		return {...state, allListings: {listings: [], error:null, loading: false} };
+	case FETCH_ALL_LISTINGS_SUCCESS:// return list of listings and make loading = false
+    return { ...state, allListings: {listings: action.payload.data, error:null, loading: false} };
+  case FETCH_ALL_LISTINGS_FAILURE:// return error and make loading = false
+    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+	  return { ...state, allListings: {listings: [], error: error, loading: false} };
+	case RESET_ALL_LISTINGS:// reset listingList to initial state
+    return { ...state, allListings: {listings: [], error:null, loading: false} };
 
   case FETCH_LISTING:
     return { ...state, activeListing:{...state.activeListing, loading: true}};

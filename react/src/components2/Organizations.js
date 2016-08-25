@@ -19,7 +19,6 @@ const Organizations = class extends Component {
 
 	submitHandler(){
 		this.props.joinOrganizations(this.state)
-		browserHistory.push('/dashboard')
 	}
 
 

@@ -9,6 +9,7 @@
 /api/config/secrets.yml
 /api/config/application.yml
 
+
 # Ignore all logfiles and tempfiles.
 /api/log/*
 /api/tmp/*

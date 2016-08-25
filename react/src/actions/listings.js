@@ -1,6 +1,10 @@
 import axios from 'axios';
 
 //Listing list
+export const FETCH_ALL_LISTINGS = 'FETCH_ALL_LISTINGS';
+export const FETCH_ALL_LISTINGS_SUCCESS = 'FETCH_ALL_LISTINGS_SUCCESS';
+export const FETCH_ALL_LISTINGS_FAILURE = 'FETCH_ALL_LISTINGS_FAILURE';
+export const RESET_ALL_LISTINGS = 'RESET_ALL_LISTINGS';
 export const FETCH_LISTINGS = 'FETCH_LISTINGS';
 export const FETCH_LISTINGS_SUCCESS = 'FETCH_LISTINGS_SUCCESS';
 export const FETCH_LISTINGS_FAILURE = 'FETCH_LISTINGS_FAILURE';
@@ -32,6 +36,34 @@ export const RESET_DELETED_LISTING = 'RESET_DELETED_LISTING';
 
 
 const ROOT_URL = 'http://localhost:3000/api/v1'
+
+export function fetchAllListings() {
+  const request = axios({
+    method: 'get',
+    url: `${ROOT_URL}/all_listings`,
+    headers: {Authorization: sessionStorage.jwtToken}
+  });
+
+  return {
+    type: FETCH_ALL_LISTINGS,
+    payload: request
+  };
+}
+
+export function fetchAllListingsSuccess(listings) {
+  return {
+    type: FETCH_ALL_LISTINGS_SUCCESS,
+    payload: listings
+  };
+}
+
+export function fetchAllListingsFailure(error) {
+  return {
+    type: FETCH_ALL_LISTINGS_FAILURE,
+    payload: error
+  };
+}
+
 
 export function fetchListings() {
   const request = axios({

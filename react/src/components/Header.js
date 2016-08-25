@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link, browserHistory } from 'react-router';
+import SearchBar from './SearchBar'
 
 class Header extends Component {
   static contextTypes = {
@@ -28,6 +29,9 @@ class Header extends Component {
         <ul>
           <li><Link to={'/profile'}>{authenticatedUser.name}</Link></li>
           <li><Link to={'/dashboard'}>Dashboard</Link></li>
+          <li><Link to={'/listings'}>All Listings</Link></li>
+          <li><Link to={'/organizations'}>My organizations</Link></li>
+          <li> <SearchBar /> </li>
           <li><Link to={'/'} onClick={this.props.logout}>Log Out</Link></li>
         </ul>
       );
@@ -45,11 +49,16 @@ class Header extends Component {
 		if(type === 'listings_index') {
        return (
          <ul>
-           <li><Link to={'/listings/new'}>New Listing</Link></li>
            {this.renderSignInLinks(authenticatedUser)}
          </ul>
   		 );
   	} else if(type === 'listings_new') {
+       return (
+         <ul>
+           {this.renderSignInLinks(authenticatedUser)}
+         </ul>
+  		 );
+  	} else if(type === 'all_listings') {
        return (
          <ul>
            {this.renderSignInLinks(authenticatedUser)}

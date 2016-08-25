@@ -1,29 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import ListingsBox from './ListingsBox'
+
 
 class ListingsList extends Component {
   componentWillMount() {
     this.props.fetchListings();
   }
 
-  renderTags(tags) {
-     return tags.map((t,idx) => {
-        return (
-          <Link to={"filter/" + t.name.split(',')[0]} key={idx} className="list-group-item-text">{" " + t.name + " "}</Link>
-        );
-     });
-  }
-
   renderListings(listings) {
     return listings.map((listing) => {
       return (
         <li className="list-group-item" key={listing.id}>
-          <Link style={{color:'black'}} to={"listings/" + listing.id}>
-            <img src={listing.image} alt={listing.name} />
-            <h3 className="list-group-item-heading">{listing.title}</h3>
-            <h4 className="list-group-item-heading">{listing.description}</h4>
-          </Link>
-            {this.renderTags(listing.tags)}
+          <ListingsBox {...listing} />
         </li>
       );
     });
@@ -40,6 +29,7 @@ class ListingsList extends Component {
 
     return (
       <div className="container">
+        <h3><Link to={'/listings/new'}>Create New Listing</Link></h3>
         <h1>Recent Listings in Your Organizations</h1>
         <ul className="list-group">
           {this.renderListings(listings)}

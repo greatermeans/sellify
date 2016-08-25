@@ -36,8 +36,6 @@ function validate(values) {
 const validateAndCreateListing = (values, dispatch) => {
 
   return new Promise((resolve, reject) => {
-
-
     let token = sessionStorage.getItem('jwtToken');
     if (!token || token === '') { //if there is no token, dont bother,
       let data = {data: {message: 'Please Sign In'}};//axios like error
@@ -50,7 +48,7 @@ const validateAndCreateListing = (values, dispatch) => {
     dispatch(createListing(listingData, token))
       .then((response) => {
         let data = response.payload.data;
-        //if any one of these exist, then there is a field error 
+        //if any one of these exist, then there is a field error
         if (response.payload.status != 200) {
           //let other components know of error by updating the redux` state
           dispatch(createListingFailure(response.payload));

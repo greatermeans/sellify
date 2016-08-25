@@ -1,5 +1,5 @@
-import {
-	FETCH_ORGANIZATIONS, FETCH_ORGANIZATIONS_SUCCESS, FETCH_ORGANIZATIONS_FAILURE, RESET_ORGANIZATIONS,
+import {JOIN_ORGANIZATIONS,
+	FETCH_ORGANIZATIONS,FETCH_ORGANIZATIONS_SUCCESS,  FETCH_ORGANIZATIONS_FAILURE,
 	FETCH_ORGANIZATION, FETCH_ORGANIZATION_SUCCESS,  FETCH_ORGANIZATION_FAILURE, RESET_ACTIVE_ORGANIZATION,
 	CREATE_ORGANIZATION, CREATE_ORGANIZATION_SUCCESS, CREATE_ORGANIZATION_FAILURE, RESET_NEW_ORGANIZATION,
 	DELETE_ORGANIZATION, DELETE_ORGANIZATION_SUCCESS, DELETE_ORGANIZATION_FAILURE, RESET_DELETED_ORGANIZATION,
@@ -7,7 +7,9 @@ import {
 } from '../actions/organizations';
 
 
-	const INITIAL_STATE = { organizationsList: {organizations: [], error:null, loading: false},
+	const INITIAL_STATE = {
+							joinedOrgs: {organizations:[],error:null, loading:false},
+							organizationsList: {organizations: [], error:null, loading: false},
 							newOrganization:{organization:null, error: null, loading: false},
 							activeOrganization:{organization:null, error:null, loading: false},
 							deletedOrganization: {organization: null, error:null, loading: false},
@@ -16,16 +18,15 @@ import {
 export default function(state = INITIAL_STATE, action) {
   let error;
   switch(action.type) {
-
+	case JOIN_ORGANIZATIONS:
+		return { ...state, joinedOrgs: {organizations:[],error:null,loading:false}}
   case FETCH_ORGANIZATIONS:// start fetching organizations and set loading = true
-  	return { ...state, organizationsList: {organizations:[], error: null, loading: true} };
-  case FETCH_ORGANIZATIONS_SUCCESS:// return list of organizations and make loading = false
-    return { ...state, organizationsList: {organizations: action.payload.data, error:null, loading: false} };
-  case FETCH_ORGANIZATIONS_FAILURE:// return error and make loading = false
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
-    return { ...state, organizationsList: {organizations: [], error: error, loading: false} };
-  case RESET_ORGANIZATIONS:// reset organizationList to initial state
-    return { ...state, organizationsList: {organizations: [], error:null, loading: false} };
+		return { ...state, organizationsList: {organizations:[], error: null, loading: true} };
+	case FETCH_ORGANIZATIONS_SUCCESS:// start fetching organizations and set loading = true
+		return { ...state, organizationsList: {organizations:action.payload.data, error: null, loading: false} };
+	case FETCH_ORGANIZATIONS_FAILURE:
+		error = action.payload.data || {message: action.payload.message};
+		return { ...state, organizationsList: {organization: null, error:error, loading:false}};
 
   case FETCH_ORGANIZATION:
     return { ...state, activeOrganization:{...state.activeOrganization, loading: true}};
