@@ -35,7 +35,7 @@ class ValidateEmailAlert extends Component {
       if(this.props.resendEmail.sentAgain) {//if the user has pressed the 'resend' button
         return 'Resent Email. Please verify';
       } else {
-        return 'Please verify email';
+        // return 'Please verify email';
       }
     }
   }
@@ -47,9 +47,9 @@ class ValidateEmailAlert extends Component {
       return (
         <div className="container">
           <div className="alert alert-danger">
-            {this.getAlertMessage()}       
+            {this.getAlertMessage()}
             <a style={{paddingLeft:'20px'}} onClick={this.props.resend} href="javascript:void(0)">Resend</a>
-            <Link style={{paddingLeft:'20px'}} to='/profile'>Update Email</Link> 
+            <Link style={{paddingLeft:'20px'}} to='/profile'>Update Email</Link>
             </div>
           </div>
         );

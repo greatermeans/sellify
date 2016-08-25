@@ -10,7 +10,7 @@ export default class ProfileCard extends Component {
         <h4>Name:</h4> {user && user.name}<br/>
         <h4>Username:</h4> {user && user.username}<br/>
         <h4>Email:</h4> {user && user.email}<br/>
-        <h4>My Organizations:</h4>
+        <h4>My Current Organizations:</h4>
         {this.props.user.user.organizations.map((organization)=>{
           return <li>{organization.name}</li>
         })}

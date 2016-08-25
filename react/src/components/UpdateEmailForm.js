@@ -43,7 +43,7 @@ class UpdateEmailForm extends Component {
       <form onSubmit={handleSubmit(this.props.validateAndUpdateEmail.bind(this))}>
         {this.getMessage()}
         <div className={`form-group ${email.touched && email.invalid ? 'has-error' : ''}`}>
-          <label className="control-label">Update Email*</label>
+          {/* <label className="control-label">Update Email*</label> */}
           <input type="email" className="form-control" {...email} />
           <div className="help-block">
             {email.touched ? email.error : ''}

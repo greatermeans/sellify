@@ -28,12 +28,14 @@ class ListingsList extends Component {
     }
 
     return (
-      <div className="container">
-        <h3><Link to={'/listings/new'}>Create New Listing</Link></h3>
+      <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
+      <div className="container" >
+        <h3><Link to={'/listings/new'}>+ Create New Listing</Link></h3>
         <h1>Recent Listings in Your Organizations</h1>
         <ul className="list-group">
           {this.renderListings(listings)}
         </ul>
+      </div>
       </div>
     );
   }

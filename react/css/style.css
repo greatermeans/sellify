@@ -116,7 +116,7 @@ figure {
 }
 @media screen and (max-width: 1200px) {
   #fh5co-aside {
-    width: 25%;
+    width: 30%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -265,7 +265,7 @@ figure {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  padding: 4em 0;
+  padding: 0em 0;
 }
 @media screen and (max-width: 768px) {
   #fh5co-main .fh5co-narrow-content {

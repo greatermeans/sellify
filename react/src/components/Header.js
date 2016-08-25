@@ -67,7 +67,6 @@ class Header extends Component {
   	} else if(type === 'listings_show') {
   			return (
           <ul>
-            <li><a onClick={this.props.onDeleteClick}>Delete Listing</a></li>
             {this.renderSignInLinks(authenticatedUser)}
     	   </ul>
   		);
