@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20160820210803) do
     t.integer  "user_id"
     t.string   "title"
     t.string   "description"
-    t.string   "location"
+    t.string   "zipcode"
     t.string   "image"
     t.float    "price"
     t.boolean  "sold?"
