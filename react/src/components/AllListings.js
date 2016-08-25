@@ -14,7 +14,7 @@ const AllListings = class extends Component {
 
   displayAllListings() {
     var chosenOrg = this.state.chosenOrg
-    var search = this.props.search
+    var search = this.props.searchResults.listings
     var listings = chosenOrg.listings
     var searchList = []
 
@@ -70,8 +70,10 @@ const AllListings = class extends Component {
     )
   }
 
-  displaySearch() {
-    //still in progress
+  showSearchButton(){
+    if (this.props.searchTerm) {
+      return <button onClick={this.props.resetSearchTerm}>{this.props.searchTerm} x </button>
+    }
   }
 
   render() {
@@ -87,7 +89,7 @@ const AllListings = class extends Component {
       <div>
         <h3>Filter by Organization </h3>
           {this.createDropdown()}
-          {this.displaySearch()}
+          {this.showSearchButton()}
           <br/>
         <h1> Listings </h1>
           {this.displayAllListings(listings)}

@@ -11,6 +11,9 @@ body {
   font-weight: 300;
   font-size: 20px;
   line-height: 1.6;
+}
+
+#root {
   background-image: url("../images/bg.png");
   background-attachment: fixed;
   background-size: cover;
@@ -18,8 +21,6 @@ body {
 
 }
 
-#root {
-}
 
 #landing {
   padding-top: 50px;

@@ -26,7 +26,6 @@ class ListingsList extends Component {
     } else if(error) {
       return <div className="alert alert-danger">Error: {error.message}</div>
     }
-
     return (
       <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
       <div className="container" >

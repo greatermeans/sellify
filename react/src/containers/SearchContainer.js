@@ -1,23 +1,24 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import searchListings from '../actions/searchListings';
-import SearchBar from '../components/AllListings';
-import { fetchAllListings, fetchAllListingsSuccess, fetchAllListingsFailure } from '../actions/listings';
-
+import { searchListings, searchTerm } from '../actions/listings';
+import SearchBar from '../components/SearchBar';
 
 const mapStateToProps = (state) => {
+  debugger
   return {
     user: state.user,
     search: state.search,
+    searchTerm: state.searchTerm
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        searchListings: bindActionCreators(searchListings: searchListings, dispatch)
+    return action: {
+      searchListings: bindActionCreators(searchListings, dispatch),
+      searchTerm: bindActionCreators(searchTerm, dispatch)
     }
 }
 
-const AllListingsContainer = connect(mapStateToProps, mapDispatchToProps)(AllListings)
+const SearchContainer = connect(mapStateToProps, mapDispatchToProps)(SearchBar)
 
-export default AllListingsContainer
+export default SearchContainer
