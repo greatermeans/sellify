@@ -14,6 +14,7 @@ class Profile extends Component {
             <UpdateAccountFormContainer />
           </div>
         </div>
+        </div>
       </div>
     );
   }
