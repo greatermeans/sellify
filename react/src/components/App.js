@@ -7,19 +7,10 @@ export default class App extends Component {
   }
 
   render() {
-		if(sessionStorage.jwtToken){
-			return (
-				<div>
-					{this.props.children}
-				</div>
-			)
-		}
-		else{
-			return (
-	      <div>
-	        {this.props.children}
-	      </div>
-	    );
-		}
-  }
-}
+		return (
+    	<div>
+        {this.props.children}
+      </div>
+		)
+	}
+ }

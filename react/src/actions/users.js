@@ -25,7 +25,7 @@ export const VALIDATE_EMAIL_SUCCESS = 'VALIDATE_EMAIL_SUCCESS';
 export const VALIDATE_EMAIL_FAILURE = 'VALIDATE_EMAIL_FAILURE';
 
 //called when email is updated in profile to update main user's email state
-export const UPDATE_USER_EMAIL = 'UPDATE_USER_EMAIL';
+export const UPDATE_USER_ACCOUNT = 'UPDATE_USER_ACCOUNT';
 
 //log out user
 export const LOGOUT_USER = 'LOGOUT_USER';
@@ -56,6 +56,16 @@ export function validateEmailFailure(error) {
   };
 }
 
+export function getUserData(userId){
+  const request = axios.get(`${ROOT_URL}/users/${userId}`,{
+    headers: {Authorization: sessionStorage.jwtToken}
+  })
+  return {
+    type: GET_USER_DATA,
+    payload: request
+  }
+}
+
 export function meFromToken(tokenFromStorage) {
   //check if the token is still valid, if so, get me from the server
   const request = axios.get(`${ROOT_URL}/users`,{
@@ -65,17 +75,6 @@ export function meFromToken(tokenFromStorage) {
     type: ME_FROM_TOKEN,
     payload: request
   };
-}
-
-
-export function getUserData(userId){
-  const request = axios.get(`${ROOT_URL}/users/${userId}`,{
-    headers: {Authorization: sessionStorage.jwtToken}
-  })
-  return {
-    type: GET_USER_DATA,
-    payload: request
-  }
 }
 
 export function meFromTokenSuccess(currentUser) {
@@ -164,9 +163,9 @@ export function logoutUser() {
     type: LOGOUT_USER
   };
 }
-export function updateUserEmail(email) {
+export function updateUserAccount(values) {
   return {
-    type: UPDATE_USER_EMAIL,
-    payload:email
+    type: UPDATE_USER_ACCOUNT,
+    payload:values
   };
 }

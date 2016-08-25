@@ -47,9 +47,15 @@ module Api
 
 
 
-      # def edit
-      #   @user = User.find(params[:id])
-      # end
+      def update
+        current_user.email = user_params[:email]
+        current_user.zipcode = user_params[:zipcode]
+        if current_user.save
+          render json: 'success', status: 200
+        else
+          render json: { error: 'Account was not updated. Please try again later.' }, status: 404
+        end
+      end
 
       # def destroy
       # end
@@ -59,7 +65,8 @@ module Api
       end
 
       def validate
-        if !User.find_by(email: user_params[:email]) || params.header
+        # this needs to be fixed.. a user can technically change their email to another user's
+        if !User.find_by(email: user_params[:email])|| params[:header].present?
           render json: 'success', status: 200
         else
           render json: { error: 'User already exists' }, status: 401

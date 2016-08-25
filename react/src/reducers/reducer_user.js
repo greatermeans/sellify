@@ -4,7 +4,7 @@ import {
   ME_FROM_TOKEN, ME_FROM_TOKEN_SUCCESS, ME_FROM_TOKEN_FAILURE, RESET_TOKEN,
 	SIGNUP_USER, SIGNUP_USER_SUCCESS, SIGNUP_USER_FAILURE, RESET_USER,
 	SIGNIN_USER, SIGNIN_USER_SUCCESS,  SIGNIN_USER_FAILURE,
-	LOGOUT_USER, UPDATE_USER_EMAIL, GET_USER_DATA
+	LOGOUT_USER, UPDATE_USER_ACCOUNT, GET_USER_DATA
 } from '../actions/users';
 
 
@@ -61,8 +61,8 @@ export default function(state = INITIAL_STATE, action) {
     return { ...state, user: null, status:'signin', error:error, loading: false};
 
 
-    case UPDATE_USER_EMAIL:
-    return{...state, user:{...state.user, email:action.payload.email}};
+    case UPDATE_USER_ACCOUNT:
+    return{...state, user:{...state.user, email:action.payload.email, zipcode:action.payload.zipcode}};
 
 
     case LOGOUT_USER:

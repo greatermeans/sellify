@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+import ListingsBox from './ListingsBox'
 
 class UpdateAccountForm extends Component {
   static contextTypes = {
@@ -40,6 +41,7 @@ class UpdateAccountForm extends Component {
     const {asyncValidating, fields: {email, zipcode}, handleSubmit, submitting, user } = this.props;
     return (
       <form onSubmit={handleSubmit(this.props.validateAndUpdateAccount.bind(this))}>
+        <div className='row'> 
         <div className="col-md-5">
         {this.getMessage()}
         <div><label className="control-label">Name*</label></div>
@@ -70,6 +72,13 @@ class UpdateAccountForm extends Component {
           {user.user.organizations.map((organization)=>{
             return <li>{organization.name}</li>
           })}
+        </div>
+        </div>
+        <div> <h4>Your Listings</h4><br/>
+        {user.user.listings.map((listing)=>{
+            return <ListingsBox {...listing} />
+          })}
+
         </div>
 
       </form>

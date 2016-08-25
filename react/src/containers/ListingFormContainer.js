@@ -48,7 +48,6 @@ const validateAndCreateListing = (values, dispatch) => {
     listingData.append("listing", values)
     dispatch(createListing(listingData, token))
       .then((response) => {
-        debugger
         let data = response.payload.data;
         //if any one of these exist, then there is a field error
         if (response.payload.status != 200) {
