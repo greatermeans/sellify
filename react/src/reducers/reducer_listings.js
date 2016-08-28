@@ -22,24 +22,24 @@ export default function(state = INITIAL_STATE, action) {
   let error;
   switch(action.type) {
 
-	case FETCH_LISTINGS:// start fetching listings and set loading = true
+	case FETCH_LISTINGS:
   	return { ...state, listingsList: {listings:[], error: null, loading: true} };
-  case FETCH_LISTINGS_SUCCESS:// return list of listings and make loading = false
+  case FETCH_LISTINGS_SUCCESS:
     return { ...state, listingsList: {listings: action.payload.data, error:null, loading: false} };
-  case FETCH_LISTINGS_FAILURE:// return error and make loading = false
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+  case FETCH_LISTINGS_FAILURE:
+    error = action.payload.data || {message: action.payload.message};
     return { ...state, listingsList: {listings: [], error: error, loading: false} };
-  case RESET_LISTINGS:// reset listingList to initial state
+  case RESET_LISTINGS:
     return { ...state, listingsList: {listings: [], error:null, loading: false} };
 
-	case FETCH_ALL_LISTINGS: // fetch all listings for current user
+	case FETCH_ALL_LISTINGS: 
 		return {...state, allListings: {listings: [], error:null, loading: false} };
-	case FETCH_ALL_LISTINGS_SUCCESS:// return list of listings and make loading = false
+	case FETCH_ALL_LISTINGS_SUCCESS:
     return { ...state, allListings: {listings: action.payload.data, error:null, loading: false} };
-  case FETCH_ALL_LISTINGS_FAILURE:// return error and make loading = false
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+  case FETCH_ALL_LISTINGS_FAILURE:
+    error = action.payload.data || {message: action.payload.message};
 	  return { ...state, allListings: {listings: [], error: error, loading: false} };
-	case RESET_ALL_LISTINGS:// reset listingList to initial state
+	case RESET_ALL_LISTINGS:
     return { ...state, allListings: {listings: [], error:null, loading: false} };
 
   case FETCH_LISTING:
@@ -47,7 +47,7 @@ export default function(state = INITIAL_STATE, action) {
   case FETCH_LISTING_SUCCESS:
     return { ...state, activeListing: {listing: action.payload.data, error:null, loading: false}};
   case FETCH_LISTING_FAILURE:
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+    error = action.payload.data || {message: action.payload.message};
     return { ...state, activeListing: {listing: null, error:error, loading:false}};
   case RESET_ACTIVE_LISTING:
     return { ...state, activeListing: {listing: null, error:null, loading: false}};
@@ -57,7 +57,7 @@ export default function(state = INITIAL_STATE, action) {
   case CREATE_LISTING_SUCCESS:
   	return {...state, newListing: {listing:action.payload.data, error:null, loading: false}}
   case CREATE_LISTING_FAILURE:
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+    error = action.payload.data || {message: action.payload.message};
   	return {...state, newListing: {listing:null, error:error, loading: false}}
   case RESET_NEW_LISTING:
   	return {...state,  newListing:{listing:null, error:null, loading: false}}
@@ -68,7 +68,7 @@ export default function(state = INITIAL_STATE, action) {
   case DELETE_LISTING_SUCCESS:
   	return {...state, deletedListing: {listing:action.payload.data, error:null, loading: false}}
   case DELETE_LISTING_FAILURE:
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+    error = action.payload.data || {message: action.payload.message};
   	return {...state, deletedListing: {listing:null, error:error, loading: false}}
   case RESET_DELETED_LISTING:
   	return {...state,  deletedListing:{listing:null, error:null, loading: false}}

@@ -10,8 +10,6 @@ function onDrop(file) {
   listingData.append('image', file[0])
 }
 
-
-//Client side validation
 function validate(values) {
   const errors = {};
 
@@ -33,15 +31,14 @@ function validate(values) {
   return errors;
 }
 
-//For any field errors upon submission (i.e. not instant check)
 const validateAndCreateListing = (values, dispatch) => {
 
   return new Promise((resolve, reject) => {
     let token = sessionStorage.getItem('jwtToken');
-    if (!token || token === '') { //if there is no token, dont bother,
-      let data = {data: {message: 'Please Sign In'}};//axios like error
-      dispatch(createListingFailure(data)); // but let other comps know
-      reject(data); //this is for redux-form itself
+    if (!token || token === '') { 
+      let data = {data: {message: 'Please Sign In'}};
+      dispatch(createListingFailure(data)); 
+      reject(data); 
       return;
     }
     values = JSON.stringify(values)
@@ -49,24 +46,17 @@ const validateAndCreateListing = (values, dispatch) => {
     dispatch(createListing(listingData, token))
       .then((response) => {
         let data = response.payload.data;
-        //if any one of these exist, then there is a field error
         if (response.payload.status != 200) {
-          //let other components know of error by updating the redux` state
           dispatch(createListingFailure(response.payload));
-          reject(data); //this is for redux-form itself
+          reject(data)
         } else {
-          //let other components know that everything is fine by updating the redux` state
           dispatch(createListingSuccess(response.payload));
           browserHistory.push(`/listings/${response.payload.data.id}`);
-          resolve(); //this is for redux-form itself
+          resolve(); 
         }
       })
-      // .then(function(resp){
-      //   browserHistory.push(`/listings/${resp.payload.id}`)});
-
-  });
+   })
 };
-
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -78,18 +68,13 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-
 function mapStateToProps(state, ownProps) {
   return {
     newListing: state.listings.newListing,
     user: state.user
-
   };
 }
 
-
-// connect: first argument is mapStateToProps, 2nd is mapDispatchToProps
-// reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ListingsNewForm',
   fields: ['title', 'description', 'price', 'zipcode','tags'],

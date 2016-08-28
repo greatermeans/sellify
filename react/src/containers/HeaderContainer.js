@@ -19,12 +19,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
   	 onDeleteClick: () => {
       let token = sessionStorage.getItem('jwtToken');
-      if (!token || token === '') { //if there is no token, dont bother,
-          let data = {data: {message: 'Please Sign In'}};//axios like error
-          dispatch(deleteListingFailure(data)); // but let other comps know
+      if (!token || token === '') {
+          let data = {data: {message: 'Please Sign In'}}
+          dispatch(deleteListingFailure(data));
           return;
       }
-
     	dispatch(deleteListing(ownProps.listingId, token))
       	.then((response) => {
             !response.error ? dispatch(deleteListingSuccess(response.payload)) : dispatch(deleteListingFailure(response.payload));
@@ -33,7 +32,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
      resetMe: () =>{
         dispatch(resetDeletedListing());
      },
-
      logout: () => {
          sessionStorage.removeItem('jwtToken');
          dispatch(logoutUser())

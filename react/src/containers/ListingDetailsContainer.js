@@ -26,7 +26,6 @@ const mapDispatchToProps = (dispatch) => {
           })
      },
      resetMe: () =>{
-      //clean up both activeListing(currrently open) and deletedListing(open and being deleted) states
         dispatch(resetActiveListing());
         dispatch(resetDeletedListing());
      }

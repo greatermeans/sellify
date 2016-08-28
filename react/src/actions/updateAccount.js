@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-
-//update  account
 export const UPDATE_ACCOUNT = 'UPDATE_ACCOUNT';
 export const UPDATE_ACCOUNT_SUCCESS = 'UPDATE_ACCOUNT_SUCCESS';
 export const UPDATE_ACCOUNT_FAILURE = 'UPDATE_ACCOUNT_FAILURE';

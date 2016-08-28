@@ -5,7 +5,6 @@ import { joinOrganizations } from '../actions/organizations'
 import { getUserData } from '../actions/users'
 import { bindActionCreators } from 'redux'
 
-
 function mapStateToProps(state) {
   return {
     organizations: state.organizations.organizationsList,
@@ -25,6 +24,5 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(JoinOrganizationsMenu);

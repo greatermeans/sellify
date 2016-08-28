@@ -14,7 +14,7 @@ export default function(state = INITIAL_STATE, action) {
     case UPDATE_ACCOUNT_SUCCESS:
     return { ...state, accountUpdated: true, error: null, loading: false};
     case UPDATE_ACCOUNT_FAILURE:
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors       
+    error = action.payload.data || {message: action.payload.message}
     return { ...state, accountUpdated: false, error: error, loading: false};
     case RESET_UPDATE_ACCOUNT_STATE:
     return { ...state, accountUpdated: false, error: null, loading: false};

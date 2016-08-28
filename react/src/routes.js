@@ -2,16 +2,14 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
 import App from './pages/App';
+import Landing from './pages/Landing';
 import ListingsIndex from './pages/ListingsIndex';
 import AllListings from './pages/AllListings';
 import ListingsNew from './pages/ListingsNew';
 import ListingsShow from './pages/ListingsShow';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import ForgotPwd from './pages/ForgotPwd';
-import ValidateEmail from './pages/ValidateEmail';
 import Profile from './pages/Profile';
-import Landing from './pages/Landing';
 import JoinOrganizations from './pages/JoinOrganizations';
 
 export default (
@@ -23,8 +21,6 @@ export default (
     <Route path="listings/:id" component={ListingsShow} />
     <Route path="/signin" component={SignIn} />
     <Route path="/signup" component={SignUp} />
-    <Route path="/forgotPwd" component={ForgotPwd} />
-    <Route path="/validateEmail/:token" component={ValidateEmail} />
     <Route path="/profile" component={Profile} />
     <Route path="/organizations" component={JoinOrganizations} />
   </Route>

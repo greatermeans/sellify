@@ -8,17 +8,15 @@ class Header extends Component {
   };
 
   componentWillUnmount() {
-    //Important! If your component is navigating based on some global state(from say componentWillReceiveProps)
-    //always reset that global state back to null when you REMOUNT
      this.props.resetMe();
   }
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.deletedListing.error && nextProps.deletedListing.error.message) {//delete failure
+    if(nextProps.deletedListing.error && nextProps.deletedListing.error.message) {
       alert(nextProps.deletedListing.error.message || 'Could not delete. Please try again.');
-    } else if(nextProps.deletedListing.listing && !nextProps.deletedListing.error) {//delete success
+    } else if(nextProps.deletedListing.listing && !nextProps.deletedListing.error) {
       this.context.router.push('/');
-    } else if(this.props.user.user && !nextProps.user.user) {//logout (had user(this.props.user.user) but no loger the case (!nextProps.user.user))
+    } else if(this.props.user.user && !nextProps.user.user) {
       browserHistory.push('/');
     }
   }

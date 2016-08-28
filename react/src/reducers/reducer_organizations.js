@@ -20,9 +20,9 @@ export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
 	case JOIN_ORGANIZATIONS:
 		return { ...state, joinedOrgs: {organizations:[],error:null,loading:false}}
-  case FETCH_ORGANIZATIONS:// start fetching organizations and set loading = true
+  case FETCH_ORGANIZATIONS:
 		return { ...state, organizationsList: {organizations:[], error: null, loading: true} };
-	case FETCH_ORGANIZATIONS_SUCCESS:// start fetching organizations and set loading = true
+	case FETCH_ORGANIZATIONS_SUCCESS:
 		return { ...state, organizationsList: {organizations:action.payload.data, error: null, loading: false} };
 	case FETCH_ORGANIZATIONS_FAILURE:
 		error = action.payload.data || {message: action.payload.message};
@@ -33,7 +33,7 @@ export default function(state = INITIAL_STATE, action) {
   case FETCH_ORGANIZATION_SUCCESS:
     return { ...state, activeOrganization: {organization: action.payload.data, error:null, loading: false}};
   case FETCH_ORGANIZATION_FAILURE:
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+    error = action.payload.data || {message: action.payload.message}
     return { ...state, activeOrganization: {organization: null, error:error, loading:false}};
   case RESET_ACTIVE_ORGANIZATION:
     return { ...state, activeOrganization: {organization: null, error:null, loading: false}};
@@ -43,7 +43,7 @@ export default function(state = INITIAL_STATE, action) {
   case CREATE_ORGANIZATION_SUCCESS:
   	return {...state, newOrganization: {organization:action.payload.data, error:null, loading: false}}
   case CREATE_ORGANIZATION_FAILURE:
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+    error = action.payload.data || {message: action.payload.message}
   	return {...state, newOrganization: {organization:null, error:error, loading: false}}
   case RESET_NEW_ORGANIZATION:
   	return {...state,  newOrganization:{organization:null, error:null, loading: false}}
@@ -54,7 +54,7 @@ export default function(state = INITIAL_STATE, action) {
   case DELETE_ORGANIZATION_SUCCESS:
   	return {...state, deletedOrganization: {organization:action.payload.data, error:null, loading: false}}
   case DELETE_ORGANIZATION_FAILURE:
-    error = action.payload.data || {message: action.payload.message};//2nd one is network or server down errors
+    error = action.payload.data || {message: action.payload.message}
   	return {...state, deletedOrganization: {organization:null, error:error, loading: false}}
   case RESET_DELETED_ORGANIZATION:
   	return {...state,  deletedOrganization:{organization:null, error:null, loading: false}}

@@ -8,23 +8,8 @@ class UpdateAccountForm extends Component {
   };
 
   componentWillUnmount() {
-    //Important: If you are reusing a component that might have some state (like error), you should reset it
-    //either here or in componentWillMount
      this.props.resetMe();
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if(nextProps.user.status === 'authenticated' && nextProps.user.user && !nextProps.user.error) {
-  //     this.context.router.push('/');
-  //   }
-
-  //   //error
-  //   //Throw error if it was not already thrown (check this.props.user.error to see if alert was already shown)
-  //   //If u dont check this.props.user.error, u may throw error multiple times due to redux-form's validation errors
-  //   if(nextProps.user.status === 'signin' && !nextProps.user.user && nextProps.user.error && !this.props.user.error) {
-  //     alert(nextProps.user.error.message);
-  //   }
-  // }
 
   getMessage() {
     const {error, accountUpdated} = this.props.updateAccount;
@@ -68,12 +53,12 @@ class UpdateAccountForm extends Component {
         <button type="submit" className="btn btn-primary"  disabled={submitting} >Update Account</button>
         </div>
         <div className='container'>
-        <div className="col-md-5">
-          <h4>My Organizations:</h4>
-          {user.user.organizations.map((organization)=>{
-            return <li>{organization.name}</li>
-          })}
-        </div>
+          <div className="col-md-5">
+            <h4>My Organizations:</h4>
+            {user.user.organizations.map((organization)=>{
+              return <li>{organization.name}</li>
+            })}
+          </div>
         </div>
         <br />
         <div> <h4>My Listings</h4><br/>
