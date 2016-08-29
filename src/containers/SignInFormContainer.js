@@ -1,5 +1,5 @@
 import SignInForm from '../components/SignInForm.js';
-import {signInUser, signInUserSuccess, signInUserFailure, resetUserFields } from '../actions/users';
+import {signInUser, signInUserSuccess, signInUserFailure } from '../actions/users';
 import { reduxForm } from 'redux-form';
 
 function validate(values) {
@@ -35,9 +35,7 @@ const validateAndSignInUser = (values, dispatch) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-   signInUser: validateAndSignInUser,
-   resetMe: () =>{ resetUserFields()
-    }
+   signInUser: validateAndSignInUser
   }
 }
 
