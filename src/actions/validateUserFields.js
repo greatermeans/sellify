@@ -6,7 +6,7 @@ export const VALIDATE_USER_FIELDS_FAILURE = 'VALIDATE_USER_FIELDS_FAILURE';
 export const RESET_VALIDATE_USER_FIELDS = 'RESET_VALIDATE_USER_FIELDS';
 
 
-const ROOT_URL = 'http://localhost:3000/api/v1'
+const ROOT_URL = 'https://sellify-api.herokuapp.com/api/v1'
 
 export function validateUserFields(values) {
   const request = axios.post(`${ROOT_URL}/users/validate/fields`,

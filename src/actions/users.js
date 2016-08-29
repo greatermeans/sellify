@@ -20,7 +20,7 @@ export const UPDATE_USER_ACCOUNT = 'UPDATE_USER_ACCOUNT';
 
 export const LOGOUT_USER = 'LOGOUT_USER';
 
-const ROOT_URL = 'http://localhost:3000/api/v1'
+const ROOT_URL = 'https://sellify-api.herokuapp.com/api/v1'
 
 export function getUserData(userId){
   const request = axios.get(`${ROOT_URL}/users/${userId}`,{

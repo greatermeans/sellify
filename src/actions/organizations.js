@@ -22,7 +22,7 @@ export const QUIT_ORGANIZATION = 'QUIT_ORGANIZATION';
 export const QUIT_ORGANIZATION_SUCCESS = 'QUIT_ORGANIZATION_SUCCESS';
 export const QUIT_ORGANIZATION_FAILURE = 'QUIT_ORGANIZATION_FAILURE';
 
-const ROOT_URL = 'http://localhost:3000/api/v1'
+const ROOT_URL = 'https://sellify-api.herokuapp.com/api/v1'
 
 export function fetchOrganizations() {
   const request = axios({

@@ -34,7 +34,7 @@ export const SEARCH_TERM = 'SEARCH_TERM'
 export const RESET_SEARCH_TERM = 'RESET_SEARCH_TERM'
 
 
-const ROOT_URL = 'http://localhost:3000/api/v1'
+const ROOT_URL = 'https://sellify-api.herokuapp.com/api/v1'
 
 export function fetchAllListings() {
   const request = axios({
