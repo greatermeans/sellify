@@ -27,7 +27,6 @@ class Landing extends Component {
             <p className="fh5co-lead">
             Want to be a minimalist?<br/>
             Sell your unwanted stuff today.<br/>
-            This is a placeholder.
             </p>
 
 
