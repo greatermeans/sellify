@@ -6,10 +6,6 @@ class SignInForm extends Component {
     router: PropTypes.object
   };
 
-  componentWillMount() {
-     this.props.resetMe();
-  }
-
   componentWillReceiveProps(nextProps) {
     if(nextProps.user.status === 'authenticated' && nextProps.user.user && !nextProps.user.error) {
       this.context.router.push('/dashboard');
