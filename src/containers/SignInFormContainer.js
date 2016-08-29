@@ -35,7 +35,9 @@ const validateAndSignInUser = (values, dispatch) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-   signInUser: validateAndSignInUser
+   signInUser: validateAndSignInUser,
+   resetMe: () => {
+    }
   }
 }
 
