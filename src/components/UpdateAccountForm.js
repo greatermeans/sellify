@@ -1,11 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react';
 import ListingsBox from './ListingsBox'
 
 class UpdateAccountForm extends Component {
-  static contextTypes = {
-    router: PropTypes.object
-  };
 
   componentWillUnmount() {
      this.props.resetMe();

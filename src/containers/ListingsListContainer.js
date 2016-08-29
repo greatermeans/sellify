@@ -15,7 +15,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getUserData: bindActionCreators(getUserData, dispatch),
-
     fetchListings: () => {
       dispatch(fetchListings()).then((response) => {
             !response.error ? dispatch(fetchListingsSuccess(response.payload)) : dispatch(fetchListingsFailure(response.payload));
@@ -23,7 +22,6 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
-
 
 const ListingsListContainer = connect(mapStateToProps, mapDispatchToProps)(ListingsList)
 

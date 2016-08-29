@@ -1,5 +1,5 @@
 import SignUpForm from '../components/SignUpForm.js';
-import {signUpUser, signUpUserSuccess, signUpUserFailure, resetUser } from '../actions/users';
+import {signUpUser, signUpUserSuccess, signUpUserFailure } from '../actions/users';
 import { validateUserFields, validateUserFieldsSuccess, validateUserFieldsFailure, resetValidateUserFields } from '../actions/validateUserFields';
 
 import { reduxForm } from 'redux-form';
@@ -37,7 +37,7 @@ const asyncValidate = (values, dispatch) => {
     dispatch(validateUserFields(values))
     .then((response) => {
         let data = response.payload.data;
-        if(response.payload.status != 200) {
+        if(response.payload.status !== 200) {
           dispatch(validateUserFieldsFailure(response.payload.response.data.error));
            reject(data); 
          } else {
@@ -59,7 +59,7 @@ const validateAndSignUpUser = (values, dispatch) => {
    dispatch(signUpUser(formValues))
     .then((response) => {
         let data = response.payload.data;
-        if(response.payload.status != 200) {
+        if(response.payload.status !== 200) {
           dispatch(signUpUserFailure(response.payload));
            reject(data); 
          } else {

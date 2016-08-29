@@ -21,7 +21,7 @@ class SignInForm extends Component {
   }
 
   render() {
-    const {asyncValidating, fields: {username, password}, handleSubmit, submitting, user, location} = this.props;
+    const {asyncValidating, fields: {username, password}, handleSubmit, submitting} = this.props;
     return (
       <div className="container">
         <form onSubmit={handleSubmit(this.props.signInUser.bind(this))}>

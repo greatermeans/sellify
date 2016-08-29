@@ -1,6 +1,4 @@
 import axios from 'axios';
-import $ from 'jquery'
-
 
 export const FETCH_ORGANIZATIONS = 'FETCH_ORGANIZATIONS';
 export const FETCH_ORGANIZATIONS_SUCCESS = 'FETCH_ORGANIZATIONS_SUCCESS';

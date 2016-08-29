@@ -18,21 +18,21 @@ const AllListings = class extends Component {
     var listings = chosenOrg.listings
     var searchList = []
 
-    if (search.length == 0 && chosenOrg == '') {
+    if (search.length === 0 && chosenOrg === '') {
       return this.state.listings.map ( (listing, idx) => {
         return(
           <li className="list-group-item" key={listing.id}>
             <ListingsBox key={idx} {...listing}/>
           </li>)
       })
-    } else if (search.length == 0 && chosenOrg !== '') {
+    } else if (search.length === 0 && chosenOrg !== '') {
       return this.state.listings.map ( (listing, idx) => {
         return(
           <li className="list-group-item" key={listing.id}>
             <ListingsBox key={idx} {...listing}/>
           </li>)
               })
-    } else if (search.length > 0 && chosenOrg == '') {
+    } else if (search.length > 0 && chosenOrg === '') {
       return search.map ( (listing, idx) => {
         return(
           <li className="list-group-item" key={listing.id}>
@@ -42,7 +42,7 @@ const AllListings = class extends Component {
     } else if (search.length > 0 && chosenOrg !== '') {
         for(var arr in (listings)){
           for(var filter in search){
-            if (listings[arr].id == search[filter].id) {
+            if (listings[arr].id === search[filter].id) {
               searchList.push(listings[arr]);
             }
           }

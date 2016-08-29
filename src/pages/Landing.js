@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import SignIn from './SignIn'
 import { connect } from 'react-redux';
 
 class Landing extends Component {

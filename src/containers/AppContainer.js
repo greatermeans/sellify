@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { meFromToken, meFromTokenSuccess, meFromTokenFailure, resetToken } from '../actions/users';
 import App from '../components/App.js';

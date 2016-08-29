@@ -25,7 +25,7 @@ const asyncValidate = (values, dispatch) => {
     dispatch(validateUserFields(values))
     .then((response) => {
         let data = response.payload.data;
-        if(response.payload.status != 200 || data.username || data.email) {
+        if(response.payload.status !== 200 || data.username || data.email) {
           dispatch(validateUserFieldsFailure(response.payload));
            reject(data); 
          } else {
@@ -47,7 +47,7 @@ const validateAndUpdateAccount = (values, dispatch) => {
    dispatch(updateAccount(values, jwtToken))
     .then((response) => {
         let data = response.payload.data
-        if(response.payload.status != 200) {
+        if(response.payload.status !== 200) {
           dispatch(updateAccountFailure(response.payload))
            reject(data); 
          } else {

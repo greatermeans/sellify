@@ -42,22 +42,17 @@ constructor(props){
 	}
 
   currentOrgs(){
-    if(this.props.user.organizations.length != 0){
+    if(this.props.user.organizations.length !== 0){
       return
         this.props.user.organizations.map((org)=>{return org.name})
     }
   }
 
   render(){
-    const { handleSubmit, handleClick} = this.props;
-
     return(
-
-        <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
-
+      <div className='fh5co-narrow-content  animate-box fadeInLeft animated'>
         <div className='well'>
-        <div className='container'>
-
+          <div className='container'>
       <h3>My Current Organizations:</h3>
       {this.props.user.organizations.map((org)=>{return <li key={org.id}>{org.name}</li>})}
       <br />

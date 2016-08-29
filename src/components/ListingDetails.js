@@ -1,10 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react';
 
 class ListingDetails extends Component {
-  static contextTypes = {
-    router: PropTypes.object
-  };
 
   componentWillUnmount() {
      this.props.resetMe();

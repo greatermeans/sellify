@@ -46,7 +46,7 @@ const validateAndCreateListing = (values, dispatch) => {
     dispatch(createListing(listingData, token))
       .then((response) => {
         let data = response.payload.data;
-        if (response.payload.status != 200) {
+        if (response.payload.status !== 200) {
           dispatch(createListingFailure(response.payload));
           reject(data)
         } else {
