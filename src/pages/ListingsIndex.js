@@ -7,7 +7,7 @@ class ListingsIndex extends Component {
     return (
       <div>
         <HeaderContainer type="listings_index"/>
-        <ListingsListContainer />
+        <ListingsList />
       </div>
     );
   }
