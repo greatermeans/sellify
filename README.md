@@ -1,5 +1,5 @@
 # README
-This is a project completed at Flatiron School by students of Web Development June 2016 cohort.
+Sellify is a project completed by students in the Flatiron School June 2016 Web Immersive Course.
 
 ##Sellify
 Buy and sell within your trusted organizations!
