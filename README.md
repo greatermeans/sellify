@@ -12,5 +12,6 @@ Buy and sell within your trusted organizations!
 
 ##Collaborators
 * [George Akouri](https://github.com/greatermeans/) | 
-
 * [Yichen Yang](https://github.com/yicheny001/) | ichenyy0701@gmail.com
+* [David Tsai](https://github.com/davidtsai130/) | 
+* [Dave Wexler](/) | 
