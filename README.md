@@ -11,7 +11,7 @@ Buy and sell within your trusted organizations!
 * Redux-forms
 
 ##Try It Out Yourself
-Simply clone this repo and open the Index.html file in your browser.
+Simply visit https://sellify.herokuapp.com.
 
 ##Collaborators
 * [George Akouri](https://github.com/greatermeans/) | george.akouri@flatironschool.com
