@@ -4,7 +4,6 @@ import { searchListings, searchTerm } from '../actions/listings';
 import SearchBar from '../components/SearchBar';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     user: state.user,
     search: state.search,

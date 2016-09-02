@@ -22,7 +22,6 @@ export default class App extends Component {
       location.state.modal &&
       this.previousChildren
     )
-    debugger
     return (
     	<AppContainer>
         <div id='fh5co-main'>
