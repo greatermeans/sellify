@@ -6,7 +6,6 @@ import ListingsList from '../components/ListingsList';
 
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     listingsList: state.listings.listingsList,
     user: state.user
