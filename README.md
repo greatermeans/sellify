@@ -14,9 +14,6 @@ We use Fuse library for a fuzzy search. We built our own Authentication system u
 * Rails
 * Redux-forms
 
-##Try It Out Yourself
-Simply visit https://sellify.herokuapp.com.
-
 ##Collaborators
 * [George Akouri](https://github.com/greatermeans/) | george.akouri@flatironschool.com
 * [Yichen Yang](https://github.com/yicheny001/) | ichenyy0701@gmail.com
